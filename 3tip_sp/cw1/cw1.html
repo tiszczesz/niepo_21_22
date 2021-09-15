@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ćwiczenie 1</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(function () {
+        document.write("<h1>Hello from JS</h1>");
+        //alert("ala ma kota");
+        const data = new Date();
+        console.log(data);
+        document.write("<h3>" + data.toLocaleString() + "</h3>");
+        document.write(`<h3>${data.toLocaleString()}</h3>`);
+        document.write(`<h1>Antoni Mączka</h1>`);
+        document.write(`<h2>3TIP_sp</h2>`);
+        document.write(
+          `<h3>${data.getFullYear()}/${data.getFullYear() + 1}</h3>`
+        );
+        document.body.style.color = "green";
+      }, 2000);
+    </script>
+  </body>
+</html>

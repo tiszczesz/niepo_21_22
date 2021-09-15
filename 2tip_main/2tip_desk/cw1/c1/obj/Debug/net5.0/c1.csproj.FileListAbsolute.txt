@@ -1,0 +1,16 @@
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\c1.exe
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\c1.deps.json
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\c1.runtimeconfig.json
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\c1.runtimeconfig.dev.json
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\c1.dll
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\ref\c1.dll
+E:\2tip_main\2tip_desk\cw1\c1\bin\Debug\net5.0\c1.pdb
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.csproj.AssemblyReference.cache
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.GeneratedMSBuildEditorConfig.editorconfig
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.AssemblyInfoInputs.cache
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.AssemblyInfo.cs
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.csproj.CoreCompileInputs.cache
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.dll
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\ref\c1.dll
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.pdb
+E:\2tip_main\2tip_desk\cw1\c1\obj\Debug\net5.0\c1.genruntimeconfig.cache

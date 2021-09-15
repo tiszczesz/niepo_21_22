@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            Fajny paragraf do pracy z JS<span>Tekst wewnątrz span</span>
+        </p>
+        <p>
+            Inny fajny paragraf ale poza zasięgiem naszym
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum adipisci, officia aspernatur molestiae odio animi laborum dignissimos cum. Doloribus consectetur repudiandae ducimus quaerat natus necessitatibus ipsa itaque laudantium recusandae aut.
+        </p>
+    </div>
+    <script>
+        const pars = document.querySelectorAll("p");
+        console.log(pars);
+        //alert(pars[0].innerHTML);
+        const div = document.querySelector("div");
+       // alert(div.innerText);
+       pars[2].innerText = "zmieniłem lorem ipsum";
+       pars[1].innerHTML = `<ul>
+            <li>element listy </li>
+            <li>element listy </li>
+            <li>element listy </li>
+            <li>element listy </li>
+        </ul>`;
+        const span = document.querySelector("span");
+        span.style.backgroundColor = "red";
+        span.style.textDecoration = "underline";
+    </script>
+</body>
+</html>

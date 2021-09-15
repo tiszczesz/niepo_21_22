@@ -1,0 +1,16 @@
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\cw2.exe
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\cw2.deps.json
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\cw2.runtimeconfig.json
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\cw2.runtimeconfig.dev.json
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\cw2.dll
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\ref\cw2.dll
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\bin\Debug\net5.0\cw2.pdb
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.GeneratedMSBuildEditorConfig.editorconfig
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.AssemblyInfoInputs.cache
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.AssemblyInfo.cs
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.csproj.CoreCompileInputs.cache
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.dll
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\ref\cw2.dll
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.pdb
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.genruntimeconfig.cache
+E:\tools\GitHub\niepo_21_22\2tip_main\2tip_desk\cw2\cw2\obj\Debug\net5.0\cw2.csproj.AssemblyReference.cache
