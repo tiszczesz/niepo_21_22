@@ -19,3 +19,10 @@ E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\obj\D
 E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\images\lis.jpg
 E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\images\sowa.jpg
 E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\images\zebra.jpg
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\obj\Debug\net5.0-windows\cw1_gim_ADO_1.csproj.CopyComplete

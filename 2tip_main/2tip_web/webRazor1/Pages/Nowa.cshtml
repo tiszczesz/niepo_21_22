@@ -1,0 +1,31 @@
+﻿@page
+@model webRazor1.Pages.NowaModel
+@{
+}
+
+<h4>
+    Moja nowa strona ... trochę pusta?
+</h4>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et arcu laoreet, hendrerit urna non, ultricies quam. Integer et enim id nulla auctor aliquam. Integer aliquet auctor elit, et egestas felis lacinia molestie. Proin accumsan nunc quis rhoncus elementum. Duis mollis dui eu nibh elementum, et pharetra orci vehicula. Fusce faucibus massa nec turpis imperdiet dictum hendrerit in eros. Vivamus condimentum ex et elementum porta. Ut maximus nisl in tincidunt lobortis. Nullam libero metus, tincidunt et pulvinar quis, fringilla vitae turpis. Nulla facilisi. Duis egestas tempus eleifend. Donec nulla sem, aliquet eu felis vitae, facilisis dapibus ipsum.
+</p>
+<p>
+    Donec pharetra semper nibh at imperdiet. Mauris non sapien lobortis, pellentesque tellus sed, mattis est. Nam fermentum magna magna, vitae ultricies lorem tempor dignissim. Nunc interdum, metus in facilisis placerat, dolor augue pellentesque ipsum, vitae posuere quam mauris ut felis. Cras ac dui nec eros fermentum sollicitudin. Proin ut enim dictum, posuere erat id, aliquet augue. Aliquam erat volutpat. Phasellus quis nisi eu erat dapibus sagittis. Nulla efficitur augue gravida elit posuere porta.
+</p>
+<p>
+    Pellentesque malesuada sem non cursus mattis. Curabitur eget elit varius nisl lacinia consectetur quis quis justo. Maecenas in erat massa. Aliquam sit amet commodo purus. Sed non nibh rhoncus, faucibus ipsum eu, feugiat ligula. Pellentesque accumsan risus nec risus convallis, vel hendrerit orci placerat. Quisque ornare, mi vitae imperdiet eleifend, elit nibh fringilla ante, id lacinia nisi eros et nulla. Integer est nulla, tincidunt at arcu ut, efficitur elementum leo. Nam eget pellentesque sapien, vel maximus diam. Etiam egestas neque ut finibus gravida. Duis sit amet elit nec neque facilisis faucibus eget sit amet nisi.
+</p>
+<p>
+    Sed semper sem lorem, ut facilisis augue euismod sed. Nulla malesuada enim rhoncus mi pellentesque ultricies. Nulla volutpat fringilla malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam sed hendrerit est. Pellentesque placerat sodales lorem sed facilisis. Vivamus rutrum gravida dignissim. Duis finibus sit amet odio ac lobortis. Proin et porta orci, vitae vulputate lectus. Cras consectetur porta magna, vestibulum convallis ante dapibus ut. Curabitur aliquet felis eget libero aliquet venenatis. Nunc a nunc posuere, vehicula augue ut, semper neque.
+</p>
+<p>
+    Donec fermentum eleifend ex, et venenatis libero luctus id. Cras commodo bibendum felis at accumsan. Aliquam convallis fringilla massa a aliquet. Donec vel hendrerit dui. Nam venenatis accumsan sem, quis feugiat velit lobortis sit amet. Sed mollis quis elit eget tempor. Donec dolor neque, mollis ut interdum non, tempor eget lectus. Donec sollicitudin lacus justo, ac mattis elit tincidunt sit amet. Pellentesque laoreet, odio et euismod bibendum, tortor velit feugiat justo, ut sagittis libero ex id dolor. Morbi vitae nisl eget urna sodales molestie et eu nulla. Maecenas sed tristique neque, a aliquet neque. Phasellus ornare augue leo, sit amet ultricies dolor venenatis congue. Aliquam erat volutpat. Duis vel nibh sit amet erat pharetra convallis eu a erat.
+</p>
+<div>
+    data: @DateTime.Now.ToLongDateString() czas: @DateTime.Now.ToShortTimeString() 
+</div>
+<ul>
+    @for (int i = 1; i < 20; i++) {
+        <li>Element list nr @i</li>
+    }
+</ul>

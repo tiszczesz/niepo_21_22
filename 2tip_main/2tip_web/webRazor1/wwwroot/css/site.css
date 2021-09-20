@@ -69,3 +69,10 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.nowa1 {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px green;
+    padding: 10px;
+    margin: 20px;
+}

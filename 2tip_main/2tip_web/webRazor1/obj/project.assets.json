@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\tools\\GitHub\\niepo2122\\2tip_main\\2tip_web\\webRazor1\\webRazor1.csproj",
+      "projectUniqueName": "E:\\tools\\GitHub\\niepo_21_22\\2tip_main\\2tip_web\\webRazor1\\webRazor1.csproj",
       "projectName": "webRazor1",
-      "projectPath": "E:\\tools\\GitHub\\niepo2122\\2tip_main\\2tip_web\\webRazor1\\webRazor1.csproj",
+      "projectPath": "E:\\tools\\GitHub\\niepo_21_22\\2tip_main\\2tip_web\\webRazor1\\webRazor1.csproj",
       "packagesPath": "C:\\Users\\prof\\.nuget\\packages\\",
-      "outputPath": "E:\\tools\\GitHub\\niepo2122\\2tip_main\\2tip_web\\webRazor1\\obj\\",
+      "outputPath": "E:\\tools\\GitHub\\niepo_21_22\\2tip_main\\2tip_web\\webRazor1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
