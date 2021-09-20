@@ -7,12 +7,12 @@
 <body>
     <script>
         const firstName = prompt("Podaj swoje imię");
-        const age = prompt("Podaj swoj wiek");
+        const age = parseInt(prompt("Podaj swoj wiek"));
         console.log(firstName);
-        if(firstName!=null && firstName!=""){
+        if(firstName!=null && firstName!="" && !isNaN(age) && age>0){
             document.writeln("<p>Witaj: "+firstName+" "+"twój wiek: "+age+"</p>");
         }else{
-            document.writeln("<p>Witaj: Szkoda, że nie chcesz się przedstawić</p>");
+            document.writeln("<p>Witaj: Szkoda, że nie chcesz się przedstawić lub podać poprawnie wieku</p>");
         }
     </script>
 </body>
