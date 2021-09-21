@@ -8,7 +8,7 @@ private:
 	Item* head{ nullptr };
 public:
 	bool Push(Item& item);
-	bool Pop();
+	Item* Pop();
 	Stack();
 	~Stack();
 	friend std::ostream& operator<<(std::ostream& os, const Stack& stack);

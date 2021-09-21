@@ -24,6 +24,16 @@ bool Stack::Push(Item& item) {
 	head = &item;
 	return true;
 }
+Item* Stack::Pop() {
+	if (head == nullptr) return nullptr;
+	Item* temp = head;
+	//zmiana heada na wczesniejszy element
+	head = head->getPrevious();
+	//pobranie ostatniego elementu
+	//count--
+	count--;
+	return temp;
+}
 
 
 
