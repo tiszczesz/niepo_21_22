@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 2</title>
+</head>
+<body>
+    <script>
+        const firstName = prompt("Podaj swoje imię:");
+        const age = parseInt(prompt("Podaj swój wiek:"));
+        if(firstName==null || isNaN(age)){
+            document.write("<h3>Szkoda, że anulowałeś lub podałeś błędny wiek</h3>");
+        }else{
+            document.write(`<h3>Witaj ${firstName} twój wiek to: ${age}</h3>`);
+        }
+        console.log(firstName);
+        console.log(typeof firstName);
+        console.log(age+22);
+    </script>
+</body>
+</html>
