@@ -7,16 +7,62 @@ namespace cw2 {
             //  Cw2();
             // Cw3();
             // Cw4();
-            Cw5_bis();
+           // Cw5_bis();
            // Cw6();
+            Cw7();
         }
 
         private static void Cw6() {
+            Random rnd = new Random();
+            int min = Int32.MaxValue;
+            int max = Int32.MinValue;
+            int licznik = 0;
+            int suma = 0;
+            int losowa = 0;
             do {
+                losowa = rnd.Next(0, 30);
+                Console.Write(losowa+" ");
+                if (losowa != 0) {
+                    licznik++;
+                    suma += licznik;
+                    if (losowa < min) min = losowa;
+                    if (losowa > max) max = losowa;
+                }
+            } while (losowa!=0);
 
-            } while (true);
+            if (licznik == 0) {
+                Console.WriteLine("\nZbior pusty!!!");
+            }
+            else {
+                Console.WriteLine($"\nIlosc elementow: {licznik}");
+                Console.WriteLine($"Najwieksza wartosc: {max}");
+                Console.WriteLine($"Najmniejsza wartosc: {min}");
+                Console.WriteLine($"Srednia wartosc: {(double)suma/licznik}");
+            }
         }
 
+        private static void Cw7() {
+            Test();
+            //Pytanie o poczatek przedzialu liczb
+            //Pytanie o ilosc liczb    poczatet->7  ilosc->10  przedzial->(7,17)
+            //  3 -> tak
+            //  4
+        }
+
+        private static void Test() {
+            Console.Write("Podaj liczbe calkowita dodatnia: ");
+            int liczba = Convert.ToInt32(Console.ReadLine());
+            if (IsPrimal(liczba)) Console.WriteLine($"Liczba: {liczba} jest pierwsza");
+            else Console.WriteLine($"Liczba: {liczba} nie jest pierwsza");
+        }
+        private static bool IsPrimal(int number) {
+            if (number == 1) return false;
+            if (number == 2) return true;
+            for (int i = 3; i * i <= number; i++) {
+                if (number % i == 0) return false;
+            }
+            return true;
+        }
         private static void Cw1() {
             const int adult = 18;
             Console.Write("Podaj swoje imie: ");

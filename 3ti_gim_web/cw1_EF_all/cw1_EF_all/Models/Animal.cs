@@ -20,5 +20,7 @@ namespace cw1_EF_all.Models
 
         public string Image { get; set; }
 
+        public decimal Price { get; set; }
+
     }
 }

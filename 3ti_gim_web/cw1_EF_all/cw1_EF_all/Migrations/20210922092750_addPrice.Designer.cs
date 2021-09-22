@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using cw1_EF_all.Data;
 
 namespace cw1_EF_all.Migrations
 {
     [DbContext(typeof(cw1_EF_allContext))]
-    partial class cw1_EF_allContextModelSnapshot : ModelSnapshot
+    [Migration("20210922092750_addPrice")]
+    partial class addPrice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
