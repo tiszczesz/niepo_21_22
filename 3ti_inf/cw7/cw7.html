@@ -9,16 +9,25 @@
 <body>
     <script>
         let sum = 0;
+        const ZAKRES = 50;
         let losowa=0;
-        while(sum<100){
+        while(sum<ZAKRES){
             //losowanie z przedzialu 0,20
-            losowa = Math.floor(Math.random()*20);
-            console
-            document.writeln(losowa+" ");
+            losowa = Math.floor(Math.random()*30);  
             sum += losowa; //sum = sum + losowa;
+            let znak = sum<ZAKRES ? " + " : " = ";
+            document.writeln(losowa+znak);
             //wyswietlanie po spacji
         }
-        document.writeln(`<p>suma wynosi: ${sum}</p>`);
+        document.writeln(sum);
+        let i= 0;
+        while(++i<=6){  // ++i pre inkrementacja    i++ post inkrementacja
+            document.write(`<h${i}>Nagłówek: ${i}</h${i}>`);
+        }
+        let j=0;
+        while(j++<6){  // ++i pre inkrementacja    i++ post inkrementacja
+            document.write(`<h${j}>Nagłówek: ${j}</h${j}>`);
+        }
     </script>
 </body>
 </html>
