@@ -39,4 +39,11 @@ std::ostream& operator<<(std::ostream& os, const Stack& stack) {
 	}
 	return os;	
 }
+Item* Stack::Pop() {
+	Item* item = top;
+	top = item->getPrevious();
+	count--;
+	return item;
+}
+
 

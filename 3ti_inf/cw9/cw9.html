@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ćwiczenie 9 - funkcje</title>
+  </head>
+  <body>
+    <h1>Funkcje w JS</h1>
+    <script>
+      Hello("Ryszard", 3);
+      Hello("Anna", 6);
+      document.write(`<h5>${Add(12, 89)}</h5>`);
+      const wynik = Add(1212, "ggg");
+
+      console.log(wynik);
+      function Hello(name, count) {
+        for (let i = 0; i < count; i++) {
+          document.write(`<h4>Witaj: ${name}</h4>`);
+        }
+        console.log(this);
+      }
+      function Add(a, b) {
+        return a + b;
+      }
+      const f1 = function (a, b) {
+        return a * b;
+      };
+      const f2 = (a, b) => {
+        console.log(this);
+        return a * b;
+      };
+      console.log(f1(4, 9));
+      console.log(f2(4, 9));
+    </script>
+  </body>
+</html>

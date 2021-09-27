@@ -23,5 +23,13 @@ int main() {
 	s1.Push(new Item("trzeci", nullptr));
 	s1.Push(new Item("czwarty", nullptr));
 	cout << s1;
+	cout << "Zdejmowanie ze stosu...." << endl;
+	Item* pobrany = s1.Pop();
+	cout << pobrany << "to element ze zstosu"<< endl;
+	cout << " =====================================\n";
+	
+	cout << s1;
+	delete pobrany;
+	pobrany = nullptr;
 	return 0;
 }

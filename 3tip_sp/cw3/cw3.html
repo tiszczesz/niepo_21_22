@@ -10,7 +10,18 @@
     <!-- fdgdf gdfgdfgdfgdfgdfgfdgdg -->
     //fdgdfgdfg ERROR
     <script>
-        // uzytkwonik podoaje dwie liczby a i b (2xprompt)
+        // uzytkwonik podaje dwie liczby a i b (2xprompt)
+        const a = parseFloat(prompt("Podaj a:"));
+        const b = parseFloat(prompt("Podaj b:"));
+        if(!isNaN(a) && !isNaN(b)){
+            document.write(`<p>${a} + ${b} = ${(a+b).toFixed(2)}</p>`);
+            document.write(`<p>${a} - ${b} = ${(a-b).toFixed(2)}</p>`);
+            document.write(`<p>${a} * ${b} = ${(a*b).toFixed(2)}</p>`);
+            const wynik = b===0 ? "Nie dzielimy przez ZERO!!" : (a/b).toFixed(2);
+            document.write(`<p>${a} / ${b} = ${wynik}</p>`);
+        }else{
+            document.write("<p>Podano błędne dane</p>");
+        }
         // nastepnie wyswitla sie w <p> 12 + 34 = 46 </p>
     </script>
 </body>

@@ -42,11 +42,21 @@ namespace cw2 {
         }
 
         private static void Cw7() {
-            Test();
+            //Test();
             //Pytanie o poczatek przedzialu liczb
+            Console.Write("Podaj poczatek przedzialu: ");
+            int first = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Podaj ilosc liczb: ");
+            int count = Convert.ToInt32(Console.ReadLine());
             //Pytanie o ilosc liczb    poczatet->7  ilosc->10  przedzial->(7,17)
             //  3 -> tak
+
+            for (int i = first; i <= (first + count); i++) {
+                string ok = IsPrimal(i) ? " -> tak" : "";
+                Console.WriteLine(i+ok);
+            }
             //  4
+
         }
 
         private static void Test() {
@@ -57,8 +67,8 @@ namespace cw2 {
         }
         private static bool IsPrimal(int number) {
             if (number == 1) return false;
-            if (number == 2) return true;
-            for (int i = 3; i * i <= number; i++) {
+            //if (number == 2) return true;
+            for (int i = 2; (i * i) <= number; i++) {
                 if (number % i == 0) return false;
             }
             return true;
