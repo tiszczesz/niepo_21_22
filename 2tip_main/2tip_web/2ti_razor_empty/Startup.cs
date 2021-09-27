@@ -16,6 +16,7 @@ namespace _2ti_razor_empty
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,13 +31,7 @@ namespace _2ti_razor_empty
   
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-                endpoints.MapGet("/nowe", async context => {
-                    await context.Response.WriteAsync("<h1>To maja nowa podstrona</h1>");
-                });
+               endpoints.MapRazorPages();
             });
         }
     }

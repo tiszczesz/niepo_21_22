@@ -26,3 +26,5 @@ E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\D
 E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\obj\Debug\net5.0-windows\cw1_gim_ADO_1.csproj.CopyComplete
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\bin\Debug\net5.0-windows\images\no_image.jpg
+E:\tools\GitHub\niepo_21_22\3ti_gim_desktopowe\cw1_gim_ADO_1\cw1_gim_ADO_1\obj\Debug\net5.0-windows\cw1_gim_ADO_1.Properties.Resources.resources
