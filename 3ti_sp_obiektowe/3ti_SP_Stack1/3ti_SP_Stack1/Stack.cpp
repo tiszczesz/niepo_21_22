@@ -16,6 +16,13 @@ Stack::Stack() {
 	count = 0;
 }
 Stack::~Stack() {
+	Item* temp = head;
+	
+	while(temp!=nullptr) {
+		Item* next = temp->getPrevious();
+		delete temp;
+		temp = next;
+	}
 	std::cout << "Niszczenie stosu...." << std::endl;
 }
 bool Stack::Push(Item& item) {

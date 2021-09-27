@@ -14,7 +14,8 @@ Item::Item(std::string value, Item* previous) {
 }
 Item::~Item() {
 	value = "";
-	previous = nullptr;
+	//previous = nullptr;
+	std::cout << "Usuwanie elementu" << std::endl;
 }
 
 

@@ -15,5 +15,8 @@ public:
 	int getCount() const {
 		return count;
 	}
+	Item* GetHead() {
+		return head;
+	}
 };
 

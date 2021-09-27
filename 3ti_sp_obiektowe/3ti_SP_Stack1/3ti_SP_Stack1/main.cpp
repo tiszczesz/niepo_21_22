@@ -25,16 +25,27 @@ void cw0() {
 	cout << " zdjecie ostatniego....." << endl;
 	cout << (*droped) << endl;
 	cout << s1;
-	cw1();
+	
 }
 void cw1() {
-	vector<string> wyrazy{ "Ala","ma","kota" };
+	vector<string> wyrazy{ "Ala","ma","kota","malego"};
 	vector<string> odwrocone;
 	Stack s2;
+	cout << s2;
 	for (string wyraz : wyrazy) {
 		Item* ii = new Item(wyraz, nullptr);
 		s2.Push(*ii);		
 	}
 	cout << s2;
+	Item* elem;
+	elem = s2.GetHead();
+	while(elem!=nullptr) {
+		odwrocone.push_back(elem->GetValue());
+		elem = elem->getPrevious();
+	}
+	for (string wyraz : odwrocone) {
+		cout << wyraz << " ";
+	}
+	cout << endl;
 	//todo
 }

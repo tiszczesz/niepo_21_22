@@ -17,5 +17,8 @@ public:
 	void setPrevious(Item* item) {
 		previous = item;
 	}
+	std::string GetValue() {
+		return value;
+	}
 };
 
