@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    border-bottom: 1px solid coral;
+}
+.line{
+    margin: 20px;
+}
+label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    margin-right: 5px;
+}
+input[type=button]{
+    margin-left: 210px;
+    padding: 10px;
+}
+input{
+    width: 150px;
+}
+#result{
+    border: rgb(136, 92, 76) solid 1px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+    box-shadow: lightgray 5px 5px;
+    min-height: 100px;
+}
+
