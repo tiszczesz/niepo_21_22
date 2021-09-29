@@ -25,4 +25,7 @@ input{
     box-shadow: lightgray 5px 5px;
     min-height: 100px;
 }
+.error{
+    color: red;
+}
 

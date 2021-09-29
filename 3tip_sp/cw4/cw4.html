@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ćwiczenie 4</title>
-</head>
-<body>
+  </head>
+  <body>
     <h3>Pętla for(... ; ....; ...){...}</h3>
     <script>
-        for(let i=1; i<=6; i++){  //i++ -> i=i+1
-            document.write(`<h${i}>Nagłówek nr: ${i}</h${i}>`);
+      for (let i = 1; i <= 6; i++) {
+        //i++ -> i=i+1
+        document.write(`<h${i}>Nagłówek nr: ${i}</h${i}>`);
+      }
+      //napisac petle for aby wygenerowac liste numerowana tyle co poda uzytkownik
+      //prompt
+      const ile = parseInt(prompt("podaj ilość elementów listy:"));
+      if (!isNaN(ile)) {
+        document.write("<ol>");
+        for (let i = 0; i < ile; i++) {
+          document.write(`<li>Element listy nr: ${i + 1}</li>`);
         }
-        //napisac petle for aby wygenerowac liste numerowana tyle co poda uzytkownik
-        //prompt
-        const ile = parseInt(prompt("podaj ilość elementów listy:"));
-        
+        document.write("</ol>");
+      }
     </script>
-</body>
+    <h3>Pętla while(warLog){...}</h3>
+    <script>
+        const MaxValue = 100;
+        let sum = 0;
+        let random = 0;
+        let i=0;
+        while(sum<MaxValue){
+            random = Math.floor(Math.random()*20);
+            i++;
+            sum += random;
+            let znak = sum<MaxValue ? " + ": " = "
+            document.write(random+znak);
+        }
+        document.write(sum+ "<br> ilość liczb: "+i);
+    </script>
+    <h3>Pętla do{....}while(warLog)</h3>
+  </body>
 </html>
