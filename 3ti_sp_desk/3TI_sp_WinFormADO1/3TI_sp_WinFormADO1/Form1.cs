@@ -12,8 +12,8 @@ namespace _3TI_sp_WinFormADO1
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
+        public Form1() {
+            string connString = Properties.Settings.Default.ConnString;
             InitializeComponent();
         }
 
