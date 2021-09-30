@@ -33,5 +33,24 @@ namespace _3ti_sp_2021_dbFirst.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        public IActionResult Delete(int? id) {
+            if (id == null) return NotFound();
+            Book toDelete = _db.Books.FirstOrDefault(b => b.Id == id);
+            if (toDelete == null) return NotFound();
+            _db.Books.Remove(toDelete);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult Create() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Book book) {
+            if (book == null) return NotFound();
+            return View();
+        }
     }
 }

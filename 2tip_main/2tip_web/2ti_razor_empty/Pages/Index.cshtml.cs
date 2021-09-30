@@ -13,7 +13,7 @@ namespace MyApp.Namespace
         public void OnGet()
         {
             imiona = new List<string>{
-                "Adam","Grażyna","Monika","Tomasz"
+                "Adam","Grażyna","Monika","Tomasz","Alojzy"
             };
         }
     }
