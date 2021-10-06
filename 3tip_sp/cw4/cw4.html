@@ -40,5 +40,15 @@
         document.write(sum+ "<br> ilość liczb: "+i);
     </script>
     <h3>Pętla do{....}while(warLog)</h3>
+    <script>
+      random = 0;
+      let count = 0;
+      do{
+        random = Math.floor(Math.random()*20);
+        if(random!==0) count++;
+        document.write(random+" ");
+      }while(random!==0);
+      document.write(`<p>Ilość wylosowanych liczb (oprócz zera): ${count}</p>`)
+    </script>
   </body>
 </html>

@@ -1,0 +1,32 @@
+.container{
+    margin: 30px;
+}
+.line{
+    margin-bottom: 20px;
+}
+label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    padding-right: 5px;
+}
+.error{
+    color: red;
+}
+input[type=button]{
+    padding: 5px;
+    
+    margin-left: 210px;
+}
+input{
+    width: 150px;
+}
+#result{
+    min-height: 40px;
+    border: solid 1px black;
+    background-color: burlywood;
+    border-radius: 5px;
+    box-shadow: rgb(190, 185, 185) 5px 5px 2px;
+    color: brown;
+    font-weight: bold;
+}

@@ -19,6 +19,7 @@ namespace _3ti_sp_2021_dbFirst.Controllers
         }
 
         public IActionResult Index() {
+            var cookies = HttpContext.Request.Cookies;
             IEnumerable<Book> books = _db.Books.ToList();
             return View(books);
         }
@@ -40,6 +41,7 @@ namespace _3ti_sp_2021_dbFirst.Controllers
             Book toDelete = _db.Books.FirstOrDefault(b => b.Id == id);
             if (toDelete == null) return NotFound();
             _db.Books.Remove(toDelete);
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
@@ -47,10 +49,24 @@ namespace _3ti_sp_2021_dbFirst.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Details(int? id) {
+            if (id == null) return NotFound();
+            Book toShow = _db.Books.FirstOrDefault(b => b.Id == id);
+            if (toShow == null) return NotFound();
+
+            return View(toShow);
+        }
+
         [HttpPost]
         public IActionResult Create(Book book) {
             if (book == null) return NotFound();
-            return View();
+            if (ModelState.IsValid) {
+                _db.Books.Add(book);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(book);
         }
     }
 }

@@ -1,0 +1,19 @@
+﻿@model _3ti_sp_2021_dbFirst.Book
+
+<div class="container">
+    <h1>Dane szczegółowe książki</h1>
+    <div class="card">
+        <div class="card-title bg-light">
+            Tytuł: @Model.Title
+        </div>
+        <div class="card-body">
+            <div>Autor: @Model.Author</div>
+        
+            <div>Cena: @Model.Price.ToString("C")</div>
+        </div>
+    </div>
+   
+    <div>
+        <a class="btn btn-info" asp-action="Index">Powrót do listy książek</a>
+    </div>
+</div>

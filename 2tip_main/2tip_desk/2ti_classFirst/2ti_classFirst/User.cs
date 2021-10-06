@@ -44,5 +44,9 @@ namespace _2ti_classFirst
         public string IsAdult() {
             return age >= 18 ? "pelnoletni" : "niepoelnoletni";
         }
+
+        public User() {
+            Console.WriteLine("========= KONSTRUKTOR========");
+        }
     }
 }

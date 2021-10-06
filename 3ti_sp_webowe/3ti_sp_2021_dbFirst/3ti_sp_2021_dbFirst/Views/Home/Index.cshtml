@@ -34,12 +34,14 @@
             i++;
             <tr>
                 <td>@i</td>
-                <td>@book.Title</td>
+                <td><a class="card-link" asp-action="Details" asp-route-id="@book.Id">@book.Title</a></td>
                 @*<td>@Html.DisplayFor(modelItem=>book.Title)</td>*@
                 <td>@Html.DisplayFor(modelItem => book.Author)</td>
                 <td>@Html.DisplayFor(modelItem => book.Price)</td>
                 <td>@Html.DisplayFor(modelItem => book.Description)</td>
                 <td>
+                    <a class="btn-danger btn" asp-action="Delete" asp-route-id="@book.Id">Usuń</a>
+                    <a class="btn-secondary btn" asp-action="Edit" asp-route-id="@book.Id">Edytuj</a>
 
                 </td>
             </tr>
