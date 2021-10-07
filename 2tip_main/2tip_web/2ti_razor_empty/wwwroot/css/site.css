@@ -5,3 +5,9 @@ h1{
     text-align: center;
     border-bottom: solid 1px gray;
 }
+.result{
+    padding: 20px;
+    margin-left: 30px;
+    background-color: coral;
+    color: darkred;
+}

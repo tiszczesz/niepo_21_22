@@ -2,6 +2,11 @@
 @model MyApp.Namespace.IndexModel
 
     <h1>Moja strona Index typu RazorPage</h1>
+    @{
+        string color = Model.RandomInt%2==0 ? "yellow": "green";
+    }
+    <div class="result" style="color:@color">Losowa liczba: @Model.RandomInt</div>
+    <div>Wylosowane imię: @ViewData["losowe"]</div>
     <ul>
         @foreach (string imie in Model.imiona)
         {
