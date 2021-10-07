@@ -26,10 +26,24 @@ namespace _3TI_sp_WinFormADO1.DAL
                 using (SqlCommand command = new SqlCommand(sqlQuery,conn)) {
                     conn.Open();
                     SqlDataReader sr = command.ExecuteReader();
+                    if (sr.HasRows) {
+                        while (sr.Read()) {
+                            books.Add(getFromRecord(sr));
+                        }
+                    }
                 }
             }
-
             return books;
+        }
+        private Book getFromRecord(SqlDataReader sr) {
+            return new Book {
+                Id = sr.GetInt32(0),
+                Title = sr.GetString(1),
+                Author = sr.GetString(2),
+                Price = sr.GetDecimal(3),
+                Description = sr.IsDBNull(4)? "":sr.GetString(4) ,
+                Image = sr.IsDBNull(5)?"" : sr.GetString(5)
+            };
         }
     }
 }

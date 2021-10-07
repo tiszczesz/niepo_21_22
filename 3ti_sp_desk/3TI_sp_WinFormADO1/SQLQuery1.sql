@@ -1,0 +1,1 @@
+﻿SELECT Id,Title,Author,Price,Description,Image FROM dbo.Books;
