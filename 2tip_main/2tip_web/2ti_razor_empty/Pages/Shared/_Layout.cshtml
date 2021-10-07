@@ -8,8 +8,24 @@
     </head>
     <body>
         <h1>Strona layoutu</h1>
-        <div style="border: solid 1px black;">
-            @RenderBody()
-        </div>
+        <div class="container">
+            <div class="menu">
+                <div class="item-menu">
+                    <a asp-page="Index">Index</a>
+                </div>
+                <div class="item-menu">
+                    <a asp-page="Nowa">Nowa</a>
+                </div>
+                <div class="item-menu">
+                    <a asp-page="Inna">Inna</a>
+                </div>
+            </div>
+            <div class="main" style="border: solid 1px black;" >
+                @RenderBody()
+            </div>
+        </div>       
+       
+       
+        
     </body>
 </html>

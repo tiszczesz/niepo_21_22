@@ -20,6 +20,7 @@ namespace MyApp.Namespace
             RandomInt = rnd.Next(5,100);
             int RandomIndex = rnd.Next(0,imiona.Count);
             ViewData["losowe"] = imiona[RandomIndex];
+            ViewData["data"] = DateTime.Now.ToShortDateString();
         }
     }
 }

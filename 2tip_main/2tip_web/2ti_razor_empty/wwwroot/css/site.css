@@ -11,3 +11,10 @@ h1{
     background-color: coral;
     color: darkred;
 }
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.menu{
+    width: 40%;
+}
