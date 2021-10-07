@@ -1,8 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @if(ViewBag.cookie!=null){
+        <h3>Ciasteczko: @ViewBag.cookie</h3>
+    }
+    else {
+        <h3>Brak ciastka</h3>
+    }
+</body>
+</html>
