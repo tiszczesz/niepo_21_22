@@ -33,11 +33,11 @@ namespace _3TI_sp_WinFormADO1
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.tbDescription = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.tbAuthor = new System.Windows.Forms.TextBox();
+            this.tbTitle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@ namespace _3TI_sp_WinFormADO1
             this.listOfBooks = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,11 +81,11 @@ namespace _3TI_sp_WinFormADO1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.pbImage);
+            this.panel2.Controls.Add(this.tbDescription);
+            this.panel2.Controls.Add(this.tbPrice);
+            this.panel2.Controls.Add(this.tbAuthor);
+            this.panel2.Controls.Add(this.tbTitle);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -97,43 +97,44 @@ namespace _3TI_sp_WinFormADO1
             this.panel2.Size = new System.Drawing.Size(1067, 570);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox1
+            // pbImage
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(567, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(474, 445);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImage.Location = new System.Drawing.Point(567, 50);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(474, 445);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbImage.TabIndex = 9;
+            this.pbImage.TabStop = false;
             // 
-            // textBox4
+            // tbDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(350, 301);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 194);
-            this.textBox4.TabIndex = 8;
+            this.tbDescription.Location = new System.Drawing.Point(350, 301);
+            this.tbDescription.Multiline = true;
+            this.tbDescription.Name = "tbDescription";
+            this.tbDescription.Size = new System.Drawing.Size(174, 194);
+            this.tbDescription.TabIndex = 8;
             // 
-            // textBox3
+            // tbPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(350, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 23);
-            this.textBox3.TabIndex = 7;
+            this.tbPrice.Location = new System.Drawing.Point(350, 206);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(174, 23);
+            this.tbPrice.TabIndex = 7;
             // 
-            // textBox2
+            // tbAuthor
             // 
-            this.textBox2.Location = new System.Drawing.Point(350, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 23);
-            this.textBox2.TabIndex = 6;
+            this.tbAuthor.Location = new System.Drawing.Point(350, 127);
+            this.tbAuthor.Name = "tbAuthor";
+            this.tbAuthor.Size = new System.Drawing.Size(174, 23);
+            this.tbAuthor.TabIndex = 6;
             // 
-            // textBox1
+            // tbTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(350, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 23);
-            this.textBox1.TabIndex = 5;
+            this.tbTitle.Location = new System.Drawing.Point(350, 50);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(174, 23);
+            this.tbTitle.TabIndex = 5;
             // 
             // label4
             // 
@@ -179,6 +180,7 @@ namespace _3TI_sp_WinFormADO1
             this.listOfBooks.Name = "listOfBooks";
             this.listOfBooks.Size = new System.Drawing.Size(248, 529);
             this.listOfBooks.TabIndex = 0;
+            this.listOfBooks.DoubleClick += new System.EventHandler(this.listOfBooks_DoubleClick);
             // 
             // Form1
             // 
@@ -192,7 +194,7 @@ namespace _3TI_sp_WinFormADO1
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,11 +204,11 @@ namespace _3TI_sp_WinFormADO1
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pbImage;
+        private System.Windows.Forms.TextBox tbDescription;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.TextBox tbAuthor;
+        private System.Windows.Forms.TextBox tbTitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
