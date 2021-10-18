@@ -23,6 +23,7 @@ input{
 }
 #result{
     min-height: 40px;
+    padding: 5px;
     border: solid 1px black;
     background-color: burlywood;
     border-radius: 5px;
