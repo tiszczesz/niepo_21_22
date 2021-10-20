@@ -8,11 +8,25 @@ function klik(){
     const a = parseFloat(document.querySelector("#a").value);
     const b = parseInt(document.querySelector("#b").value);
     console.log(`a = ${a} b = ${b}`);
+    if(b < 0 &&  a === 0) {
+        document.querySelector('#result').innerHTML = "brak wyniku!!!";    
+        return; 
+    }
+    let a1=0;
+    let b1=0;
+     if(b<0){
+        a1 = 1/a;
+        b1 = -b;
+     }else{
+         a1 = a;
+         b1 = b;
+     }
     if(!isNaN(a) && !isNaN(b)){
         const wynik1 = Math.pow(a,b);
         let wynik2 = 1;
-        for(let i=1; i<=b;i++){
-            wynik2 *= a; //wynik2 = wynik2*a;
+        for(let i=1; i<=b1;i++){
+            wynik2 *= a1; //wynik2 = wynik2*a;
+            
         }
         console.log(`${a} ^ ${b} = ${wynik1}`);
         console.log(`${a} ^ ${b} = ${wynik2}`);
