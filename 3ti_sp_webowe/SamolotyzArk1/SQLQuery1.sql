@@ -1,4 +1,18 @@
-﻿INSERT INTO [dbo].[odloty] (samoloty_id, nr_rejsu, kierunek, czas, dzien, status_lotu) VALUES
+﻿--utworz baze danych  3tisp_SamolotyArk1
+
+CREATE TABLE [dbo].[odloty] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [samoloty_id] INT           NOT NULL,
+    [nr_rejsu]    NVARCHAR (8)  NULL,
+    [kierunek]    NVARCHAR (10) NULL,
+    [czas]        TIME (7)      NOT NULL,
+    [dzien]       DATE          NULL,
+    [status_lotu] NVARCHAR (50) NULL
+);
+
+
+
+INSERT INTO [dbo].[odloty] (samoloty_id, nr_rejsu, kierunek, czas, dzien, status_lotu) VALUES
 ( 1, 'FR1646', 'Neapol', '09:20:00', '2019-07-25', 'wystartowal'),
 ( 1, 'FR1327', 'ALICANTE', '09:10:00', '2019-07-25', 'Opozniony 10 min'),
 ( 2, 'W63425', 'Warszawa', '09:45:00', '2019-07-25', 'odprawa'),
