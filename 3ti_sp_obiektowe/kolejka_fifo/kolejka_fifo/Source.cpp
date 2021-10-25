@@ -4,7 +4,7 @@
 using namespace std;
 struct Item {
 	string value;
-	Item* next;
+	Item* next=nullptr;
 };
 class Queue {
 public:
@@ -56,7 +56,8 @@ public:
 	}
 	string GetFirst() 
 	{
-		return first->next->value;
+		if (first == nullptr) return "";
+		return first->value;
 	}
 	string GetLast() 
 	{
@@ -74,6 +75,15 @@ int main()
 	{
 		Queue queue; //utworzenie kolejki
 		vector<string> sentence{ "Ala","ma","kota","o","ciemnej","masci" };
+		for (string word : sentence) {
+			queue.push_back(word);
+		}
+		std::cout << "Rozmiar po zaladowniu: " << queue.size() << endl;
+		
+		while(queue.size()>0){
+			std::cout << "===  " << queue.pop_back() << endl;
+		}
+		
 		//wrzucic do kolejki push_back() i wyciagac pojedynczo pop_back()
 
 	//	queue.push_back("value 1");
@@ -94,9 +104,10 @@ int main()
 	//	cout << "Liczba elementow w kolejce: " << queue.size() << endl;
 	//	if (queue.size() == 0)
 	//		cout << "Queue jest pusta, nie ma nic do usuwania" << endl;
-	//}
-	//
-	cout << "koniec programu" << endl;
+		
+	}
+	
+	std::cout << "koniec programu" << endl;
 	
 	return 0;
 }
