@@ -23,22 +23,42 @@ namespace SamolotyzArk1.Controllers
         public IActionResult Index()
         {
             
-            var odloty = db.Odloties.ToList();
+            var odloty = db.Odloties.OrderByDescending(o=>o.Czas).ToList();
             Response.Cookies.Append(
-                "moje",
-                "smakowite",
+                "odwiedzone",
+                "true",
                 new Microsoft.AspNetCore.Http.CookieOptions()
                 {
-                    Path = "/"
+                    Path = "/",
+                    Expires = DateTimeOffset.Now.AddHours(1)
                 }
             );
             var cookies = Response.Cookies;
-            if (cookies != null && Request.Cookies["moje"] != null) {
-                ViewBag.cookie = Request.Cookies["moje"].ToString();
+            if (cookies != null && Request.Cookies["odwiedzone"] != null) {
+                ViewBag.cookie = Request.Cookies["odwiedzone"].ToString();
             }
+            
+            return View(odloty);
+        }
+
+        [HttpGet]
+        public IActionResult Create() {
+            
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Create(Odloty odloty) {
+            if (ModelState.IsValid) {
+                //zapisywanie do bazy
+                db.Odloties.
+                db.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            else {
+                return View(odloty);
+            }
+        }
         public IActionResult Privacy()
         {
             return View();

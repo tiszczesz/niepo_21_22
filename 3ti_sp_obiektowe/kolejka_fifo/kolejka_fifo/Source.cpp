@@ -70,26 +70,30 @@ private:
 
 int main()
 {
-	Queue queue; //utworzenie kolejki
+	{
+		Queue queue; //utworzenie kolejki
 
-	queue.push_back("value 1"); 
-	cout << "Liczba elementow w kolejce: " << queue.size() << endl; 
-	queue.push_back("value 2"); 
-	cout << "Liczba elementow w kolejce: " << queue.size() << endl; 
-	queue.push_back("value 3"); 
-	cout << "Liczba elementow w kolejce: " << queue.size() << endl; 
-	cout << "Pierwszy value kolejce: " << queue.GetFirst() << endl; 
-	cout << "Ostatni value kolejce: " << queue.GetLast() << endl;   
-	
-	cout << "usuwamy element o wartosci: " << queue.pop_back() << endl;
-	
-	cout << "usuwamy element o wartosci: " << queue.pop_back() << endl;
-	cout << "Liczba elementow w kolejce: " << queue.size() << endl; 
-	cout << "usuwamy element o wartosci: " << queue.pop_back() << endl;
-	
-	cout << "Liczba elementow w kolejce: " << queue.size() << endl; 
-	if (queue.size()==0)
-		cout << "Queue jest pusta, nie ma nic do usuwania" << endl;
+		queue.push_back("value 1");
+		cout << "Liczba elementow w kolejce: " << queue.size() << endl;
+		queue.push_back("value 2");
+		cout << "Liczba elementow w kolejce: " << queue.size() << endl;
+		queue.push_back("value 3");
+		cout << "Liczba elementow w kolejce: " << queue.size() << endl;
+		cout << "Pierwszy value kolejce: " << queue.GetFirst() << endl;
+		cout << "Ostatni value kolejce: " << queue.GetLast() << endl;
 
+		cout << "usuwamy element o wartosci: " << queue.pop_back() << endl;
+
+		cout << "usuwamy element o wartosci: " << queue.pop_back() << endl;
+		cout << "Liczba elementow w kolejce: " << queue.size() << endl;
+		/*cout << "usuwamy element o wartosci: " << queue.pop_back() << endl;*/
+
+		cout << "Liczba elementow w kolejce: " << queue.size() << endl;
+		if (queue.size() == 0)
+			cout << "Queue jest pusta, nie ma nic do usuwania" << endl;
+	}
+	
+	cout << "koniec programu" << endl;
+	
 	return 0;
 }

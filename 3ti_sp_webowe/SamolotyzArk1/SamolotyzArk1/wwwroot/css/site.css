@@ -1,71 +1,51 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿.b1 {
+    text-align: center;
+    width: 75%;
+    height: 150px;
+    font-size: 200%;
 }
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.b2 {
+    width: 25%;
+    height: 150px;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.banner {
+    display: flex;
+    flex-direction: row;
 }
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.main {
+    background-color: rgb(128, 0, 0);
+    padding: 50px;
+    text-transform: uppercase;
 }
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
+.stopka {
+    display: flex;
+    flex-direction: row;
 }
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.s1, .s3 {
+    width: 20%;
+    padding-top: 90px;
 }
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
+.s2 {
+    text-align: center;
+    width: 60%;
 }
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    font-family: arial;
+    background-color: rgb(244, 164, 96);
+    color: white;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+p {
+    font-size: 150px;
+    border: 2px dotted rgb(169, 169, 169);
+}
+p:hover {
+    background-color: rgb(169, 169, 169);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td,th {
+    border: 1px solid rgb(192, 192, 192);
+    padding: 5px;
 }

@@ -1,13 +1,65 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model List<Odloty>
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
 <head>
-    <title></title>
+    <title>Odloty samolotów</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
 </head>
 <body>
-    @if(ViewBag.cookie!=null){
-        <h3>Ciasteczko: @ViewBag.cookie</h3>
-    }
-    else {
-        <h3>Brak ciastka</h3>
-    }
+<div class="banner">
+    <div class="b1">
+        <h2>Odloty z lotniska</h2>
+    </div>
+    <div class="b2">
+        <img src="~/media/zad6_1.png" alt="logotyp"/>
+    </div>
+</div>
+<div class="main">
+    <h4>tabela odlotów</h4>
+    <table>
+        <tr>
+            <th>lp.</th>
+            <th>numer rejsu</th>
+            <th>czas</th>
+            <th>kierunek</th>
+            <th>status</th>
+        </tr>
+        @foreach (var row in Model) {
+            <tr>
+                <td>@row.Id</td>
+                <td>@row.NrRejsu</td>
+                <td>@row.Czas</td>
+                <td>@row.Kierunek</td>
+                <td>@row.StatusLotu</td>
+            </tr>
+        }
+    </table>
+    <div>
+        <a asp-action="Create">Dodaj nowy odlot</a>
+    </div>
+</div>
+<div class="stopka">
+    <div class="s1">
+        <a href="/media/zad6_1.png" target="_blank">Pobierz obraz</a>
+    </div>
+    <div class="s2">
+        @if (ViewBag.cookie != null) {
+            <h3>Witamy ponownie</h3>
+        }
+        else {
+            <h3>Witamy pierwszy raz</h3>
+        }
+    </div>
+    <div class="s3">
+        Autor: XXXXXXXXX
+    </div>
+</div>
+
+
 </body>
 </html>

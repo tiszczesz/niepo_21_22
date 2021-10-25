@@ -1,0 +1,65 @@
+﻿@model SamolotyzArk1.Models.Odloty
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odloty samolotów</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="banner">
+        <div class="b1">
+            <h2>Odloty z lotniska</h2>
+        </div>
+        <div class="b2">
+            <img src="~/media/zad6_1.png" alt="logotyp" />
+        </div>
+    </div>
+    <div class="main">
+        <form asp-action="Create" method="post">
+            <div>
+                <label asp-for="NrRejsu"></label>
+                <input asp-for="NrRejsu" />
+            </div>  
+            <div>
+                <label asp-for="Czas"></label>
+                <input type="time"  asp-for="Czas" />
+            </div>  
+            <div>
+                <label asp-for="Kierunek"></label>
+                <input asp-for="Kierunek" />
+            </div>  
+            <div>
+                <label asp-for="Dzien"></label>
+                <input asp-for="Dzien" />
+            </div>  
+            <div>
+                <input type="submit"  value="Zapisz" />
+            </div>  
+        </form>
+    </div>
+    <div class="stopka">
+        <div class="s1">
+            <a href="/media/zad6_1.png" target="_blank">Pobierz obraz</a>
+        </div>
+        <div class="s2">
+            <h3>Brak ciasteczek</h3>
+        </div>
+        <div class="s3">
+            Autor: XXXXXXXXX
+        </div>
+    </div>
+
+
+</body>
+</html>

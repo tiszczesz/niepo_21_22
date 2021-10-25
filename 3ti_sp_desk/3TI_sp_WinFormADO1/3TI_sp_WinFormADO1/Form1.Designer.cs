@@ -30,6 +30,10 @@ namespace _3TI_sp_WinFormADO1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAddNew = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,6 +54,10 @@ namespace _3TI_sp_WinFormADO1
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnAddNew);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnLoad);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -57,6 +65,47 @@ namespace _3TI_sp_WinFormADO1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(207, 570);
             this.panel1.TabIndex = 0;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(13, 236);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(172, 35);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Wyczyść formularz";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(13, 183);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(172, 35);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Usuń książkę";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Enabled = false;
+            this.btnEdit.Location = new System.Drawing.Point(13, 130);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(172, 35);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edytuj książkę";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNew
+            // 
+            this.btnAddNew.Enabled = false;
+            this.btnAddNew.Location = new System.Drawing.Point(13, 77);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(172, 35);
+            this.btnAddNew.TabIndex = 2;
+            this.btnAddNew.Text = "Dodaj książkę";
+            this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // btnClose
             // 
@@ -215,6 +264,10 @@ namespace _3TI_sp_WinFormADO1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listOfBooks;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAddNew;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

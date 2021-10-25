@@ -45,5 +45,22 @@ namespace _3TI_sp_WinFormADO1.DAL
                 Image = sr.IsDBNull(5)?"" : sr.GetString(5)
             };
         }
+
+        public void Insert(Book b) {
+            using (SqlConnection conn = new SqlConnection(ConnString)) {
+                string sqlInsert = "INSERT INTO dbo.Books(Title,Author,Price,Description,Image)"
+                                   + " VALUES(@Title,@Author,@Price,@Description,@Image)";
+                using (SqlCommand command = new SqlCommand(sqlInsert,conn)) {
+                    command.Parameters.AddWithValue("Title", b.Title);
+                    command.Parameters.AddWithValue("Author", b.Author);
+                    command.Parameters.AddWithValue("Price", b.Price);
+                    command.Parameters.AddWithValue("Description", b.Description);
+                    command.Parameters.AddWithValue("Image", b.Image);
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
     }
 }
