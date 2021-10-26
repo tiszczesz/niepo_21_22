@@ -35,7 +35,7 @@ namespace _2ti_classFirst
             Point2D p1 = new Point2D(6,8);
             Point2D p2 = new Point2D(3,4);
             Console.WriteLine($"p1: {p1} p2: {p2}");
-            Point2D.DistanceStat();
+          //  Point2D.DistanceStat();
             Console.WriteLine($"Odleglosc punktu: {p2} od (0,0) wynosi: {p2.Distance()}");
             Console.WriteLine($"Odleglosc punktu: {p2} od {p1} wynosi: {p2.Distance(p1)}");
 

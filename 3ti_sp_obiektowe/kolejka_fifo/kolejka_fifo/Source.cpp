@@ -31,8 +31,8 @@ public:
 		{
 			last = new Item;    
 			last->value = x; 
-			first = new Item; 		
-			first->next = last;  
+			first = last; 		
+			first->next = nullptr;  
 			isEmpty = false;
 		}
 		else
@@ -73,16 +73,7 @@ private:
 int main()
 {
 	{
-		Queue queue; //utworzenie kolejki
-		vector<string> sentence{ "Ala","ma","kota","o","ciemnej","masci" };
-		for (string word : sentence) {
-			queue.push_back(word);
-		}
-		std::cout << "Rozmiar po zaladowniu: " << queue.size() << endl;
 		
-		while(queue.size()>0){
-			std::cout << "===  " << queue.pop_back() << endl;
-		}
 		
 		//wrzucic do kolejki push_back() i wyciagac pojedynczo pop_back()
 
