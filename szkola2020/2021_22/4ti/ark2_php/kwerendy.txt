@@ -1,0 +1,10 @@
+INSERT INTO `filmy`(`id`, `gatunki_id`, `rezyserzy_id`, `tytul`, `rok`, `ocena`) VALUES (null,5,1,'Suburbicon',2017,5)
+
+
+SELECT filmy.tytul,gatunki.nazwa FROM `filmy` INNER JOIN gatunki on filmy.gatunki_id=gatunki.id 
+where 
+filmy.ocena=6
+
+SELECT filmy.tytul,filmy.rok FROM `filmy` WHERE filmy.gatunki_id=3 and filmy.ocena=5
+
+CREATE TABLE aktorzy(id int Primary Key AUTO_INCREMENT, imie varchar(50),nazwisko varchar(50))

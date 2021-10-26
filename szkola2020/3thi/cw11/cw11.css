@@ -1,0 +1,39 @@
+h1{
+    border-bottom: solid 1px grey ;
+    text-align: center;
+}
+.article{
+    margin: 20px 40px;
+    padding: 10px;
+}
+.article-date{margin-right: 40px;color: grey;}
+.article-tag{
+    padding: 6px;border: 1px black solid;background-color: rgb(233, 233, 119);
+}
+.article-other{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.line{
+    margin: 20px;
+}
+.line label{
+    display: inline-block;
+    width: 160px;
+    text-align: right;
+    padding-right: 6px;
+}
+.lab1{
+    vertical-align: top;
+}
+.article-link{
+    display: inline-block;
+    margin: 0px 5px;
+    border: solid 1px black;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: chocolate;
+    width: 50px;
+}

@@ -1,0 +1,32 @@
+.banner
+{
+    background-color: RGB(30, 137, 157);
+    color: white;
+    font-size: 120%;
+    text-align: right;
+    height: 100px;
+}
+
+.left, .right 
+{
+    background-color: RGB(58, 159,178);
+    width: 20%;
+    height: 550px;
+}
+
+.left,.middle,.right{float: left;}
+
+.middle 
+{   
+    background-color: RGB(143, 212, 225);
+    width: 60%;
+    height: 550px;
+}
+
+h3 {
+    color: white;
+}
+
+.left img {
+    float: left;
+}

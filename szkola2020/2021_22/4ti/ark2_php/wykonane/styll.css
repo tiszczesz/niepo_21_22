@@ -1,0 +1,55 @@
+* {
+  font-family: Helvetica;
+}
+.uno {
+  background-color: navy;
+  color: white;
+  height: 700px;
+  width: 25%;
+  float: left;
+}
+
+.dos {
+  background-color: royalblue;
+  height: 100px;
+  width: 75%;
+  text-align: center;
+  float: right;
+}
+
+.tres {
+  background-color: steelblue;
+  height: 300px;
+  width: 75%;
+  float: right;
+}
+
+.cuatro {
+  background-color: royalblue;
+  height: 300px;
+  width: 75%;
+  text-align: center;
+  float: right;
+}
+
+footer {
+  background-color: steelblue;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  letter-spacing: 5px;
+}
+
+form {
+  margin: 30px;
+  line-height: 3;
+}
+
+form:hover {
+  background-color: deepskyblue;
+}

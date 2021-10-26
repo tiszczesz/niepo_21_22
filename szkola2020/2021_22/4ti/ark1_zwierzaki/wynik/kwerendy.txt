@@ -1,0 +1,8 @@
+zapytanie 1:
+SELECT uslugi.nazwa,uslugi.cena FROM uslugi;
+zapytanie 2:
+SELECT zwierzeta.imie,zwierzeta.rodzaj,zwierzeta.nastepna_wizyta,zwierzeta.telefon FROM zwierzeta WHERE zwierzeta.nastepna_wizyta !=0;
+Zapytnie 3 :
+SELECT rodzaj, uslugi.nazwa FROM zwierzeta INNER JOIN  uslugi ON zwierzeta.usluga_id = usluga.id;
+Zapytanie 4:
+SELECT MIN(cena) FROM uslugi;

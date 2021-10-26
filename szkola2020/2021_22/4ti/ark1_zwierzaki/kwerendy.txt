@@ -1,0 +1,2 @@
+zap1:
+SELECT uslugi.nazwa,uslugi.cena FROM uslugi;
