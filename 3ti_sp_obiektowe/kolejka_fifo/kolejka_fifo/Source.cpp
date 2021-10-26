@@ -73,7 +73,17 @@ private:
 int main()
 {
 	{
+		Queue queue; //utworzenie kolejki
+		vector<string> sentence{ "Ala","ma","kota","o","ciemnej","masci" };
+		for (string word : sentence) {
+			queue.push_back(word);
+		}
+		std::cout << "Rozmiar po zaladowniu: " << queue.size() << endl;
 		
+		while(queue.size()>0){
+			std::cout << "===  " << queue.pop_back() <<" Aktualny rozmiar kolejki: "<<queue.size()<< endl;
+		}
+		cout << "Po zdjeciu wszystkich elementow rozmiar kolejki: " << queue.size() << endl;
 		
 		//wrzucic do kolejki push_back() i wyciagac pojedynczo pop_back()
 
