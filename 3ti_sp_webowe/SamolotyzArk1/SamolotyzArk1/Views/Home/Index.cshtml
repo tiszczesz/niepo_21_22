@@ -29,9 +29,12 @@
             <th>kierunek</th>
             <th>status</th>
         </tr>
+        @{ int i = 0;}
         @foreach (var row in Model) {
+            i++;
             <tr>
-                <td>@row.Id</td>
+                
+                <td>@i</td>
                 <td>@row.NrRejsu</td>
                 <td>@row.Czas</td>
                 <td>@row.Kierunek</td>

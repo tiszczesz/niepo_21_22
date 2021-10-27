@@ -21,6 +21,18 @@ namespace FileReadAndWrite_2sp_desc
             }
         }
 
+        public List<User> FromFile() {
+            List<User> list = new List<User>();
+            using (StreamReader sr = new StreamReader(_fileName)) {
+                string line = "";
+                while ((line=sr.ReadLine())!=null) {
+                    if(line.Trim().Length==0 ) continue;
+                    list.Add(User.FromLine(line));
+                }
+            }
+
+            return list;
+        }
         public void ToJSONFile(List<User> users,string fileName) {
             using (StreamWriter sw = new StreamWriter(fileName))
             {

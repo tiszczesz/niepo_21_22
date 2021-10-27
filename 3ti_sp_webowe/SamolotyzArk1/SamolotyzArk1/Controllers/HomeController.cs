@@ -51,7 +51,7 @@ namespace SamolotyzArk1.Controllers
         public IActionResult Create(Odloty odloty) {
             if (ModelState.IsValid) {
                 //zapisywanie do bazy
-                db.Odloties.
+                db.Odloties.Add(odloty);
                 db.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }

@@ -8,7 +8,9 @@ namespace SamolotyzArk1.Models
 {
     public  class Odloty
     {
+        [Key]
         public int Id { get; set; }
+        
         public int SamolotyId { get; set; }
         public string NrRejsu { get; set; }
         public string Kierunek { get; set; }

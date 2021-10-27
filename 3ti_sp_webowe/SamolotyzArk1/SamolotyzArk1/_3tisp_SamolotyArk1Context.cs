@@ -35,7 +35,7 @@ namespace SamolotyzArk1
 
             modelBuilder.Entity<Odloty>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey("Id");
 
                 entity.ToTable("odloty");
 

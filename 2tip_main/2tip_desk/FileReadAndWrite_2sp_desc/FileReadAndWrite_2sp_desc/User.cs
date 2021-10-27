@@ -22,7 +22,7 @@ namespace FileReadAndWrite_2sp_desc
         }
 
         public string ToLine() {
-            return $"{Id};{Login};{FirstName};{LastName}:{Age}";
+            return $"{Id};{Login};{FirstName};{LastName};{Age}";
         }
 
         public static User FromLine(string line) {

@@ -12,12 +12,14 @@ namespace FileReadAndWrite_2sp_desc
                 new User {Id = 3, Login = "rysio", FirstName = "Ryszard", LastName = "Hajduk", Age = 21},
                 new User {Id = 4, Login = "monia", FirstName = "Monika", LastName = "Wałecka", Age = 29},
                 new User {Id = 5, Login = "tymek", FirstName = "Tymoteusz", LastName = "Wałecki", Age = 33},
+                new User {Id = 6, Login = "dymek", FirstName = "Dominik", LastName = "Rygowski", Age = 14},
             };
             Repository repo = new Repository();
-           // repo.ToFile(users);
-           // repo.ToJSONFile(users,"data_json.txt");
-           //var gg = repo.FromJSONFile("dane.txt");
-
+            //repo.ToFile(users);
+            var list = repo.FromFile();
+            // repo.ToJSONFile(users,"data_json.txt");
+            //var gg = repo.FromJSONFile("dane.txt");
+            //wyswietlanie w konsoli 
         }
     }
 }

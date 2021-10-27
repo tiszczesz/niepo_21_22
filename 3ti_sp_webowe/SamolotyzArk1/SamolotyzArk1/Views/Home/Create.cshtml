@@ -28,24 +28,32 @@
     <div class="main">
         <form asp-action="Create" method="post">
             <div>
+                <label asp-for="SamolotyId"></label>
+                <input asp-for="SamolotyId" />
+            </div>
+            <div>
                 <label asp-for="NrRejsu"></label>
                 <input asp-for="NrRejsu" />
-            </div>  
+            </div>
             <div>
                 <label asp-for="Czas"></label>
-                <input type="time"  asp-for="Czas" />
-            </div>  
+                <input type="time" asp-for="Czas" />
+            </div>
             <div>
                 <label asp-for="Kierunek"></label>
                 <input asp-for="Kierunek" />
-            </div>  
+            </div>
             <div>
                 <label asp-for="Dzien"></label>
                 <input asp-for="Dzien" />
-            </div>  
+            </div>
             <div>
-                <input type="submit"  value="Zapisz" />
-            </div>  
+                <label asp-for="StatusLotu"></label>
+                <input asp-for="StatusLotu" />
+            </div>
+            <div>
+                <input type="submit" value="Zapisz" />
+            </div>
         </form>
     </div>
     <div class="stopka">
