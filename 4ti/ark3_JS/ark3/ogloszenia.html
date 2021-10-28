@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl5.css">
+    <title>Portal ogłoszeniowy</title>
+</head>
+<body>
+    
+    <div class="banner">
+        <h1>Portał ogłoszeniowy</h1>
+    </div>
+
+
+    <div class="first">
+        <img src="logo-male.png" alt="">
+    </div>
+
+
+    <div class="second">
+        <h3>Adres</h3>
+        <p>ul. Morska 45 Gdynia</p>
+    </div>
+
+
+    <div class="third">
+        <h3>Telefon</h3>
+        <p>601601601</p>
+    </div>
+
+    <div class="fourth">
+        <h3>e-mail</h3>
+        <p>ogloszenia@poczta.pl</p>
+    </div>
+
+    <div class="left">
+        <h2>Ceny ogłoszeń</h2>
+        <table>
+            <tr>
+                <td>Liczba ogłoszeń</td>
+                <td>Cena ogłoszenia</td>
+                <td>Bonus</td>
+            </tr>
+            <tr>
+                <td>1 - 50</td>
+                <td>2 PLN</td>
+                <td rowspan="2">Subskrypcja newslettera to upust 0,20 PLN na ogłoszenie</td>
+            </tr>
+            <tr>
+                <td>51 i więcej</td>
+                <td>1 PLN</td>
+            </tr>
+        </table>
+    </div>
+    <div class="middle">
+        <h2>Witamy na stronie naszego poratlu!</h2>
+        <img src="logo-duze.png" alt="ogłoszenia">
+    </div>
+    <div class="right">
+        <h2>Ile kosztuje ogłoszenie?</h2>Podaj liczbe ogłoszeń:
+        <input type="number" id="liczba"><br>Policz upust na newsletter
+        <input type="checkbox" id="sprawdz">
+        <input type="button" id="licz" value="Oblicz" class="przycisk" onclick="ogloszenia()">
+    </div>
+
+    <footer>
+        <p>Portal ogłoszeniowy opracował: 00000000000</p>
+    </footer>
+
+    <script>
+        function ogloszenia(){
+            var dana = parseInt(document.querySelector("#liczba").value);
+            var check = document.querySelector("#sprawdz").checked;
+            console.log(dana,check);
+        }
+    </script>
+</body>
+</html>

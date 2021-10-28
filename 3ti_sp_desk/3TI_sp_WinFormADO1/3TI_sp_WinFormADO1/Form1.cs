@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -33,6 +34,7 @@ namespace _3TI_sp_WinFormADO1 {
         private void listOfBooks_DoubleClick(object sender, EventArgs e) {
             if (listOfBooks.DataSource == null) {
                 MessageBox.Show("Brak załadowanych danych");
+                Debug.WriteLine("------- fffffff-------");
                 return;
             }
 
@@ -70,11 +72,23 @@ namespace _3TI_sp_WinFormADO1 {
         }
 
         private void btnAddNew_Click(object sender, EventArgs e) {
-            //bez walidacji!!!
+            if (tbTitle.Text.Trim() == "" ||
+                tbAuthor.Text.Trim() == "" ||
+                tbPrice.Text.Trim() == "") {
+                MessageBox.Show("Dane niepoprawne!!!");
+                return;
+            }
             var b = new Book();
             b.Title = tbTitle.Text;
             b.Author = tbAuthor.Text;
-            b.Price = Convert.ToDecimal(tbPrice.Text);
+            try {
+                b.Price = Convert.ToDecimal(tbPrice.Text);
+            }
+            catch (FormatException ex) {
+                MessageBox.Show("błędna cena!!");
+                return;
+            }
+            
             b.Description = tbDescription.Text;
             b.Image = "";
             repo.Insert(b);

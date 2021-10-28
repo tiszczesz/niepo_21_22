@@ -21,4 +21,11 @@
             <li>@Model.imiona[i]</li>
         }
     </ol>
+    <hr>
+
+    @for(int i=1;i<6;i++){
+        <hr>
+        @Html.Raw("<h"+i+">Nagłówek"+i+"</h"+i+">")
+        
+    }
 
