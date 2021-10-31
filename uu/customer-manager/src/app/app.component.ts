@@ -25,7 +25,7 @@ import { Customer } from "./model";
               <button
                 (click)="isActive = !isActive"
                 type="button"
-                class="btn btn-primary m-1"
+                class="btn btn-primary"
               >
                 Przełącz podkreślenie
               </button>
@@ -33,7 +33,7 @@ import { Customer } from "./model";
               <button
                 (click)="changeColor()"
                 type="button"
-                class="btn btn-primary m-1"
+                class="btn btn-primary"
               >
                 Przełącz kolor
               </button> 
