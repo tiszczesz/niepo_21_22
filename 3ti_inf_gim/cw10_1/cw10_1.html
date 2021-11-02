@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cw10_1.css">
+    <title>Tabliczka mnożenia</title>
+  </head>
+  <body>
+    <div>
+      <div class="line">
+          <label for="cols">Podaj ilość kolumn: </label>
+        <input type="number" id="cols" min="1" max="50" value="10"/>
+        <span class="error"></span>
+      </div>
+      <div class="line">
+          <label for="rows">Podaj ilość wierszy: </label>
+        <input type="number" id="rows" min="1" max="50" value="10"/>
+        <span class="error"></span>
+      </div>
+      <div class="line">
+        <input type="button" id="gener" value="Generuj Tabliczkę mnożenia"/>
+      </div>
+    </div>
+    <div id="result"></div>
+    <script src="cw10_1.js"></script>
+  </body>
+</html>

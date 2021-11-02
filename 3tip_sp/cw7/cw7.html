@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 7 - tablice</title>
+</head>
+<body>
+    <h1>Ćwiczenie 7 - tablice</h1>
+    <h3>Tworzenie tablic w JS</h3>
+    <script>
+        const t1 = new Array(2,34,5,6,"asasa",true,34);
+        console.log("rozmiar tablicy: "+ t1.length);
+        document.write(t1+"<br>");
+        const t2 = [12,45,"ala ma kota",34]; //tworzenie tablicy
+        document.write(t2+"<br>");
+        document.write(t2[2]+"<br>");
+        t2[2] = "Już go nie ma";
+        document.write(t2+"<br>");
+        //t2=t1;
+    </script>
+    <h3>Operacje na elementach tablicy</h3>
+    <script>
+        t2.push("nowy element na końcu tablicy");//dodawanie na koniec
+        document.write(t2+"<br>");
+        let zmienna = t2.pop(); //zabieranie z końca
+        document.write(t2+"<br>");
+        console.log(zmienna);
+        t2.shift();//zabranie z początku
+        document.write(t2+"<br>");
+        t2.unshift("coś nowego na początek tablicy"); //dodanie na początek
+        document.write(t2+"<br>");
+    </script>
+</body>
+</html>

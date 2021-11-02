@@ -1,0 +1,22 @@
+.line{
+    margin: 20px 0;
+}
+label{
+    display: inline-block;
+    width: 180px;
+    text-align: right;
+}
+input{
+    width: 180px;
+}
+input[type=button]{
+    margin-left: 185px;
+}
+table{
+    border-collapse: collapse;
+    margin-left: 120px;
+}
+td{
+    padding: 5px;
+    border: solid pink 1px;
+}

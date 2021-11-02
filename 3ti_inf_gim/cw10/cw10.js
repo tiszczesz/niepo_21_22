@@ -1,10 +1,10 @@
 function Show(content,count){
-    let html = "<ul>";
+    let html = "<ol>\n";
     for(let i=0 ; i < count ; i++){
-        html += `<li>${content}</li>`
+        html += `\t<li>${content}</li>\n`
     }
-    html += "</ul>";
-    console.log(html);
+    html += "</ol>\n";
+   // console.log(html);
     return html;
 }
 
@@ -28,4 +28,6 @@ button.onclick = function(){
     //console.log(content,count);
     
     document.querySelector("#result").innerHTML = isValidate ? Show(content,count):"";
+    console.log(isValidate ? Show(content,count):"");
+
 };
