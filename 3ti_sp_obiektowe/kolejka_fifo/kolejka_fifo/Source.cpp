@@ -46,12 +46,13 @@ public:
 	}
 	string pop_back()
 	{
-		if (lastIndex - firstIndex == 0)return ""; //gdy nie ma nic w kolejce zwracamy 0
+		if (lastIndex - firstIndex == 0) return ""; //gdy nie ma nic w kolejce zwracamy 0
 		el = first;
 		first = first->next;
 		string result = el->value;
 		delete el;		
 		++firstIndex;
+		isEmpty = firstIndex != lastIndex;
 		return result;
 	}
 	string GetFirst() 
@@ -61,6 +62,7 @@ public:
 	}
 	string GetLast() 
 	{
+		if (last == nullptr) return "";
 		return last->value;
 	}
 private:

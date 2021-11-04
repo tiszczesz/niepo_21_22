@@ -53,6 +53,16 @@
                 <td>1 PLN</td>
             </tr>
         </table>
+
+        <div>
+            <label for="ilosc">Liczba ogłoszeń:</label>
+            <input type="text" name="ilosc" id="ilosc">
+        </div>
+        <div>
+            <label for="cena">Cena: </label>
+            <input type="text" name="cena" id="cena">
+        </div>
+        <div><input type="button" value="Dodaj" id="addNewRow"></div>
     </div>
     <div class="middle">
         <h2>Witamy na stronie naszego poratlu!</h2>
@@ -70,6 +80,22 @@
     </footer>
 
     <script>
+        document.querySelector("#addNewRow").addEventListener("click",function(){
+            console.log("dd");
+            const ilosc = document.querySelector("#ilosc").value;
+            const cena = document.querySelector("#cena").value;
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            td1.innerText = ilosc;
+            td2.innerText = cena;
+            td3.innerText = "-------------";
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            document.querySelector("div.left table").appendChild(tr);
+        });
         function ogloszenia(){
             var dana = parseInt(document.querySelector("#liczba").value);
             var check = document.querySelector("#sprawdz").checked;

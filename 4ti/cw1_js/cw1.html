@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="cw1.css">
+    <title>Klasy css i js</title>
+</head>
+<body>
+    <p class="default">1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, optio assumenda. Ab distinctio nobis, aliquam praesentium et ut voluptates sed accusamus fuga iure adipisci perferendis cumque eius recusandae laborum quas?</p>
+    <p class="default">2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, optio assumenda. Ab distinctio nobis, aliquam praesentium et ut voluptates sed accusamus fuga iure adipisci perferendis cumque eius recusandae laborum quas?</p>
+    <p class="default">3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, optio assumenda. Ab distinctio nobis, aliquam praesentium et ut voluptates sed accusamus fuga iure adipisci perferendis cumque eius recusandae laborum quas?</p>
+    <p class="default">4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, optio assumenda. Ab distinctio nobis, aliquam praesentium et ut voluptates sed accusamus fuga iure adipisci perferendis cumque eius recusandae laborum quas?</p>
+    <p>5 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, optio assumenda. Ab distinctio nobis, aliquam praesentium et ut voluptates sed accusamus fuga iure adipisci perferendis cumque eius recusandae laborum quas?</p>
+<script>
+    window.onload = function(){
+        const pars = document.querySelectorAll("p");
+        console.log(pars);
+        for(let i=0; i<pars.length;i++){
+            pars[i].onclick = function(e){
+                if(e.target.classList.contains("mark")){
+                    e.target.classList.remove("mark");
+                }else{
+                    e.target.classList.add("mark");
+                }
+            };
+        }
+    }    
+</script>
+</body>
+</html>

@@ -48,6 +48,7 @@ namespace FileReadAndWrite_2sp_desc
             using (StreamReader sr = new StreamReader(filename)) {
                 string line = "";
                 while ((line = sr.ReadLine()) != null) {
+                    if(line.Trim().Length==0) continue;
                     list.Add(User.FromJSON(line));
                 }
             }

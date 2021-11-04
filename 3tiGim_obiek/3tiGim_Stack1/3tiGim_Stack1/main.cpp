@@ -31,9 +31,17 @@ void Cw2() {
 	for (string imie : imiona) {
 		s1.Push(new Item(imie,nullptr));
 	}
+	
 	cout << s1;
+	Item* it = nullptr;
+	while(s1.GetTop()!=nullptr) {
+		it = s1.Pop();
+		reversImiona.push_back(it->getValue());
+		delete it;
+	}
+	cout << " ------------------ wektor imion revers ----------------\n";
 	for (string imie : reversImiona) {
-		
+		cout << imie << endl;
 	}
 }
 void Cw1() {

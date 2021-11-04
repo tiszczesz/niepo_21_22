@@ -15,8 +15,12 @@ namespace FileReadAndWrite_2sp_desc
                 new User {Id = 6, Login = "dymek", FirstName = "Dominik", LastName = "Rygowski", Age = 14},
             };
             Repository repo = new Repository();
-            //repo.ToFile(users);
+           // repo.ToFile(users);
+           repo.ToJSONFile(users,"usersJSON.txt");
             var list = repo.FromFile();
+            foreach (User u in list) {
+                Console.WriteLine(u);
+            }
             // repo.ToJSONFile(users,"data_json.txt");
             //var gg = repo.FromJSONFile("dane.txt");
             //wyswietlanie w konsoli 
