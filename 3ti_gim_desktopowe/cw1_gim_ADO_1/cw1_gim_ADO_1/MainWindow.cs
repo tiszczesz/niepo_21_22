@@ -25,9 +25,9 @@ namespace cw1_gim_ADO_1
 
         private void btnLoad_Click(object sender, EventArgs e) {
             Repository repo = new Repository();
-            List<Animal> animals = repo.getAllAnimals();
+            List<Animal> animal = repo.getAllAnimalsSpecies();
             listAnimals.DisplayMember = "Name";
-            listAnimals.DataSource = animals;
+            listAnimals.DataSource = animal;
         }
 
         private void listAnimals_MouseDoubleClick(object sender, MouseEventArgs e) {

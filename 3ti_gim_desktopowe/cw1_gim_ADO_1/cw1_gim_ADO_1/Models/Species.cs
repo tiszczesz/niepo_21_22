@@ -11,5 +11,7 @@ namespace cw1_gim_ADO_1.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+
+        public List<Animal> Animals { get; set; }
     }
 }

@@ -69,10 +69,11 @@ namespace cw1_gim_ADO_1
             this.listAnimals.Dock = System.Windows.Forms.DockStyle.Left;
             this.listAnimals.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listAnimals.FormattingEnabled = true;
+            this.listAnimals.HorizontalScrollbar = true;
             this.listAnimals.ItemHeight = 25;
             this.listAnimals.Location = new System.Drawing.Point(200, 0);
             this.listAnimals.Name = "listAnimals";
-            this.listAnimals.Size = new System.Drawing.Size(254, 371);
+            this.listAnimals.Size = new System.Drawing.Size(292, 371);
             this.listAnimals.TabIndex = 1;
             this.listAnimals.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listAnimals_MouseDoubleClick);
             // 
