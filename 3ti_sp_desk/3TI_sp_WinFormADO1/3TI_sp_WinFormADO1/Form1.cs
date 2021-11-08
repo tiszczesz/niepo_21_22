@@ -95,5 +95,17 @@ namespace _3TI_sp_WinFormADO1 {
             ClearForm();
             btnLoad_Click(this, e);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var book = (Book)listOfBooks.SelectedItem;
+            if (book == null) {
+                MessageBox.Show("Nie można usunąć książki");
+                return;
+            }
+
+            repo.Delete(book);
+            btnLoad_Click(this,e);
+        }
     }
 }

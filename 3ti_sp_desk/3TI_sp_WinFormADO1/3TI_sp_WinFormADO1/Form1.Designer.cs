@@ -85,6 +85,7 @@ namespace _3TI_sp_WinFormADO1
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Usuń książkę";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 

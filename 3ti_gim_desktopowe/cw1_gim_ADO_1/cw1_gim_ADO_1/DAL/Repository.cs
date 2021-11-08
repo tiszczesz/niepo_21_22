@@ -22,7 +22,8 @@ namespace cw1_gim_ADO_1.DAL
         public List<Animal> getAllAnimals() {
             List<Animal> animals = new List<Animal>();
             using (SqlConnection connection = new SqlConnection(connString)) {
-                string sqlText = "SELECT Id,Name,Description,SpeciesId,Image FROM Animals";
+                string sqlText = "SELECT Animals.Id,Animals.Name,Animals.Description,SpeciesId,Image, Species.Name FROM Animals "
+                                 +" INNER JOIN Species ON SpeciesId=Species.Id";
                 using (SqlCommand sqlCommand = new SqlCommand(sqlText,connection)) {
                     connection.Open();
                     SqlDataReader sr = sqlCommand.ExecuteReader();

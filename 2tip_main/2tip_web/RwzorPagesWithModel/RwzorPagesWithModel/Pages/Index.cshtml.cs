@@ -25,5 +25,8 @@ namespace RwzorPagesWithModel.Pages
         public void OnGet() {
             Films = Repository.GetFilms();
         }
+        public void OnPost(){
+            var dd = Request.Form["a"];
+        }
     }
 }

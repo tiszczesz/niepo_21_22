@@ -62,5 +62,19 @@ namespace _3TI_sp_WinFormADO1.DAL
                 }
             }
         }
+
+        public void Delete(Book b) {
+            using (SqlConnection conn = new SqlConnection(ConnString))
+            {
+                string sqlInsert = "DELETE FROM dbo.Books WHERE Id=@bookId ";
+                using (SqlCommand command = new SqlCommand(sqlInsert, conn))
+                {
+                    command.Parameters.AddWithValue("bookId", b.Id);
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
     }
 }

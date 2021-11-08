@@ -24,9 +24,22 @@
             <td>@row.Title</td>
             <td>@row.Author</td>
             <td>@row.Price.ToString("c")</td>
-            <td>@row.DateOfRelease.Date</td>
+            <td>@row.DateOfRelease.ToString("dd-MM-yyyy")</td>
             </tr>
         }
     </table>
+</div>
+<div>
+    <form asp-page="Index" method="post">
+        <div class="form-group">
+            <label for="a">a</label>
+            <input type="number" class="form-control" name="a">
+        </div>
+        <div class="form-group">
+            <label for="b">b</label>
+            <input type="number" class="form-control" name="b">
+        </div>
+        <div><input type="submit" value="Wykonaj"></div>
+    </form>
 </div>
 

@@ -1,0 +1,11 @@
+﻿@page
+@model RwzorPagesWithModel.Pages.FortuneModel
+@{
+}
+<div class="wow">
+    @if (ViewData["fortune"] != null)
+    {
+        <div>Szczęśliwy numerek:@ViewData["fortune"]</div>
+    }
+
+</div>
