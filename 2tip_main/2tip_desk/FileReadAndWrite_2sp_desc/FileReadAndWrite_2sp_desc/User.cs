@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace FileReadAndWrite_2sp_desc
 {
-    public class User
-    {
+    public class User {
+        public static int KEY = 0;
         public int Id { get; set; }
         public string Login { get; set; }
         public string FirstName { get; set; }
@@ -19,6 +19,11 @@ namespace FileReadAndWrite_2sp_desc
             sb.Append($"Uzytkownik {FirstName} {LastName}"+Environment.NewLine);
             sb.Append($"Login: {Login} wiek: {Age}");
             return sb.ToString();
+        }
+
+        public User() {
+            KEY++;
+            Id = KEY;
         }
 
         public string ToLine() {

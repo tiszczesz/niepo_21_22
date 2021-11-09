@@ -55,5 +55,11 @@ namespace FileReadAndWrite_2sp_desc
 
             return list;
         }
+
+        public int GetMaxIdFromFile(string fileName) {
+            if (!File.Exists(fileName)) return 0;
+            var dane = FromJSONFile(fileName);
+            return dane.Max(d => d.Id);
+        }
     }
 }

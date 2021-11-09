@@ -39,6 +39,7 @@ namespace cw1_gim_ADO_1
             this.tbDescription = new System.Windows.Forms.TextBox();
             this.tbSpecies = new System.Windows.Forms.TextBox();
             this.picAnimal = new System.Windows.Forms.PictureBox();
+            this.btnAddAnimal = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnimal)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@ namespace cw1_gim_ADO_1
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMain.Controls.Add(this.btnAddAnimal);
             this.panelMain.Controls.Add(this.btnLoad);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
@@ -73,7 +75,7 @@ namespace cw1_gim_ADO_1
             this.listAnimals.ItemHeight = 25;
             this.listAnimals.Location = new System.Drawing.Point(200, 0);
             this.listAnimals.Name = "listAnimals";
-            this.listAnimals.Size = new System.Drawing.Size(292, 371);
+            this.listAnimals.Size = new System.Drawing.Size(283, 371);
             this.listAnimals.TabIndex = 1;
             this.listAnimals.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listAnimals_MouseDoubleClick);
             // 
@@ -134,6 +136,16 @@ namespace cw1_gim_ADO_1
             this.picAnimal.TabIndex = 8;
             this.picAnimal.TabStop = false;
             // 
+            // btnAddAnimal
+            // 
+            this.btnAddAnimal.Location = new System.Drawing.Point(4, 66);
+            this.btnAddAnimal.Name = "btnAddAnimal";
+            this.btnAddAnimal.Size = new System.Drawing.Size(191, 48);
+            this.btnAddAnimal.TabIndex = 1;
+            this.btnAddAnimal.Text = "Nowe Zwierzę";
+            this.btnAddAnimal.UseVisualStyleBackColor = true;
+            this.btnAddAnimal.Click += new System.EventHandler(this.btnAddAnimal_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -169,6 +181,7 @@ namespace cw1_gim_ADO_1
         private System.Windows.Forms.TextBox tbDescription;
         private System.Windows.Forms.TextBox tbSpecies;
         private System.Windows.Forms.PictureBox picAnimal;
+        private System.Windows.Forms.Button btnAddAnimal;
     }
 }
 

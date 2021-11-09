@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice JS</title>
+</head>
+<body>
+    <h1>Tworzenie tablicy const tab = [1,3,4,5] lub const tab2 = new Arrray(3,5,6)</h1>
+    <script>
+        const tab = [1,7,true,"ala",[12,5],3];
+        console.log(tab);
+        document.write(tab+"<br>");
+        const tab2 = new Array(3,6,8,"sdssds",true,new Array(12,5));
+        console.log(tab2);
+        document.write(tab2+"<br>");
+    </script>
+    <h1>Dostęp do elementów tablicy</h1>
+    <script>
+        console.log(`tab[2] = ${tab[2]}`);
+        console.log(`rozmiar tablicy tab2: ${tab2.length}`);
+        console.log(`ostatni element tab: ${tab[tab.length-1]}`);
+        console.log(`ostatni element tab: ${tab[-1]}`);
+        tab2[5] = "zmiana warości";
+        //tab2 = [12,56];
+    </script>
+     <h1>Dodawanie na końcu i początku tablicy</h1>
+     <script>
+         tab.push("nowy na końcu"); //dodanie na koniec
+         tab.unshift("nowe ale na początek");//dodanie na początek
+         console.log(tab);
+     </script>
+     <h1>Usuwanie z końca i początku tablicy</h1>
+     <script>
+         tab.pop(); //zabranie z końca tablicy
+         tab.shift();//zabranie z początku tablicy
+         console.log(tab);
+         for (const element of tab) {
+             console.log(element+ " w petki of");
+         }
+         const hs = document.querySelectorAll("h1");
+         console.log(hs);
+         hs[hs.length-1].style.color = "red";
+         hs[0].onclick = function(){
+            alert("WOW!!!");
+         };
+     </script>
+</body>
+</html>

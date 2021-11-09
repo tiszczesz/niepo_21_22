@@ -15,16 +15,16 @@ using cw1_gim_ADO_1.Models;
 
 namespace cw1_gim_ADO_1
 {
-    public partial class MainWindow : Form
-    {
+    public partial class MainWindow : Form {
+        public Repository repo;
         public MainWindow() {
-            
+            repo = new Repository();
             InitializeComponent();
             
         }
 
         private void btnLoad_Click(object sender, EventArgs e) {
-            Repository repo = new Repository();
+           
             List<Animal> animal = repo.getAllAnimalsSpecies();
             listAnimals.DisplayMember = "Name";
             listAnimals.DataSource = animal;
@@ -45,7 +45,12 @@ namespace cw1_gim_ADO_1
                     Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
                     "images/"+animal.Image));
                 picAnimal.Image = image;
+                tbSpecies.Text = animal.Species.Name;
             }
+        }
+
+        private void btnAddAnimal_Click(object sender, EventArgs e) {
+            new AddNew(this).ShowDialog();
         }
     }
 }
