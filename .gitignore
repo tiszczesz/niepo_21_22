@@ -11,7 +11,7 @@
 *.lo
 *.o
 *.obj
-
+bootstrap-5.1.3-dist
 # Precompiled Headers
 *.gch
 *.pch
