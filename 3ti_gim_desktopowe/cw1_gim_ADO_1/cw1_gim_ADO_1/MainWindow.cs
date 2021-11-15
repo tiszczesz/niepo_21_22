@@ -23,8 +23,13 @@ namespace cw1_gim_ADO_1
             
         }
 
-        private void btnLoad_Click(object sender, EventArgs e) {
-           
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            UploadAnimals();
+        }
+
+        public void UploadAnimals()
+        {
             List<Animal> animal = repo.getAllAnimalsSpecies();
             listAnimals.DisplayMember = "Name";
             listAnimals.DataSource = animal;
@@ -41,9 +46,12 @@ namespace cw1_gim_ADO_1
             if (animal != null) {
                 tbName.Text = animal.Name;
                 tbDescription.Text = animal.Description;
-                Image image = Image.FromFile(Path.Combine(
+                Image image = animal.Image !="" ? Image.FromFile(Path.Combine(
                     Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
-                    "images/"+animal.Image));
+                    "images/"+animal.Image)):
+                    Image.FromFile(Path.Combine(
+                        Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+                        "images/no_image.jpg"));
                 picAnimal.Image = image;
                 tbSpecies.Text = animal.Species.Name;
             }

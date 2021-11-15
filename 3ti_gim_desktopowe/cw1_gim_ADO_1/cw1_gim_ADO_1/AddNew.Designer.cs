@@ -32,9 +32,9 @@ namespace cw1_gim_ADO_1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbDescription = new System.Windows.Forms.TextBox();
+            this.cbSpecies = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,28 +65,28 @@ namespace cw1_gim_ADO_1
             this.label3.TabIndex = 2;
             this.label3.Text = "Gatunek";
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 3;
+            this.tbName.Location = new System.Drawing.Point(135, 21);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(121, 23);
+            this.tbName.TabIndex = 3;
             // 
-            // textBox2
+            // tbDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(352, 21);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 149);
-            this.textBox2.TabIndex = 4;
+            this.tbDescription.Location = new System.Drawing.Point(352, 21);
+            this.tbDescription.Multiline = true;
+            this.tbDescription.Name = "tbDescription";
+            this.tbDescription.Size = new System.Drawing.Size(279, 149);
+            this.tbDescription.TabIndex = 4;
             // 
-            // comboBox1
+            // cbSpecies
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 5;
+            this.cbSpecies.FormattingEnabled = true;
+            this.cbSpecies.Location = new System.Drawing.Point(135, 64);
+            this.cbSpecies.Name = "cbSpecies";
+            this.cbSpecies.Size = new System.Drawing.Size(121, 23);
+            this.cbSpecies.TabIndex = 5;
             // 
             // btnAdd
             // 
@@ -96,6 +96,7 @@ namespace cw1_gim_ADO_1
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Zapisz";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AddNew
             // 
@@ -103,14 +104,15 @@ namespace cw1_gim_ADO_1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 234);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbSpecies);
+            this.Controls.Add(this.tbDescription);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddNew";
             this.Text = "AddNew";
+            this.Load += new System.EventHandler(this.AddNew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,9 +123,9 @@ namespace cw1_gim_ADO_1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbDescription;
+        private System.Windows.Forms.ComboBox cbSpecies;
         private System.Windows.Forms.Button btnAdd;
     }
 }
