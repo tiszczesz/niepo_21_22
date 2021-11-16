@@ -39,7 +39,7 @@
 
             </section>
             <section class="content col-9">
-                dfgf
+              
                 <?php
                      
                         $workers = $repo->getWorkers($id);

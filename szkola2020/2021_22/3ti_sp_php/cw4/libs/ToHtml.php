@@ -12,7 +12,7 @@ class ToHtml{
         }
         return $html ."</div>";
     }
-    public static function WorkersToTable(array $dane)
+    public static function WorkersToTable(array $dane):string
     {
         $html =<<<TEXT
          <table class="table table-striped">
@@ -31,5 +31,13 @@ TEXT;
                 ."<td>{$w->Salary}</td><td>{$w->Section}</td></tr>";
      }
         return $html ."</table>";
+    }
+
+    public static function SectionsToSelect(array $sections):string {
+        $html = "";
+        foreach($sections as $section){
+            $html .= "<option value=\"{$section->id}\">{$section->name}</option>";
+        }
+        return $html;
     }
 }
