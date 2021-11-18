@@ -1,0 +1,15 @@
+h1{text-align: center; border-bottom: black solid 2px; margin-bottom: 20px;}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 30px;
+}
+.line{margin: 20px;}
+input{width: 120px;}
+label{display: inline-block; text-align: right;width: 140px;}
+input[type=button]{margin-left: 140px;padding: 5px;}
+.error{color: red;}
+.mark{background-color: yellowgreen;}
+table{border-collapse: collapse;}
+td{padding: 3px; border: solid 1px black;}

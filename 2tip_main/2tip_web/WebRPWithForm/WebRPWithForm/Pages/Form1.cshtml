@@ -1,0 +1,26 @@
+﻿@page
+@model WebRPWithForm.Pages.Form1Model
+@{
+}
+<form method="post">
+    <div class="form-group">
+        <label>Podaj imię: </label>
+        <input name="firstname" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Podaj Nazwisko: </label>
+        <input name="lastname" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Podaj datę urodzenia: </label>
+        <input name="birth" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Zapisz"/>
+    </div>
+</form>
+
+<div>
+    @ViewData["firstname"]
+    <span class="alert">@ViewData["colFirstName"] </span>
+</div>
