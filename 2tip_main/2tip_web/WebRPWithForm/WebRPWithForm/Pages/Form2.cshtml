@@ -19,3 +19,12 @@
         <input type="submit" class="btn btn-primary" value="Zapisz" />
     </div>
 </form>
+
+@if ((bool) ViewData["isPost"] == true) {
+    <div>
+        Dane użytkownika:
+        <p>@Model.MyUser.Firstame</p>
+        <p>@Model.MyUser.LastName</p>
+        <p>@Model.MyUser.Birtday.Date.ToShortDateString()</p>
+    </div>
+}

@@ -9,6 +9,8 @@ namespace WebRPWithForm.Models
     {
         public string Firstame { get; set; }
         public string LastName { get; set; }
+        
+        
         public DateTime Birtday { get; set; }
     }
 }

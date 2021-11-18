@@ -12,11 +12,12 @@ namespace WebRPWithForm.Pages
     {
         [BindProperty]
         public User MyUser { get; set; }
-        public void OnGet()
-        {
+        public void OnGet() {
+            ViewData["isPost"] = false;
         }
 
         public void OnPost() {
+            ViewData["isPost"] = true;
             var resut = MyUser;
         }
     }
