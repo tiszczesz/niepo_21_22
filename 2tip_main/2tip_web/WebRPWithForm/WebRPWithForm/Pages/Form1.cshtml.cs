@@ -11,6 +11,7 @@ namespace WebRPWithForm.Pages
     public class Form1Model : PageModel
     {
         public void OnGet() {
+            ViewData["isPost"] = false;
             int a = 12;
         }
 
@@ -22,7 +23,7 @@ namespace WebRPWithForm.Pages
             ViewData["firstname"] = firstname;
             ViewData["lastname"] = lastname;
             ViewData["birth"] = date;
-            ViewData["colFirstName"] = collection["firstname"];
+            ViewData["colLastname"] = collection["lastname"];
         }
     }
 }

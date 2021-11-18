@@ -1,5 +1,5 @@
 ﻿@page
-@model WebRPWithForm.Pages.Form1Model
+@model WebRPWithForm.Pages.Form2Model
 @{
 }
 <form method="post">
@@ -16,16 +16,6 @@
         <input name="birth" type="date" class="form-control" />
     </div>
     <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Zapisz"/>
+        <input type="submit" class="btn btn-primary" value="Zapisz" />
     </div>
 </form>
-
-@if((bool)ViewData["isPost"]) {
-    <div>
-        <h2>Informacje o użytkowniku</h2>
-        @ViewData["firstname"] @ViewData["lastname"] 
-        urodzony/a: @ViewData["birth"]
-    </div>
-    <div>@ViewData["colLastname"]</div>
-}
-
