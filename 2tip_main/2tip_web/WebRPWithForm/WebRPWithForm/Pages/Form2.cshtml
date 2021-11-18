@@ -4,16 +4,16 @@
 }
 <form method="post">
     <div class="form-group">
-        <label>Podaj imię: </label>
-        <input name="firstname" type="text" class="form-control" />
+        <label asp-for="MyUser.Firstame"></label>
+        <input asp-for="MyUser.Firstame" class="form-control" />
     </div>
     <div class="form-group">
-        <label>Podaj Nazwisko: </label>
-        <input name="lastname" type="text" class="form-control" />
+        <label asp-for="MyUser.LastName"></label>
+        <input asp-for="MyUser.LastName" class="form-control" />
     </div>
     <div class="form-group">
-        <label>Podaj datę urodzenia: </label>
-        <input name="birth" type="date" class="form-control" />
+        <label asp-for="MyUser.Birtday"></label>
+        <input asp-for="MyUser.Birtday" class="form-control" />
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-primary" value="Zapisz" />
