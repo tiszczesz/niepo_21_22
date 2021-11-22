@@ -9,7 +9,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>ello</h1>
+        <h1>Sklepik 2021_22</h1>
+        <?php
+        require_once "functions.php";
+        //$conn = getConnection();
+        //var_dump($conn);
+        //$conn->close(); 
+        //mysqli_close($conn);
+        echo getCustomers();
+        ?>
     </div>
     
 </body>

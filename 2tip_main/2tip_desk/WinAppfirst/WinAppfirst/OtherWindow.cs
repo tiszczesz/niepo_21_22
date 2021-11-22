@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace WinAppfirst
 {
-    public partial class MainWindow : Form
+    public partial class OtherWindow : Form
     {
-        public MainWindow()
+        public OtherWindow()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-            //Application.Exit();
+        private void button1_Click(object sender, EventArgs e) {
+            label1.Text = "Hello world from\n WindowsForms";
         }
 
-        private void button2_Click(object sender, EventArgs e) {
-            new OtherWindow().ShowDialog();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

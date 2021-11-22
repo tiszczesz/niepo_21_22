@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsFramework_gim", "WinFormsFramework_gim\WinFormsFramework_gim.csproj", "{9941C945-AFE9-41A4-AC39-6CCEE83247A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9941C945-AFE9-41A4-AC39-6CCEE83247A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9941C945-AFE9-41A4-AC39-6CCEE83247A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9941C945-AFE9-41A4-AC39-6CCEE83247A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9941C945-AFE9-41A4-AC39-6CCEE83247A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {848CC092-1608-4E43-86B4-D4116DEFA2FD}
+	EndGlobalSection
+EndGlobal

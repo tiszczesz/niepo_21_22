@@ -8,6 +8,7 @@
 using namespace std;
 void Cw1();
 void Cw2();
+class My{};
 int main() {
 	/*Item* i1 = new Item();
 	cout << i1;
@@ -19,7 +20,24 @@ int main() {
 	i1 = nullptr;
 	i2 = nullptr;*/
 	//Cw1();
-	Cw2();
+	//Cw2();
+	My m1;
+	My m2;
+	//cout << m1 + m2 << endl;
+	cout << 3.0 / 2 << endl;
+	int a[] = { 12,4,6,7,80,8 };
+	cout << a[5] << endl;
+	cout << 4 + 6 << endl;
+	string w1 = "ala";
+	string w2 = "bela";
+	cout << w1 + w2 << endl;
+	//cout << w1 * w2 << endl;
+	vector<double> dane{ 3,5,8,9.0 };
+	dane.push_back(1222);
+	for (double s : dane) {
+		cout << s << " ";
+	}
+	cout << dane.size() <<endl;
 	return 0;
 }
 void Cw2() {
