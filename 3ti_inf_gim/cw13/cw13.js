@@ -24,6 +24,19 @@ document.querySelector("#gener").onclick = function () {
     return;
   }
   document.querySelector("#result").innerHTML = generTab(rowsElem.value, colsElem.value);
+  //const tds2 = document.getElementsByTagName("td");
+  const tds = document.querySelectorAll("#result td");
+  // for (const td of tds) {
+  //   td.onclick = function(e){
+  //     alert(e.target.innerHTML);
+  //   }
+  // }
+  tds.forEach(function(e,i){
+    e.onclick = function(event){
+      console.log(event.target.innerHTML);
+    }
+  })
+  console.log(tds);
   //console.log(rows,cols);
 };
 function Validate(elem) {

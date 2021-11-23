@@ -1,0 +1,9 @@
+li{
+    cursor: pointer;
+    margin-bottom: 6px;
+    width: 300px;
+    padding: 6px;
+}
+.border{
+    border: solid 1px black;
+}
