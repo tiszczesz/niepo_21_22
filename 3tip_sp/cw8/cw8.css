@@ -12,4 +12,5 @@ input[type=button]{margin-left: 140px;padding: 5px;}
 .error{color: red;}
 .mark{background-color: yellowgreen;}
 table{border-collapse: collapse;}
-td{padding: 3px; border: solid 1px black;}
+td{padding: 5px; border: solid 1px black;
+text-align: center;}

@@ -36,9 +36,10 @@
         if(filter_has_var(INPUT_GET,'id')){
             $id = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
             if($id){
-                $worker = getWorker($id);
+              //  $worker = getWorker($id);
             }
          echo workerToForm($worker);
+        }
         ?>
     </div>
 

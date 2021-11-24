@@ -21,9 +21,11 @@ namespace WinAppfirst
             label1.Text = "Hello world from\n WindowsForms";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Kliknieto(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+       
     }
 }

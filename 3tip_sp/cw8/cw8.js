@@ -10,5 +10,23 @@ document.querySelector("#gener").onclick = function (){
     document.querySelector("#result").innerHTML = showTable(rows,cols);
 };
 function showTable(rows,cols){
-    return "Brawo tabelka o rozmiarze: "+rows+"x"+cols;
+    let html = "<table>";
+    let number = 1;
+    for(let i=0; i<rows;i++){
+        html+= "<tr>"
+        for(let j=0;j<cols;j++){
+            let mark = isPrimal(number)? "class='mark'": ""
+            html += `<td ${mark}>${number++}</td>`;
+            console.log(number,isPrimal(number));
+        }        
+        html +="</tr>";
+    }
+    return html+"</table>";
+}
+function isPrimal(liczba){
+    if(liczba==1) return false;
+    for(let i=2 ; i<liczba; i++){
+        if(liczba % i == 0) return false;
+    }
+    return true;
 }
