@@ -35,5 +35,10 @@ namespace WinFormsFramework_gim
         private void btnDetails_Click(object sender, EventArgs e) {
             new DetailsWindow().ShowDialog();
         }
+
+        private void animalsBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,5 +26,17 @@ namespace WinAppfirst
         private void button2_Click(object sender, EventArgs e) {
             new OtherWindow().ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e) {
+            try {
+                double a = Convert.ToDouble(tbA.Text);
+                double b = Convert.ToDouble(tbB.Text);
+                lbResult.Text = (a + b).ToString();
+            }
+            catch (FormatException ex) {
+                MessageBox.Show("Błąd konwersji na liczbę: " + ex.Message);
+            }
+           
+        }
     }
 }

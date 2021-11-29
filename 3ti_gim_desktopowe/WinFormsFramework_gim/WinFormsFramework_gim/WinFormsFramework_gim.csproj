@@ -51,6 +51,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AnimalsDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AnimalsDBDataSet1.cs">
+      <DependentUpon>AnimalsDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AnimalsDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

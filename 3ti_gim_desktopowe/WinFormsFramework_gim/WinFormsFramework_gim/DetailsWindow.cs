@@ -17,20 +17,14 @@ namespace WinFormsFramework_gim
             InitializeComponent();
         }
 
-        private void animalsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.animalsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.animalsDBDataSet);
-
-        }
+       
 
         private void DetailsWindow_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'animalsDBDataSet.Species' table. You can move, or remove it, as needed.
-            this.speciesTableAdapter.Fill(this.animalsDBDataSet.Species);
-            // TODO: This line of code loads data into the 'animalsDBDataSet.Animals' table. You can move, or remove it, as needed.
-            this.animalsTableAdapter.Fill(this.animalsDBDataSet.Animals);
+            // TODO: This line of code loads data into the 'animalsDBDataSet1.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.Fill(this.animalsDBDataSet1.DataTable1);
+            
+
 
         }
     }

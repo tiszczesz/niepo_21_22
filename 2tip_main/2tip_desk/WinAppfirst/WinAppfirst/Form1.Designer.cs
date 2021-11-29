@@ -34,9 +34,10 @@ namespace WinAppfirst
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbA = new System.Windows.Forms.TextBox();
+            this.tbB = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.lbResult = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,37 +90,50 @@ namespace WinAppfirst
             this.label2.TabIndex = 4;
             this.label2.Text = "Podaj B = ";
             // 
-            // textBox1
+            // tbA
             // 
-            this.textBox1.Location = new System.Drawing.Point(359, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 23);
-            this.textBox1.TabIndex = 5;
+            this.tbA.Location = new System.Drawing.Point(359, 26);
+            this.tbA.Name = "tbA";
+            this.tbA.Size = new System.Drawing.Size(259, 23);
+            this.tbA.TabIndex = 5;
             // 
-            // textBox2
+            // tbB
             // 
-            this.textBox2.Location = new System.Drawing.Point(359, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 23);
-            this.textBox2.TabIndex = 6;
+            this.tbB.Location = new System.Drawing.Point(359, 62);
+            this.tbB.Name = "tbB";
+            this.tbB.Size = new System.Drawing.Size(259, 23);
+            this.tbB.TabIndex = 6;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(359, 98);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(259, 23);
+            this.button3.Size = new System.Drawing.Size(259, 45);
             this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
+            this.button3.Text = "Oblicz";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // lbResult
+            // 
+            this.lbResult.AutoSize = true;
+            this.lbResult.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbResult.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbResult.Location = new System.Drawing.Point(367, 160);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(72, 30);
+            this.lbResult.TabIndex = 8;
+            this.lbResult.Text = "label3";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbResult);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbB);
+            this.Controls.Add(this.tbA);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -141,9 +155,10 @@ namespace WinAppfirst
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbA;
+        private System.Windows.Forms.TextBox tbB;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lbResult;
     }
 }
 
