@@ -1,3 +1,4 @@
+using _3tig_MySql1Net.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace _3tig_MySql1Net
 {
@@ -21,8 +24,10 @@ namespace _3tig_MySql1Net
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices(IServiceCollection services) {
+            string myConnString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContextPool<UsersDbContext>
+                (options => options.UseMySql(myConnString, ServerVersion.AutoDetect(myConnString)));
             services.AddControllersWithViews();
         }
 

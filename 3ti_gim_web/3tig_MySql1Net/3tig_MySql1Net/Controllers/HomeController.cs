@@ -6,16 +6,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using _3tig_MySql1Net.Data;
 
 namespace _3tig_MySql1Net.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private UsersDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,UsersDbContext context)
         {
             _logger = logger;
+            _db = context;
         }
 
         public IActionResult Index()

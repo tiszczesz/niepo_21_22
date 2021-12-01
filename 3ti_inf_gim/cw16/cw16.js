@@ -23,6 +23,7 @@ function GenerRow(row,isButton=false){
 }
 function GenerTab(dane){    
     let table = document.createElement("table");
+    table.id = "dane1";
     table.appendChild(GenerRow(["Imię","Nazwisko","Wiek","Pensja","Inne"]));
     for(let row of dane){
         table.appendChild(GenerRow(row,true));
@@ -31,3 +32,16 @@ function GenerTab(dane){
 }
 console.log(GenerTab(dane));
 document.querySelector("#root").appendChild(GenerTab(dane));
+let btns = document.querySelectorAll(".remove");
+for(let btn of btns){
+    btn.onclick = function(e){
+        console.log(e.target.parentNode.parentNode);
+        document.querySelector("#dane1").removeChild(e.target.parentNode.parentNode);
+    }
+}
+// for(let i=0;i<btns.length;i++){
+//     btns[i].onclick = function(e){
+//         console.log(e.target);
+//     }
+// }
+console.log(btns);

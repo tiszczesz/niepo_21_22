@@ -22,13 +22,13 @@ namespace _3tig_MySql1Net.Data
             modelBuilder.Entity<Users>().ToTable("UsersTable");
 
             modelBuilder.Entity<Users>().HasData(
-                new Users {Id=1,Firstname = "Antoni",Lastname = "Małecki",DateOf = new DateTime(2012,12,12)},
-                new Users {Id=2,Firstname = "Antoni",Lastname = "Małecki",DateOf = new DateTime(2012,12,12)},
-                new Users {Id=3,Firstname = "Antoni",Lastname = "Małecki",DateOf = new DateTime(2012,12,12)}
-       
-
-              
-                );
+                new Users {Id = 1, Firstname = "Antoni", Lastname = "Małecki", 
+                    DateOf = new DateTime(2012, 12, 12)},
+                new Users {Id = 2, Firstname = "Monika", Lastname = "Dworek", 
+                    DateOf = new DateTime(2012, 9, 11)},
+                new Users {Id = 3, Firstname = "Tomasz", Lastname = "Bomasz", 
+                    DateOf = new DateTime(2009, 3, 22)}
+            );
         }
     }
 }
