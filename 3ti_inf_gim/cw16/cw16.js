@@ -4,7 +4,7 @@ const dane = [
     ["Monika","Wałecki",23,2400],
     ["Roman","Tomera",34,5800],
     ["Edmund","Waligóra",32,2100]
-]
+];
 
 function GenerRow(row,isButton=false){
     let tr = document.createElement("tr");
@@ -21,6 +21,26 @@ function GenerRow(row,isButton=false){
     
     return tr;
 }
+function AddNew(data){
+    const imie = document.querySelector("#imie").value;
+    const nazwisko = document.querySelector("#nazwisko").value;
+    const wiek = parseInt(document.querySelector("#wiek").value);
+    const pensja = parseInt(document.querySelector("#pensja").value);
+    data.push([imie,nazwisko,wiek,pensja]);
+    ClearForm();
+}
+function ClearForm(){
+    document.querySelectorAll(".toclear").forEach(function(v,i){
+        v.value = "";
+    })
+} 
+document.querySelector("#addNew").onclick = function(){
+   // console.log("erer");
+    //debugger;
+    AddNew(dane);
+    RenderTable(document.querySelector("#root"));
+    
+};
 function GenerTab(dane){    
     let table = document.createElement("table");
     table.id = "dane1";
@@ -30,18 +50,31 @@ function GenerTab(dane){
     }
     return table;
 }
-console.log(GenerTab(dane));
-document.querySelector("#root").appendChild(GenerTab(dane));
-let btns = document.querySelectorAll(".remove");
-for(let btn of btns){
-    btn.onclick = function(e){
-        console.log(e.target.parentNode.parentNode);
-        document.querySelector("#dane1").removeChild(e.target.parentNode.parentNode);
-    }
+function RenderTable(elem){
+    elem.innerHTML = "";
+    elem.appendChild(GenerTab(dane));
+    RemovePrepare();
 }
+//console.log(GenerTab(dane));
+RenderTable(document.querySelector("#root"));
+
 // for(let i=0;i<btns.length;i++){
 //     btns[i].onclick = function(e){
 //         console.log(e.target);
 //     }
 // }
-console.log(btns);
+
+
+function RemovePrepare() {
+    let btns = document.querySelectorAll(".remove");
+    for (let btn of btns) {
+        btn.onclick = function (e) {
+            const index = e.target.parentNode.parentNode.rowIndex;
+            console.log(index);
+            // console.log(e.target.parentNode.parentNode);
+             document.querySelector("#dane1").removeChild(e.target.parentNode.parentNode);
+            dane.splice(index-1,1);
+            console.log(dane);
+        };
+    }    
+}

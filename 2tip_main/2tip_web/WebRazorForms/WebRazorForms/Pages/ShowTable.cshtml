@@ -1,0 +1,29 @@
+﻿@page
+@model WebRazorForms.Pages.ShowTableModel
+@{
+}
+
+<div class="align-content-center">
+    <form asp-page="ShowTable" method="post">
+        <div class="form-group">
+            <label>Podaj ilość wierszy: </label>
+            <input asp-for="MyTableSize.Rows" />
+            <span class="text-danger" asp-validation-for="MyTableSize.Rows"></span>
+        </div>
+        <div class="form-group">
+            <label>Podaj ilość kolumn: </label>
+            <input asp-for="MyTableSize.Cols" />
+            <span class="text-danger" asp-validation-for="MyTableSize.Cols"></span>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="submit" value="Generuj" />
+        </div>
+    </form>
+</div>
+
+<div>
+    @if (ViewData["IsPost"] != null) {
+        <span>@Html.Raw(ViewData["html"])</span>
+    }
+</div>
+

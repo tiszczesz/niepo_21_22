@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drzewo DOM</title>
     <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        .line{margin: 20px;}
+        label{display: inline-block; width: 200px;text-align: right;}
+        #addNew{margin-left: 200px;padding: 8px;}
         table{border-collapse: collapse;width: 500px;}
         td{border:solid black 1px;padding: 5px;}
         tr:nth-child(odd){background-color: rgb(180, 208, 209);}
@@ -13,7 +21,32 @@
 </head>
 <body>
     <h1>Operacje na DOM c.d</h1>
-    <div id="root"></div>
+    <div class="container">
+         <div id="root"></div>
+         <div>
+             <div class="line">
+                 <label for="imie">Podaj imię</label>
+                 <input type="text" name="imie" id="imie" class="toclear">
+             </div>
+             <div class="line">
+                 <label for="nazwisko">Podaj nazwisko</label>
+                 <input type="text" name="nazwisko" id="nazwisko" class="toclear">
+             </div>
+             <div class="line">
+                 <label for="wiek">Podaj wiek</label>
+                 <input type="number" name="wiek" id="wiek" class="toclear">
+             </div>
+             <div class="line">
+                 <label for="pensja">Podaj zarobki</label>
+                 <input type="number" name="pensja" id="pensja" class="toclear">
+             </div>
+             <div class="line">                 
+                 <input type="button"id="addNew" value="dodaj nowy rekord">
+             </div>
+         </div>
+    </div>
+   
+
     <script src="cw16.js" defer></script>
 </body>
 </html>

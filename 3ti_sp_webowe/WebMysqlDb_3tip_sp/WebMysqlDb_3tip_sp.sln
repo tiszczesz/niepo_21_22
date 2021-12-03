@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMysqlDb_3tip_sp", "WebMysqlDb_3tip_sp\WebMysqlDb_3tip_sp.csproj", "{15372B85-8E96-4D89-9E6C-2DE04253FDEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15372B85-8E96-4D89-9E6C-2DE04253FDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15372B85-8E96-4D89-9E6C-2DE04253FDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15372B85-8E96-4D89-9E6C-2DE04253FDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15372B85-8E96-4D89-9E6C-2DE04253FDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACF8F4F3-8FB8-409A-9A2D-607C881EFDE7}
+	EndGlobalSection
+EndGlobal

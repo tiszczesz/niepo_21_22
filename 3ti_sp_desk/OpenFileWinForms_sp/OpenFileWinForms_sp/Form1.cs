@@ -25,6 +25,7 @@ namespace OpenFileWinForms_sp
                     var sr = new StreamReader(openFileDialog1.FileName);
                     rtDocument.Text = sr.ReadToEnd();
                     sr.Close();
+                    this.Text += " - " + openFileDialog1.FileName;
                 }
                 catch (SecurityException ex) {
                     MessageBox.Show($"Błąd wczytania pliku: {ex.Message}");
@@ -54,6 +55,8 @@ namespace OpenFileWinForms_sp
                     }
                     var filePath = saveFileDialog1.FileName;
                     File.WriteAllText(filePath,rtDocument.Text);
+                    rtDocument.Text = "";
+                    this.Text = "Form1";
                 }catch(SecurityException ex) {
                     MessageBox.Show("Błąd zapisu: " + ex.Message);
                 }
