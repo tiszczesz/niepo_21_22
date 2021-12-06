@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOpenSave_gim_3ti", "FileOpenSave_gim_3ti\FileOpenSave_gim_3ti.csproj", "{C7AFD421-3FA7-4EE2-AE8D-741FA2074013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7AFD421-3FA7-4EE2-AE8D-741FA2074013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7AFD421-3FA7-4EE2-AE8D-741FA2074013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7AFD421-3FA7-4EE2-AE8D-741FA2074013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7AFD421-3FA7-4EE2-AE8D-741FA2074013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BAA25D5-5A6B-4DFA-9F62-49D54687E640}
+	EndGlobalSection
+EndGlobal
