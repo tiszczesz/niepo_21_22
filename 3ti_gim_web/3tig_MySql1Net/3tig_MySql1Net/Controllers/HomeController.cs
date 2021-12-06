@@ -21,9 +21,9 @@ namespace _3tig_MySql1Net.Controllers
             _db = context;
         }
 
-        public IActionResult Index()
-        {
-            return View();
+        public IActionResult Index() {
+            List<Users> users = _db.Users.ToList();
+            return View(users);
         }
 
         public IActionResult Privacy()
