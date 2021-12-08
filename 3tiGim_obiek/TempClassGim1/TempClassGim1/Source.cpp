@@ -15,6 +15,8 @@ int main() {
 	delete c1;
 	c1 = nullptr;
 	if(c1!=nullptr) {
+		string elem = "jeszcze jeden element";
+		c1->AddNew(elem);
 		c1->ShowAll();
 	}else {
 		cout << "dsfsd fsd f";

@@ -5,7 +5,12 @@ scene.onclick = function(){
     document.querySelector("#klik").innerText = count;
 };
 setGift();
-
+document.querySelector(".gift").onclick = function(e){
+    e.target.style.opacity = "1";   
+    scene.onclick = function(){
+        console.log("koniec");
+    } 
+}
 
 
 function setGift(){
@@ -14,8 +19,8 @@ function setGift(){
     let widthScene = scene.offsetWidth;
     let heightScene = scene.offsetHeight;
     console.log(widthScene,heightScene);
-    const left = Math.floor(Math.random()*(widthScene-52));
-    const top = Math.floor(Math.random()*(heightScene-52));
+    const left = Math.floor(Math.random()*(widthScene-102));
+    const top = Math.floor(Math.random()*(heightScene-102));
     console.log(left,top);
     gift.style.left = left+"px";
     gift.style.top = top+"px";

@@ -16,5 +16,8 @@ public:
 			std::cout << item << std::endl;
 		}
 	}
+	void AddNew(T& item) {
+		data.push_back(item);
+	}
 };
 
