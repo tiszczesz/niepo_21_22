@@ -30,7 +30,8 @@ namespace WebRazorForms.Pages
             for (int i = 1; i <= rows; i++) {
                 sb.Append("<tr>");
                 for (int j = 1; j <= cols; j++) {
-                    sb.Append($"<td>{licznik++}</td>");
+                    string primalClass = Tools.IsPrimal(licznik) ? "class='primal'" : "";
+                    sb.Append($"<td {primalClass}>{licznik++}</td>");
                 }
                 sb.Append("</tr>");
             }
