@@ -12,8 +12,9 @@ using System.Windows.Forms;
 
 namespace OpenFileWinForms_sp
 {
-    public partial class Form1 : Form
-    {
+    
+    public partial class Form1 : Form {
+        private string fileName = "";
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace OpenFileWinForms_sp
                     var sr = new StreamReader(openFileDialog1.FileName);
                     rtDocument.Text = sr.ReadToEnd();
                     sr.Close();
+                    this.fileName = openFileDialog1.FileName;
                     this.Text += " - " + openFileDialog1.FileName;
                 }
                 catch (SecurityException ex) {
@@ -47,8 +49,10 @@ namespace OpenFileWinForms_sp
 
         private void zapiszToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            saveFileDialog1.FileName = this.fileName;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
                 try {
+                    
                     if (saveFileDialog1.FileName == "") {
                         MessageBox.Show("Brak nazwy pliku!!");
                         return;
