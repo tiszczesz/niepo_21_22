@@ -22,7 +22,8 @@ public:
 	}
 	Container<T> GetSort() {
 		Container<T> result = (*this);
-		//result.data.
+		
+		sort(result.data.begin(), result.data.end());
 		return  result;
 	}
 };

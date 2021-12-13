@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-	vector<string> v1{"ala", "mela", "Bella", "ciela"};
+	vector<string> v1{"ala","wele", "mela", "Bella", "ciela"};
 	Pair p1{ 12,6 };
 	Pair p2{ 3,67 };
 	Pair p3{ 44,67 };
@@ -21,7 +21,9 @@ int main() {
 	c1->ShowAll();
 	//pary->ShowAll();
 
-	Container<Pair> mySort = pary->GetSort();
+	Container<string> mySort = c1->GetSort();
+	cout << " posortowane: \n\n";
+	mySort.ShowAll();
 	delete c1;
 
 	
@@ -33,5 +35,20 @@ int main() {
 	}else {
 		cout << "dsfsd fsd f";
 	}
+	int a[8] = { 11, 2, 29, 7, 1, 22, 16, 4 };
+
+	sort(a, a + 8);
+
+	cout << "\nTablica a posortowana rosn¹co: \n";
+	for (int i = 0; i < 8; i++)
+		cout << a[i] << ' ';
+
+	sort(a, a + 8, greater < int >());
+
+	cout << "\nTablica a posortowana malej¹co: \n";
+	for (int i = 0; i < 8; i++)
+		cout << a[i] << ' ';
+
+	
 	return EXIT_SUCCESS;
 }
