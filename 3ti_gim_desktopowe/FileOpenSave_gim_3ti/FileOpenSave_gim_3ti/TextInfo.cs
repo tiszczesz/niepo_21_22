@@ -11,9 +11,19 @@ namespace FileOpenSave_gim_3ti
 
         public TextInfo(List<string> lines) {
             _lines = lines;
-            Lines = _lines.Count;
+            Lines = _lines.Count(line=>line.Trim().Length>0);
+            Chars = CountChar(_lines);
+            Letters = CountChar(_lines,true);
         }
 
+        public int CountChar(List<string> lines, bool isLetter=false) {
+            int result = 0;
+            foreach (string line in lines) {
+                result += isLetter ? line.Count(item=>Char.IsLetter(item)):line.Length;
+            }
+
+            return result;
+        }
         public int Lines { get; set; }
         public int Chars { get; set; }
         public int Letters { get; set; }

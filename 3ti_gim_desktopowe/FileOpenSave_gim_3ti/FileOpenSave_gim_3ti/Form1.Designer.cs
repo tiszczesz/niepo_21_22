@@ -39,15 +39,15 @@ namespace FileOpenSave_gim_3ti
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbLetters = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbChars = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbLines = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.rbDocument = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,33 +79,33 @@ namespace FileOpenSave_gim_3ti
             // nowyToolStripMenuItem
             // 
             this.nowyToolStripMenuItem.Name = "nowyToolStripMenuItem";
-            this.nowyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nowyToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.nowyToolStripMenuItem.Text = "Nowy";
             this.nowyToolStripMenuItem.Click += new System.EventHandler(this.OpenNew);
             // 
             // otwórzToolStripMenuItem
             // 
             this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
-            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.otwórzToolStripMenuItem.Text = "Otwórz";
             this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // zapiszToolStripMenuItem
             // 
             this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
-            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.zapiszToolStripMenuItem.Text = "Zapisz";
             this.zapiszToolStripMenuItem.Click += new System.EventHandler(this.SaveFile);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(114, 6);
             // 
             // zamknijToolStripMenuItem
             // 
             this.zamknijToolStripMenuItem.Name = "zamknijToolStripMenuItem";
-            this.zamknijToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zamknijToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.zamknijToolStripMenuItem.Text = "Zamknij";
             // 
             // edycjaToolStripMenuItem
@@ -123,17 +123,80 @@ namespace FileOpenSave_gim_3ti
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lbLetters);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbChars);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbLines);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 426);
             this.panel1.TabIndex = 1;
+            // 
+            // lbLetters
+            // 
+            this.lbLetters.AutoSize = true;
+            this.lbLetters.BackColor = System.Drawing.Color.White;
+            this.lbLetters.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbLetters.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbLetters.Location = new System.Drawing.Point(97, 112);
+            this.lbLetters.Name = "lbLetters";
+            this.lbLetters.Size = new System.Drawing.Size(57, 21);
+            this.lbLetters.TabIndex = 5;
+            this.lbLetters.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ilość liter:";
+            // 
+            // lbChars
+            // 
+            this.lbChars.AutoSize = true;
+            this.lbChars.BackColor = System.Drawing.Color.White;
+            this.lbChars.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbChars.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbChars.Location = new System.Drawing.Point(97, 64);
+            this.lbChars.Name = "lbChars";
+            this.lbChars.Size = new System.Drawing.Size(57, 21);
+            this.lbChars.TabIndex = 3;
+            this.lbChars.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Ilość znaków:";
+            // 
+            // lbLines
+            // 
+            this.lbLines.AutoSize = true;
+            this.lbLines.BackColor = System.Drawing.Color.White;
+            this.lbLines.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbLines.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbLines.Location = new System.Drawing.Point(97, 16);
+            this.lbLines.Name = "lbLines";
+            this.lbLines.Size = new System.Drawing.Size(57, 21);
+            this.lbLines.TabIndex = 1;
+            this.lbLines.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ilość lini:";
             // 
             // rbDocument
             // 
@@ -153,69 +216,6 @@ namespace FileOpenSave_gim_3ti
             // 
             this.saveFileDialog1.DefaultExt = "txt";
             this.saveFileDialog1.Title = "Zapisz plik";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ilość lini:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(97, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ilość znaków:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(97, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ilość liter:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(97, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
             // 
             // Form1
             // 
@@ -252,11 +252,11 @@ namespace FileOpenSave_gim_3ti
         private System.Windows.Forms.ToolStripMenuItem zamknijToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbLetters;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbChars;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbLines;
         private System.Windows.Forms.Label label1;
     }
 }

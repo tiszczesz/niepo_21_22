@@ -18,7 +18,7 @@ int main() {
 	Container<Pair>*  pary = new Container<Pair>(pp);
 	(*c1).ShowAll();
 	c1->ShowAll();
-	//pary->ShowAll();
+	pary->ShowAll();
 	delete c1;
 	c1 = nullptr;
 	if(c1!=nullptr) {

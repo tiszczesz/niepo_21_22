@@ -13,9 +13,11 @@ namespace FileOpenSave_gim_3ti
 {
     public partial class Form1 : Form {
         private string fileName;
+        private TextInfo _textInfo;
         public Form1()
         {
             InitializeComponent();
+           
         }
 
         private void OpenFile_Click(object sender, EventArgs e)
@@ -26,9 +28,20 @@ namespace FileOpenSave_gim_3ti
                 this.fileName = openFileDialog1.FileName;
                 this.Text = this.Text + " - " + openFileDialog1.FileName;
                 using (StreamReader sr = new StreamReader(openFileDialog1.FileName)) {
-                    rbDocument.Text = sr.ReadToEnd();
-
+                    string line = "";
+                    int i = 0;
+                    List<string> lines = new List<string>();
+                    
+                    while ((line = sr.ReadLine()) != null) {
+                        lines.Add(line);
+                    }
+                    //rbDocument.Lines = lines.ToArray();
+                    rbDocument.Lines = lines.ToArray();
+                    _textInfo = _textInfo = new TextInfo(lines);
                     sr.Close();
+                    lbLines.Text = _textInfo.Lines.ToString();
+                    lbChars.Text = _textInfo.Chars.ToString();
+                    lbLetters.Text = _textInfo.Letters.ToString();
                 }
             }
             else {
