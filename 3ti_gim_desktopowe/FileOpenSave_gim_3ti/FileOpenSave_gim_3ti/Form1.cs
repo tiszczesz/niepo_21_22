@@ -11,8 +11,8 @@ using System.Windows.Forms;
 
 namespace FileOpenSave_gim_3ti
 {
-    public partial class Form1 : Form
-    {
+    public partial class Form1 : Form {
+        private string fileName;
         public Form1()
         {
             InitializeComponent();
@@ -20,8 +20,10 @@ namespace FileOpenSave_gim_3ti
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK) {
                 //MessageBox.Show(openFileDialog1.FileName);
+                this.fileName = openFileDialog1.FileName;
                 this.Text = this.Text + " - " + openFileDialog1.FileName;
                 using (StreamReader sr = new StreamReader(openFileDialog1.FileName)) {
                     rbDocument.Text = sr.ReadToEnd();
@@ -42,6 +44,9 @@ namespace FileOpenSave_gim_3ti
 
         private void SaveFile(object sender, EventArgs e)
         {
+            if (!String.IsNullOrEmpty(this.fileName)) {
+                saveFileDialog1.FileName = this.fileName;
+            }
             if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
                 File.WriteAllText(saveFileDialog1.FileName,rbDocument.Text);
             }

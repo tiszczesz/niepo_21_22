@@ -69,5 +69,25 @@ namespace OpenFileWinForms_sp
                 MessageBox.Show("nie zapisano pliku!!!");
             }
         }
+
+        private void item1ToolStripMenuItem_Click(object sender, EventArgs e) {
+            rtDocument.SelectionFont = new Font(rtDocument.Font, FontStyle.Bold);
+
+           
+           // rtDocument.SelectionStart = 1;
+            rtDocument.SelectionLength = 0;
+           
+            rtDocument.SelectionFont = rtDocument.Font;
+
+            // Reselect previous text
+         //   rtDocument.Select(selstart, sellength);
+         //   MessageBox.Show(rtDocument.SelectedText);
+        }
+
+        private void ustawNormalToolStripMenuItem_Click(object sender, EventArgs e) {
+            rtDocument.SelectionFont = new Font(rtDocument.Font, FontStyle.Regular);
+            rtDocument.SelectionLength = 0;
+            rtDocument.SelectionFont = rtDocument.Font;
+        }
     }
 }

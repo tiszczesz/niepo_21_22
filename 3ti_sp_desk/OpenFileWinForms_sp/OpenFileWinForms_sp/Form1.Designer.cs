@@ -29,6 +29,7 @@ namespace OpenFileWinForms_sp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nowyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,18 +40,22 @@ namespace OpenFileWinForms_sp
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.rtDocument = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ustawNormalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -137,6 +142,17 @@ namespace OpenFileWinForms_sp
             this.panel1.Size = new System.Drawing.Size(216, 426);
             this.panel1.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(0, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Informacje o pliku";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -200,25 +216,30 @@ namespace OpenFileWinForms_sp
             this.label2.TabIndex = 1;
             this.label2.Text = "Ilość znaków:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(0, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Informacje o pliku";
-            // 
             // rtDocument
             // 
+            this.rtDocument.ContextMenuStrip = this.contextMenuStrip1;
             this.rtDocument.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtDocument.Location = new System.Drawing.Point(216, 24);
             this.rtDocument.Name = "rtDocument";
             this.rtDocument.Size = new System.Drawing.Size(584, 426);
             this.rtDocument.TabIndex = 2;
             this.rtDocument.Text = "";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.item1ToolStripMenuItem,
+            this.ustawNormalToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // item1ToolStripMenuItem
+            // 
+            this.item1ToolStripMenuItem.Name = "item1ToolStripMenuItem";
+            this.item1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item1ToolStripMenuItem.Text = "Ustaw Bold";
+            this.item1ToolStripMenuItem.Click += new System.EventHandler(this.item1ToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -230,6 +251,13 @@ namespace OpenFileWinForms_sp
             // 
             this.saveFileDialog1.DefaultExt = "txt";
             this.saveFileDialog1.Title = "Zapisywanie pliku";
+            // 
+            // ustawNormalToolStripMenuItem
+            // 
+            this.ustawNormalToolStripMenuItem.Name = "ustawNormalToolStripMenuItem";
+            this.ustawNormalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ustawNormalToolStripMenuItem.Text = "Ustaw Normal";
+            this.ustawNormalToolStripMenuItem.Click += new System.EventHandler(this.ustawNormalToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -246,6 +274,7 @@ namespace OpenFileWinForms_sp
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +302,9 @@ namespace OpenFileWinForms_sp
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem item1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ustawNormalToolStripMenuItem;
     }
 }
 
