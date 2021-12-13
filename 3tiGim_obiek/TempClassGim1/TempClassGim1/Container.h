@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <iostream>
+#include <algorithm>
 template<typename  T>
 class Container
 {
@@ -18,6 +19,11 @@ public:
 	}
 	void AddNew(T& item) {
 		data.push_back(item);
+	}
+	Container<T> GetSort() {
+		Container<T> result = (*this);
+		//result.data.
+		return  result;
 	}
 };
 

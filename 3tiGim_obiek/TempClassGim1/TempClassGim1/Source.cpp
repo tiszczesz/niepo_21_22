@@ -3,6 +3,7 @@
 #include <string>
 #include "Container.h"
 #include <vector>
+#include <algorithm>
 #include "Pair.h"
 using namespace std;
 
@@ -18,8 +19,12 @@ int main() {
 	Container<Pair>*  pary = new Container<Pair>(pp);
 	(*c1).ShowAll();
 	c1->ShowAll();
-	pary->ShowAll();
+	//pary->ShowAll();
+
+	Container<Pair> mySort = pary->GetSort();
 	delete c1;
+
+	
 	c1 = nullptr;
 	if(c1!=nullptr) {
 		string elem = "jeszcze jeden element";
