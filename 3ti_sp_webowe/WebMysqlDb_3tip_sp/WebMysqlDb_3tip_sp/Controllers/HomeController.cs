@@ -21,9 +21,9 @@ namespace WebMysqlDb_3tip_sp.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
-        {
-            return View();
+        public IActionResult Index() {
+            var films = _db.Films.OrderBy(f => f.Title).ToList();
+            return View(films);
         }
 
         public IActionResult Privacy()

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Film>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +7,21 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<table class="table table-striped">
+    <tr>
+        <th>Lp</th>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>Data realizacji</th>
+    </tr>
+    @{ int i = 0;}
+    @foreach (Film f in Model) {
+        i++;
+        <tr>
+            <td>@i</td>
+            <td>@f.Title</td>
+            <td>@f.Author</td>
+            <td>@f.ReleaseDate.ToShortDateString()</td>
+        </tr>
+    }
+</table>
