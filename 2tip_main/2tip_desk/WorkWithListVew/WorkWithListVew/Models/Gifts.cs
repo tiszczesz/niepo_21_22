@@ -15,7 +15,9 @@ namespace WorkWithListVew.Models
                 new Gift {Name = "Saneczki", Price = 34.89M},
                 new Gift {Name = "Rowerek", Price = 120.00M},
                 new Gift {Name = "Lalka Barbie", Price = 29.89M},
-                new Gift {Name = "Samochodzik", Price = 12.89M}
+                new Gift {Name = "Samochodzik", Price = 12.89M},
+                new Gift {Name = "Misiu", Price = 52.89M},
+                new Gift {Name = "Narty", Price = 312.89M}
             };
         }
 

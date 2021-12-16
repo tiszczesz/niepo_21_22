@@ -11,17 +11,21 @@ using WorkWithListVew.Models;
 
 namespace WorkWithListVew
 {
-    public partial class Form1 : Form {
-        private Gifts _gifts;
-        public Form1()
+    public partial class MainWindow : Form {
+        public Gifts gifts;
+        public MainWindow()
         {
             InitializeComponent();
-            _gifts = new Gifts();
+            gifts = new Gifts();
         }
 
         private void btnLoad_Click(object sender, EventArgs e) {
-            lbGifts.DataSource = _gifts.MyGifts;
+            lbGifts.DataSource = gifts.MyGifts;
             lbGifts.DisplayMember = "NamePrice";
+        }
+
+        private void btnAddNewGift_Click(object sender, EventArgs e) {
+            new NewItem(this).ShowDialog();
         }
     }
 }

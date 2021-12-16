@@ -13,3 +13,5 @@ th,td{
 th{background-color: lightgrey;}
 tr:hover{background-color: lightsteelblue;}
 tr{cursor: pointer;}
+td.total{text-align: right;font-weight: bold;color: darkred;font-size: 1.2em;}
+.red{color:red;}
