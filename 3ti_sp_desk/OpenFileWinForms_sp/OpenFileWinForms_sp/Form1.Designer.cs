@@ -41,18 +41,18 @@ namespace OpenFileWinForms_sp
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbLetters = new System.Windows.Forms.Label();
+            this.lbLines = new System.Windows.Forms.Label();
+            this.lbChars = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rtDocument = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ustawNormalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.ustawNormalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -130,9 +130,9 @@ namespace OpenFileWinForms_sp
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lbLetters);
+            this.panel1.Controls.Add(this.lbLines);
+            this.panel1.Controls.Add(this.lbChars);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -153,41 +153,41 @@ namespace OpenFileWinForms_sp
             this.label1.TabIndex = 0;
             this.label1.Text = "Informacje o pliku";
             // 
-            // label7
+            // lbLetters
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(145, 171);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.lbLetters.AutoSize = true;
+            this.lbLetters.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbLetters.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbLetters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbLetters.Location = new System.Drawing.Point(145, 171);
+            this.lbLetters.Name = "lbLetters";
+            this.lbLetters.Size = new System.Drawing.Size(52, 21);
+            this.lbLetters.TabIndex = 6;
+            this.lbLetters.Text = "label7";
             // 
-            // label6
+            // lbLines
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(145, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.lbLines.AutoSize = true;
+            this.lbLines.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbLines.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbLines.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbLines.Location = new System.Drawing.Point(145, 109);
+            this.lbLines.Name = "lbLines";
+            this.lbLines.Size = new System.Drawing.Size(52, 21);
+            this.lbLines.TabIndex = 5;
+            this.lbLines.Text = "label6";
             // 
-            // label5
+            // lbChars
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(145, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.lbChars.AutoSize = true;
+            this.lbChars.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbChars.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbChars.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbChars.Location = new System.Drawing.Point(145, 52);
+            this.lbChars.Name = "lbChars";
+            this.lbChars.Size = new System.Drawing.Size(52, 21);
+            this.lbChars.TabIndex = 4;
+            this.lbChars.Text = "label5";
             // 
             // label4
             // 
@@ -225,6 +225,7 @@ namespace OpenFileWinForms_sp
             this.rtDocument.Size = new System.Drawing.Size(584, 426);
             this.rtDocument.TabIndex = 2;
             this.rtDocument.Text = "";
+            this.rtDocument.TextChanged += new System.EventHandler(this.rtDocument_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -232,14 +233,21 @@ namespace OpenFileWinForms_sp
             this.item1ToolStripMenuItem,
             this.ustawNormalToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(150, 48);
             // 
             // item1ToolStripMenuItem
             // 
             this.item1ToolStripMenuItem.Name = "item1ToolStripMenuItem";
-            this.item1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item1ToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.item1ToolStripMenuItem.Text = "Ustaw Bold";
             this.item1ToolStripMenuItem.Click += new System.EventHandler(this.item1ToolStripMenuItem_Click);
+            // 
+            // ustawNormalToolStripMenuItem
+            // 
+            this.ustawNormalToolStripMenuItem.Name = "ustawNormalToolStripMenuItem";
+            this.ustawNormalToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.ustawNormalToolStripMenuItem.Text = "Ustaw Normal";
+            this.ustawNormalToolStripMenuItem.Click += new System.EventHandler(this.ustawNormalToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -251,13 +259,6 @@ namespace OpenFileWinForms_sp
             // 
             this.saveFileDialog1.DefaultExt = "txt";
             this.saveFileDialog1.Title = "Zapisywanie pliku";
-            // 
-            // ustawNormalToolStripMenuItem
-            // 
-            this.ustawNormalToolStripMenuItem.Name = "ustawNormalToolStripMenuItem";
-            this.ustawNormalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ustawNormalToolStripMenuItem.Text = "Ustaw Normal";
-            this.ustawNormalToolStripMenuItem.Click += new System.EventHandler(this.ustawNormalToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -299,9 +300,9 @@ namespace OpenFileWinForms_sp
         private System.Windows.Forms.RichTextBox rtDocument;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbLetters;
+        private System.Windows.Forms.Label lbLines;
+        private System.Windows.Forms.Label lbChars;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem item1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawNormalToolStripMenuItem;

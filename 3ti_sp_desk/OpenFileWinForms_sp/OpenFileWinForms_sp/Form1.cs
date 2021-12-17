@@ -9,12 +9,14 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OpenFileWinForms_sp.Models;
 
 namespace OpenFileWinForms_sp
 {
     
     public partial class Form1 : Form {
         private string fileName = "";
+        private TextInfo textInfo;
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace OpenFileWinForms_sp
                     sr.Close();
                     this.fileName = openFileDialog1.FileName;
                     this.Text += " - " + openFileDialog1.FileName;
+                    UpdateInfo(rtDocument.Lines.ToList());
                 }
                 catch (SecurityException ex) {
                     MessageBox.Show($"Błąd wczytania pliku: {ex.Message}");
@@ -38,6 +41,12 @@ namespace OpenFileWinForms_sp
             }
         }
 
+        private void UpdateInfo(List<string> data) {
+            textInfo = new TextInfo(data);
+            lbChars.Text = textInfo.CharCount.ToString();
+            lbLetters.Text = textInfo.AlphaCount.ToString();
+            lbLines.Text = textInfo.LineCount.ToString();
+        }
         private void zakończToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -88,6 +97,11 @@ namespace OpenFileWinForms_sp
             rtDocument.SelectionFont = new Font(rtDocument.Font, FontStyle.Regular);
             rtDocument.SelectionLength = 0;
             rtDocument.SelectionFont = rtDocument.Font;
+        }
+
+        private void rtDocument_TextChanged(object sender, EventArgs e)
+        {
+            UpdateInfo(rtDocument.Lines.ToList());
         }
     }
 }

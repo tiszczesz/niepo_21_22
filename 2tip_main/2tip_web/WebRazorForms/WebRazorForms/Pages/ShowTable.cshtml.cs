@@ -23,6 +23,8 @@ namespace WebRazorForms.Pages
         }
 
         private string generTab(int? rows, int? cols) {
+            string test = @"gfhfg hfghfghfgh  fg
+                        fghfghfghfghfghfghfh fgh fghfghfg fgh fg hfgh fgh fghgfh h h";
             if (rows == null || cols == null) 
                 return "<span style='color:red;'>B³êdne dane</span>";
             StringBuilder sb = new StringBuilder("<table class='table'>");

@@ -28,9 +28,23 @@ namespace OpenFileWinForms_sp.Models
             return isEmpty ? _textFile.Count : _textFile.Count(elem => elem.Trim().Length > 0);
         }
         public int LineCount { get; set; }
-        public int CharCount { get; set; }
-        public int AlphaCount { get; set; }
-        
+
+        public int CharCount {
+            get {
+                return _textFile.Sum(elem => elem.Length);
+            }
+        }
+
+        public int AlphaCount {
+            get {
+                int count = 0;
+                foreach (string s in _textFile) {
+                    count += s.Count(elem => Char.IsLetter(elem));
+                }
+                return count;
+            }
+        }
+
 
     }
 }
