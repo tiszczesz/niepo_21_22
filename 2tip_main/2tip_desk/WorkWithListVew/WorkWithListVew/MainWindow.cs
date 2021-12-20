@@ -20,11 +20,18 @@ namespace WorkWithListVew
         }
 
         private void btnLoad_Click(object sender, EventArgs e) {
+            lbGifts.DataSource = null;
             lbGifts.DataSource = gifts.MyGifts;
             lbGifts.DisplayMember = "NamePrice";
         }
 
         private void btnAddNewGift_Click(object sender, EventArgs e) {
+            new NewItem(this).ShowDialog();
+            btnLoad_Click(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             new NewItem(this).ShowDialog();
         }
     }

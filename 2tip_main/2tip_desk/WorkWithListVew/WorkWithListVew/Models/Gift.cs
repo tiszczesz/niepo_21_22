@@ -27,4 +27,8 @@ namespace WorkWithListVew.Models
             }
         }
     }
+
+    public enum StateOfWin {
+        Add,Edit
+    }
 }
