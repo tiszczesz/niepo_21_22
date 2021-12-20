@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <stdexcept>
+#include <algorithm>
 template<typename  T>
 class Box
 {
@@ -32,5 +33,6 @@ public:
 		}
 		return max;
 	}
+	Box SortBubble(bool order=true);  //ma zwarac nowy obiekt Box posortowany
 };
 
