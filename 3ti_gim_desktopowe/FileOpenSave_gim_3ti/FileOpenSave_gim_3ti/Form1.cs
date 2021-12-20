@@ -37,11 +37,9 @@ namespace FileOpenSave_gim_3ti
                     }
                     //rbDocument.Lines = lines.ToArray();
                     rbDocument.Lines = lines.ToArray();
-                    _textInfo = _textInfo = new TextInfo(lines);
+                    
                     sr.Close();
-                    lbLines.Text = _textInfo.Lines.ToString();
-                    lbChars.Text = _textInfo.Chars.ToString();
-                    lbLetters.Text = _textInfo.Letters.ToString();
+                    UpdateInfo(lines);
                 }
             }
             else {
@@ -49,6 +47,12 @@ namespace FileOpenSave_gim_3ti
             }
         }
 
+        private void UpdateInfo(List<string> lines) {
+            _textInfo = _textInfo = new TextInfo(lines);
+            lbLines.Text = _textInfo.Lines.ToString();
+            lbChars.Text = _textInfo.Chars.ToString();
+            lbLetters.Text = _textInfo.Letters.ToString();
+        }
         private void OpenNew(object sender, EventArgs e) {
             this.Text = "Okno główne";
             rbDocument.Text = "";
@@ -66,6 +70,11 @@ namespace FileOpenSave_gim_3ti
             else {
                 MessageBox.Show("Nie zapisano pliku");
             }
+        }
+
+        private void rbDocument_TextChanged(object sender, EventArgs e)
+        {
+            UpdateInfo(rbDocument.Lines.ToList());
         }
     }
 }
