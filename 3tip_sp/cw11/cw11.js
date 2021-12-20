@@ -6,7 +6,10 @@ function getAllGifts(){
         ["Tomasz","Bomasz","Rowerek",4.99],
         ["Helena","Małecka","Wiaderko",19.99],
         ["Renata","Gryk","Miś pluszowy",69.00],
-        ["Świety", "Mikołaj","Renifer",5.90]
+        ["Świety", "Mikołaj","Renifer",5.90],
+        ["Grażyna", "Sprężyna","lalka szmaciana",115.90],
+        ["Roman", "Boman","Samochodzik na resorach",135.90],
+        ["Eryk", "Małecki","Renifer",105.90],
     ];
 }
 function thTableRow(){
@@ -32,9 +35,18 @@ function CreateTab(dane,limit=100){
 }
 const dane = getAllGifts();
 document.querySelector(".root").appendChild(CreateTab(dane,50));
+
 let rangeLimit = document.querySelector("#limit");
 rangeLimit.max = GetMaxPrice(dane);
-//debugger;
+
+rangeLimit.onchange = function(e){
+    console.log(e.target.value);
+    document.querySelector("#infoRange").innerHTML = `maksymalna wartość ${rangeLimit.max}<br />
+                                       aktualna wartość ${e.target.value} <br />
+                                       ilość prezentów do kupienia: `;
+    document.querySelector(".root").innerHTML = "";
+    document.querySelector(".root").appendChild(CreateTab(dane,e.target.value));                                    
+}
 function GetMaxPrice(dane){
     let max = dane[0][3];
     for(let row of dane){
