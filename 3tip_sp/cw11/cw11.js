@@ -38,14 +38,22 @@ document.querySelector(".root").appendChild(CreateTab(dane,50));
 
 let rangeLimit = document.querySelector("#limit");
 rangeLimit.max = GetMaxPrice(dane);
-
+function getGiftsCount(limit,dane){
+    const result = dane.filter(function(element){
+        return element[3]<=limit
+    });
+    console.log(result);
+    return result.length;
+}
 rangeLimit.onchange = function(e){
     console.log(e.target.value);
     document.querySelector("#infoRange").innerHTML = `maksymalna wartość ${rangeLimit.max}<br />
                                        aktualna wartość ${e.target.value} <br />
-                                       ilość prezentów do kupienia: `;
+                                       ilość prezentów do kupienia: 
+                                           ${getGiftsCount(e.target.value,dane)}`;
     document.querySelector(".root").innerHTML = "";
-    document.querySelector(".root").appendChild(CreateTab(dane,e.target.value));                                    
+    document.querySelector(".root").appendChild(CreateTab(dane,e.target.value));
+                                    
 }
 function GetMaxPrice(dane){
     let max = dane[0][3];
