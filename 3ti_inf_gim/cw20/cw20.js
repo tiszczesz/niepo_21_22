@@ -25,8 +25,9 @@ class ToHtml{
 }
 const users = [
     new User("Antoni","Hajduk",23),
-    new User("Monika","Grabska",25,new Date('2020-03-12'))
-    
+    new User("Monika","Grabska",25,new Date('2020-03-12')),
+    new User("Teresa","Rydzyk",25,new Date('2020-03-12')),
+    new User("Roman","Monek",25,new Date('2020-03-12'))   
 ];
 // document.querySelector(".root").innerHTML = `<div class='userInfo'>${users[0].showString()}</div>
 //                         <div class='userInfo'>${users[1].showString()}</div>`;

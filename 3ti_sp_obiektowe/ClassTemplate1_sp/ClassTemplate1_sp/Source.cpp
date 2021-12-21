@@ -14,6 +14,10 @@ int main() {
 	Box<string>* BoxOfWords = new Box<string>(words);
 	Box<Pair> BoxOfPair = Box<Pair>(pary);
 	BoxOfPair.ShowAll();
+	cout << "sortujemy pary....." << endl;
+	Box<Pair> posortowanePary = BoxOfPair.SortAlg();
+	posortowanePary.ShowAll();
+	cout << "\n=====================================\n\n";
 	/*BoxOfNumbers.ShowAll();
 	BoxOfNumbers.Add(999);
 	BoxOfNumbers.ShowAll();*/

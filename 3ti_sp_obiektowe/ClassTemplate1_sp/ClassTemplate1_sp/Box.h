@@ -34,5 +34,11 @@ public:
 		return max;
 	}
 	Box SortBubble(bool order=true);  //ma zwarac nowy obiekt Box posortowany
+	Box SortAlg() {
+		std::vector<T> result = data;
+		std::sort(result.begin(), result.end());
+		Box sortBox(result);
+		return sortBox;
+	}  //ma zwarac nowy obiekt Box posortowany
 };
 
