@@ -13,6 +13,7 @@ namespace WorkWithListVew
 {
     public partial class MainWindow : Form {
         public Gifts gifts;
+        public StateOfWin MyStateOfWin { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -23,16 +24,23 @@ namespace WorkWithListVew
             lbGifts.DataSource = null;
             lbGifts.DataSource = gifts.MyGifts;
             lbGifts.DisplayMember = "NamePrice";
+            btnAddNewGift.Enabled = true;
+            btnEdit.Enabled = true;
         }
 
         private void btnAddNewGift_Click(object sender, EventArgs e) {
+            MyStateOfWin = StateOfWin.Add;
             new NewItem(this).ShowDialog();
             btnLoad_Click(sender, e);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
+            MyStateOfWin = StateOfWin.Edit;
             new NewItem(this).ShowDialog();
+        }
+
+        public ListBox GetListBox() {
+            return lbGifts;
         }
     }
 }

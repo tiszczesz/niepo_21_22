@@ -47,5 +47,23 @@ namespace WorkWithListVew
             return null;
 
         }
+
+        private void NewItem_Load(object sender, EventArgs e)
+        {
+            if (_window.MyStateOfWin == StateOfWin.Edit) {
+                this.Text = "Edytuj prezent";
+                btnAdd.Text = "Edytuj";
+                ListBox gifts = _window.GetListBox();
+                if (gifts.DataSource == null || gifts.SelectedItem==null) {
+                    this.Close();
+                }
+
+                Gift selGift = gifts.SelectedItem as Gift;
+            }
+            else {
+                this.Text = "Dodaj prezent";
+                btnAdd.Text = "Dodaj";
+            }
+        }
     }
 }

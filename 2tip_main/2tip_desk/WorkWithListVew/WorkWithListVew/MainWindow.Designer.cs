@@ -30,17 +30,17 @@ namespace WorkWithListVew
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddNewGift = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lbGifts = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAddNewGift);
             this.panel1.Controls.Add(this.btnLoad);
             this.panel1.Controls.Add(this.lbGifts);
@@ -51,8 +51,21 @@ namespace WorkWithListVew
             this.panel1.Size = new System.Drawing.Size(451, 600);
             this.panel1.TabIndex = 0;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Enabled = false;
+            this.btnEdit.Location = new System.Drawing.Point(218, 159);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(215, 36);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edytuj Prezent";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnAddNewGift
             // 
+            this.btnAddNewGift.Enabled = false;
             this.btnAddNewGift.Location = new System.Drawing.Point(218, 89);
             this.btnAddNewGift.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddNewGift.Name = "btnAddNewGift";
@@ -84,17 +97,6 @@ namespace WorkWithListVew
             this.lbGifts.Size = new System.Drawing.Size(211, 600);
             this.lbGifts.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(218, 159);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 36);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Edytuj Prezent";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -115,7 +117,7 @@ namespace WorkWithListVew
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.ListBox lbGifts;
         private System.Windows.Forms.Button btnAddNewGift;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
 

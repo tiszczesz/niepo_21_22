@@ -158,6 +158,7 @@ namespace WorkWithListVew
             this.MaximizeBox = false;
             this.Name = "NewItem";
             this.Text = "Dodawanie prezentu";
+            this.Load += new System.EventHandler(this.NewItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
