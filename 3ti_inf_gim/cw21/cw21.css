@@ -13,3 +13,6 @@ table{border-collapse: collapse;min-width: min-content;width: 70%;margin: auto;t
     th,td{border: solid 1px black;padding: 5px;}
     th{background-color: lightblue;}
     tr:hover{background-color: lightseagreen;}
+.error{
+    color: red;
+}
