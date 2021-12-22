@@ -59,11 +59,16 @@ namespace WorkWithListVew
                 }
 
                 Gift selGift = gifts.SelectedItem as Gift;
+                UpdateForm(selGift);
             }
             else {
                 this.Text = "Dodaj prezent";
                 btnAdd.Text = "Dodaj";
             }
+        }
+
+        private void UpdateForm(Gift gift) {
+
         }
     }
 }
