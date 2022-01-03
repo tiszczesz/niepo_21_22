@@ -5,19 +5,33 @@
 #include <vector>
 #include <algorithm>
 #include "Pair.h"
+#include "Gift.h"
 using namespace std;
 
+void Ex1();
+void Ex2();
+
 int main() {
-	vector<string> v1{"ala","wele", "mela", "Bella", "ciela"};
-	Pair p1{ 12,6 };
-	Pair p2{ 3,67 };
-	Pair p3{ 44,67 };
-	vector<Pair> pp {p1, p2, p3};
-	pp.push_back(Pair{1,2});
-	vector<int> numbers{ 12,6,8,9,0,23 };//na stosie ->w momencie kompliacji
-	Container<string>* c1 = new Container<string>(v1);//na stercie przy uruchomieniu
+	//Ex1();
+	Ex2();
+	return EXIT_SUCCESS;
+}
+
+void Ex2() {
+	//utworzyc Kontener prezentow i mozliwosc wyswietlania i sortowania po cenie
+}
+
+void Ex1() {
+	vector<string> v1{"ala", "wele", "mela", "Bella", "ciela"};
+	Pair p1{12, 6};
+	Pair p2{3, 67};
+	Pair p3{44, 67};
+	vector<Pair> pp{p1, p2, p3};
+	pp.push_back(Pair{1, 2});
+	vector<int> numbers{12, 6, 8, 9, 0, 23}; //na stosie ->w momencie kompliacji
+	Container<string>* c1 = new Container<string>(v1); //na stercie przy uruchomieniu
 	Container<int> liczby(numbers);
-	Container<Pair>*  pary = new Container<Pair>(pp);
+	Container<Pair>* pary = new Container<Pair>(pp);
 	//(*c1).ShowAll();
 	//c1->ShowAll();
 	pary->ShowAll();
@@ -31,13 +45,13 @@ int main() {
 	pairSort.ShowAll();
 	//cout << pp[0] << " > " << pp[1] << (pp[0] > pp[1]) << endl;
 	c1 = nullptr;
-	if(c1!=nullptr) {
+	if (c1 != nullptr) {
 		string elem = "jeszcze jeden element";
 		c1->AddNew(elem);
 		c1->ShowAll();
-	}else {
+	}
+	else {
 		cout << "dsfsd fsd f";
 	}
-	
-	return EXIT_SUCCESS;
+
 }
