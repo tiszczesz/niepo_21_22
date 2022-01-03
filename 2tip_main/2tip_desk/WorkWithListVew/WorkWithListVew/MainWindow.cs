@@ -20,7 +20,7 @@ namespace WorkWithListVew
             gifts = new Gifts();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e) {
+        public void btnLoad_Click(object sender, EventArgs e) {
             lbGifts.DataSource = null;
             lbGifts.DataSource = gifts.MyGifts;
             lbGifts.DisplayMember = "NamePrice";

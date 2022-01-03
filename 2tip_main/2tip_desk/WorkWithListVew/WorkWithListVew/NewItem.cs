@@ -27,8 +27,21 @@ namespace WorkWithListVew
         private void btnAdd_Click(object sender, EventArgs e) {
             var rr = _window.gifts;
             Gift gift = getFromForm();
-            if (gift != null) {
+            ListBox gifts = _window.GetListBox();
+            if (gifts.DataSource == null || gifts.SelectedItem == null)
+            {
+                this.Close();
+            }
+            Gift toUpdateGift = gifts.SelectedItem as Gift;
+            if (gift != null && _window.MyStateOfWin == StateOfWin.Add) {
                 _window.gifts.MyGifts.Add(gift);
+                Close();
+            }else if (gift != null && _window.MyStateOfWin == StateOfWin.Edit) {
+               // Gift orginGift = _window.gifts.MyGifts.FirstOrDefault(g=>g.KeyGuid==toUpdateGift.KeyGuid);
+               toUpdateGift.Name = gift.Name;
+               toUpdateGift.Price = gift.Price;
+               toUpdateGift.Description = gift.Description;
+
                 Close();
             }
         }
@@ -68,7 +81,14 @@ namespace WorkWithListVew
         }
 
         private void UpdateForm(Gift gift) {
+            tbName.Text = gift.Name;
+            tbPrice.Text = gift.Price.ToString();
+            tbDescription.Text = gift.Description;
+        }
 
+        private void NewItem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _window.btnLoad_Click(_window,null);
         }
     }
 }
