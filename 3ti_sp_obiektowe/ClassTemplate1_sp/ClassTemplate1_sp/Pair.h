@@ -11,4 +11,4 @@ struct Pair
 	friend bool operator==(const Pair& p1, const Pair& p2);
 	
 };
-//todo abs >  <<
+//todo  >  <<

@@ -36,7 +36,7 @@ public:
 	Box SortBubble(bool order=true);  //ma zwarac nowy obiekt Box posortowany
 	Box SortAlg() {
 		std::vector<T> result = data;
-		std::sort(result.begin(), result.end());
+		std::sort(result.begin(), result.end());  //n*ln( n)
 		Box sortBox(result);
 		return sortBox;
 	}  //ma zwarac nowy obiekt Box posortowany
