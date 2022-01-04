@@ -41,6 +41,9 @@ class ToHtml {
 }
 let table = document.querySelector('#list');
 ToHtml.ToTable(data);
+document.querySelector("#total").innerHTML = "Całkowity koszt imprezy: "+TotalPrice(data);
+
+
 document.querySelector('#addNew').onclick = function (e) {
   const dish = DishFromForm();
   if (dish == null) return;
@@ -49,6 +52,7 @@ document.querySelector('#addNew').onclick = function (e) {
   document.querySelector("#name").value = "";
   document.querySelector("#price").value = "";
   document.querySelector("#quantity").value = "";
+  document.querySelector("#total").innerHTML = "Całkowity koszt imprezy: "+TotalPrice(data);
 };
 function DishFromForm() {
   let name = document.querySelector('#name').value;
@@ -59,4 +63,12 @@ function DishFromForm() {
     return null;
   }
   return new Dish(name, price, quantity);
+}
+function TotalPrice(data){
+  let total = 0;
+  for (const elem of data) {
+    total+=(elem.price*elem.quantity);
+  }
+
+  return total;
 }
