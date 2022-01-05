@@ -30,11 +30,11 @@ namespace WorkWithListVew
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddNewGift = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lbGifts = new System.Windows.Forms.ListBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,18 @@ namespace WorkWithListVew
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(451, 600);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(217, 234);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(215, 36);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Usuń Prezent";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -98,17 +110,7 @@ namespace WorkWithListVew
             this.lbGifts.Name = "lbGifts";
             this.lbGifts.Size = new System.Drawing.Size(211, 600);
             this.lbGifts.TabIndex = 0;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(217, 234);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(215, 36);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Usuń Prezent";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.lbGifts.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbGifts_MouseDoubleClick);
             // 
             // MainWindow
             // 

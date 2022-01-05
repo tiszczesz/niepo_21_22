@@ -21,14 +21,17 @@ namespace WorkWithListVew
         }
 
         public void btnLoad_Click(object sender, EventArgs e) {
-            lbGifts.DataSource = null;
-            lbGifts.DataSource = gifts.MyGifts;
-            lbGifts.DisplayMember = "NamePrice";
+            UpdateListBox();
             btnAddNewGift.Enabled = true;
             btnEdit.Enabled = true;
             btnDelete.Enabled = true;
         }
 
+        private void UpdateListBox() {
+            lbGifts.DataSource = null;
+            lbGifts.DataSource = gifts.MyGifts;
+            lbGifts.DisplayMember = "NamePrice";
+        }
         private void btnAddNewGift_Click(object sender, EventArgs e) {
             MyStateOfWin = StateOfWin.Add;
             new NewItem(this).ShowDialog();
@@ -42,6 +45,22 @@ namespace WorkWithListVew
 
         public ListBox GetListBox() {
             return lbGifts;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if ( lbGifts.SelectedItem==null) return;
+           
+            Gift selectedGift = lbGifts.SelectedItem as Gift;
+            if(selectedGift==null) return;
+            gifts.MyGifts.Remove(selectedGift);
+            UpdateListBox();
+        }
+
+        private void lbGifts_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            MyStateOfWin = StateOfWin.Edit;
+            new NewItem(this).ShowDialog();
         }
     }
 }

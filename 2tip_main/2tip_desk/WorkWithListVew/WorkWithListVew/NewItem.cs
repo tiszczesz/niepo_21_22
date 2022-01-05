@@ -25,7 +25,7 @@ namespace WorkWithListVew
         }
 
         private void btnAdd_Click(object sender, EventArgs e) {
-            var rr = _window.gifts;
+            //var rr = _window.gifts;
             Gift gift = getFromForm();
             ListBox gifts = _window.GetListBox();
             if (gifts.DataSource == null || gifts.SelectedItem == null)
@@ -69,6 +69,7 @@ namespace WorkWithListVew
                 ListBox gifts = _window.GetListBox();
                 if (gifts.DataSource == null || gifts.SelectedItem==null) {
                     this.Close();
+                    return;
                 }
 
                 Gift selGift = gifts.SelectedItem as Gift;
