@@ -57,8 +57,8 @@ namespace WorkWithListVew
             UpdateListBox();
         }
 
-        private void lbGifts_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
+        private void lbGifts_MouseDoubleClick(object sender, MouseEventArgs e) {
+            if (lbGifts.DataSource == null) return;
             MyStateOfWin = StateOfWin.Edit;
             new NewItem(this).ShowDialog();
         }
