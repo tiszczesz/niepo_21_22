@@ -26,6 +26,7 @@ namespace WorkWithListVew
             lbGifts.DisplayMember = "NamePrice";
             btnAddNewGift.Enabled = true;
             btnEdit.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         private void btnAddNewGift_Click(object sender, EventArgs e) {
