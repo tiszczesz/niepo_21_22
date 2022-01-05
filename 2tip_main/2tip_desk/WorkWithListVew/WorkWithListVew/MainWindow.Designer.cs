@@ -34,12 +34,14 @@ namespace WorkWithListVew
             this.btnAddNewGift = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lbGifts = new System.Windows.Forms.ListBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAddNewGift);
             this.panel1.Controls.Add(this.btnLoad);
@@ -54,7 +56,7 @@ namespace WorkWithListVew
             // btnEdit
             // 
             this.btnEdit.Enabled = false;
-            this.btnEdit.Location = new System.Drawing.Point(218, 159);
+            this.btnEdit.Location = new System.Drawing.Point(218, 165);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(215, 36);
@@ -66,7 +68,7 @@ namespace WorkWithListVew
             // btnAddNewGift
             // 
             this.btnAddNewGift.Enabled = false;
-            this.btnAddNewGift.Location = new System.Drawing.Point(218, 89);
+            this.btnAddNewGift.Location = new System.Drawing.Point(218, 96);
             this.btnAddNewGift.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddNewGift.Name = "btnAddNewGift";
             this.btnAddNewGift.Size = new System.Drawing.Size(215, 36);
@@ -97,6 +99,17 @@ namespace WorkWithListVew
             this.lbGifts.Size = new System.Drawing.Size(211, 600);
             this.lbGifts.TabIndex = 0;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(217, 234);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(215, 36);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Usuń Prezent";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -118,6 +131,7 @@ namespace WorkWithListVew
         private System.Windows.Forms.ListBox lbGifts;
         private System.Windows.Forms.Button btnAddNewGift;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
