@@ -12,8 +12,8 @@ void Ex1();
 void Ex2();
 
 int main() {
-	//Ex1();
-	Ex2();
+	Ex1();
+	//Ex2();
 	return EXIT_SUCCESS;
 }
 
