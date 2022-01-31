@@ -12,12 +12,12 @@ namespace WorkWithListVew.Models
 
         public Gifts() {
             MyGifts = new List<Gift> {
-                new Gift {Name = "Saneczki", Price = 34.89M},
-                new Gift {Name = "Rowerek", Price = 120.00M},
-                new Gift {Name = "Lalka Barbie", Price = 29.89M},
-                new Gift {Name = "Samochodzik", Price = 12.89M},
-                new Gift {Name = "Misiu", Price = 52.89M},
-                new Gift {Name = "Narty", Price = 312.89M}
+                new Gift {Name = "Saneczki", Price = 34.89M,Description = "fffff"},
+                new Gift {Name = "Rowerek", Price = 120.00M,Description = "fw wwffff"},
+                new Gift {Name = "Lalka Barbie", Price = 29.89M,Description = "rrr"},
+                new Gift {Name = "Samochodzik", Price = 12.89M,Description = "fffff"},
+                new Gift {Name = "Misiu", Price = 52.89M,Description = "dddd"},
+                new Gift {Name = "Narty", Price = 312.89M,Description = "tttt"}
             };
         }
 

@@ -35,7 +35,14 @@ namespace WorkWithListVew
             this.btnAddNewGift = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.lbGifts = new System.Windows.Forms.ListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lvGifts = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,16 +119,62 @@ namespace WorkWithListVew
             this.lbGifts.TabIndex = 0;
             this.lbGifts.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbGifts_MouseDoubleClick);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lvGifts);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(451, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(773, 600);
+            this.panel2.TabIndex = 1;
+            // 
+            // lvGifts
+            // 
+            this.lvGifts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.lvGifts.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lvGifts.GridLines = true;
+            this.lvGifts.HideSelection = false;
+            this.lvGifts.Location = new System.Drawing.Point(223, 0);
+            this.lvGifts.Name = "lvGifts";
+            this.lvGifts.Size = new System.Drawing.Size(550, 600);
+            this.lvGifts.TabIndex = 0;
+            this.lvGifts.UseCompatibleStateImageBehavior = false;
+            this.lvGifts.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nazwa";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Cena";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Opis";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.DisplayIndex = 3;
+            this.columnHeader4.Text = "Lp";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(1224, 600);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainWindow";
             this.Text = "Okno główne";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -134,6 +187,12 @@ namespace WorkWithListVew
         private System.Windows.Forms.Button btnAddNewGift;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListView lvGifts;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
