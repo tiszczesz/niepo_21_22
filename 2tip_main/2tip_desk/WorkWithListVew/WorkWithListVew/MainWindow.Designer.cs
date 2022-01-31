@@ -37,10 +37,10 @@ namespace WorkWithListVew
             this.lbGifts = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvGifts = new System.Windows.Forms.ListView();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -130,24 +130,30 @@ namespace WorkWithListVew
             // 
             // lvGifts
             // 
+            this.lvGifts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lvGifts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.lvGifts.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lvGifts.FullRowSelect = true;
             this.lvGifts.GridLines = true;
             this.lvGifts.HideSelection = false;
-            this.lvGifts.Location = new System.Drawing.Point(223, 0);
+            this.lvGifts.Location = new System.Drawing.Point(135, 0);
             this.lvGifts.Name = "lvGifts";
-            this.lvGifts.Size = new System.Drawing.Size(550, 600);
+            this.lvGifts.Size = new System.Drawing.Size(638, 600);
             this.lvGifts.TabIndex = 0;
             this.lvGifts.UseCompatibleStateImageBehavior = false;
             this.lvGifts.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Lp";
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Nazwa";
+            this.columnHeader1.Width = 160;
             // 
             // columnHeader2
             // 
@@ -156,11 +162,7 @@ namespace WorkWithListVew
             // columnHeader3
             // 
             this.columnHeader3.Text = "Opis";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.DisplayIndex = 3;
-            this.columnHeader4.Text = "Lp";
+            this.columnHeader3.Width = 160;
             // 
             // MainWindow
             // 
