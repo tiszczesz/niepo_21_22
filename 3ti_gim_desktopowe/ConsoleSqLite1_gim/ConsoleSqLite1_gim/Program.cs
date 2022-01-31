@@ -13,11 +13,27 @@ namespace ConsoleSqLite1_gim
             //db.Database.EnsureCreated();
             GiftRepo repo = new GiftRepo();
              repo.ShowAll();
-           // Gift g = new Gift {Name = "rrr", Owner = "gggg", Price = 23.7M};
-           //db.Gifts.Add(g);
-           //db.SaveChanges();
-           //repo.ShowAll();
-            Console.ReadKey();
+             Console.WriteLine("czy dodac nowy prezent (t/n)?: ");
+
+             string question = Console.ReadLine();
+             if (question!=null && question.StartsWith('t') ) {
+                AddNewGift();
+                repo.ShowAll();
+             }
+             Console.ReadKey();
+        }
+
+        public static void AddNewGift() {
+            Console.WriteLine("Podaj nazwe prezentu: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Podaj imie osoby: ");
+            string owner = Console.ReadLine();
+            Console.WriteLine("Podaj cenę: ");
+            decimal price = Convert.ToDecimal(Console.ReadLine());
+
+            Gift gift = new Gift { Name = name, Owner = owner, Price = price };
+            GiftRepo repo = new GiftRepo();
+            repo.AddNew(gift);
         }
     }
 }
