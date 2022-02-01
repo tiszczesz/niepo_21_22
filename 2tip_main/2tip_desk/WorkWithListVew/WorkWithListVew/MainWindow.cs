@@ -68,18 +68,19 @@ namespace WorkWithListVew
         }
 
         private void FillListViewGifts() {
-            lvGifts.Clear();
-            //int lp = 0;
-            //foreach (Gift gift in gifts.MyGifts) {
-            //    lp++;
-            //    ListViewItem lvItem = new ListViewItem(lp.ToString());
-            //    lvItem.SubItems.Add(gift.Name);
-            //    lvItem.SubItems.Add(gift.Price.ToString());
-            //    lvItem.SubItems.Add(gift.Description);
-            //    lvGifts.Items.Add(lvItem);
-            //}
-          
-           
-    }
+            lvGifts.Items.Clear();
+            int lp = 0;
+            foreach (Gift gift in gifts.MyGifts)
+            {
+                lp++;
+                ListViewItem lvItem = new ListViewItem(lp.ToString());
+                lvItem.SubItems.Add(gift.Name);
+                lvItem.SubItems.Add(gift.Price.ToString());
+                lvItem.SubItems.Add(gift.Description);
+                lvGifts.Items.Add(lvItem);
+            }
+
+
+        }
     }
 }
