@@ -75,11 +75,16 @@ namespace WorkWithListVew
                 lp++;
                 ListViewItem lvItem = new ListViewItem(lp.ToString());
                 lvItem.SubItems.Add(gift.Name);
-                lvItem.SubItems.Add(gift.Price.ToString());
+                lvItem.SubItems.Add(gift.Price.ToString(/*"c2"*/));
                 lvItem.SubItems.Add(gift.Description);
                 lvGifts.Items.Add(lvItem);
             }
 
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
     }

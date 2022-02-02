@@ -30,6 +30,10 @@ namespace WorkWithListVew
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAddNewGift = new System.Windows.Forms.Button();
@@ -42,12 +46,14 @@ namespace WorkWithListVew
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnAddNewGift);
@@ -59,6 +65,48 @@ namespace WorkWithListVew
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(451, 600);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Location = new System.Drawing.Point(217, 302);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(231, 295);
+            this.panel3.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(2, 173);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 36);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Usuń Prezent";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 104);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(215, 36);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Edytuj Prezent";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 35);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 36);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Dodaj Prezent";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnDelete
             // 
@@ -136,12 +184,13 @@ namespace WorkWithListVew
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.lvGifts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvGifts.FullRowSelect = true;
             this.lvGifts.GridLines = true;
             this.lvGifts.HideSelection = false;
-            this.lvGifts.Location = new System.Drawing.Point(135, 0);
+            this.lvGifts.Location = new System.Drawing.Point(0, 0);
             this.lvGifts.Name = "lvGifts";
-            this.lvGifts.Size = new System.Drawing.Size(638, 600);
+            this.lvGifts.Size = new System.Drawing.Size(773, 600);
             this.lvGifts.TabIndex = 0;
             this.lvGifts.UseCompatibleStateImageBehavior = false;
             this.lvGifts.View = System.Windows.Forms.View.Details;
@@ -176,6 +225,7 @@ namespace WorkWithListVew
             this.Text = "Okno główne";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -195,6 +245,10 @@ namespace WorkWithListVew
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
