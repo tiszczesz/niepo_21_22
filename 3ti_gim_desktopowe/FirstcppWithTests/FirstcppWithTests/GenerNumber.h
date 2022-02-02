@@ -6,7 +6,6 @@ class GenerNumber
 {
 public:
 	static int GenerEven() {
-
 		return rand()*2;
 	}
 	static std::vector<int> GetEvenNumbers(size_t size) {
@@ -18,6 +17,9 @@ public:
 	}
 	static int GetDividedBy(int divisor) {
 		return 5;
+	}
+	static int GetPrimalRandom() {
+		return 3;
 	}
 };
 
