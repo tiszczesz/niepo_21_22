@@ -16,5 +16,22 @@ namespace MyUnitTest
 			int ff = gn.GenerEven();
 			Assert::IsTrue(ff % 2 == 0);
 		}
+		TEST_METHOD(Even_Test_Static)
+		{			
+			int ff = GenerNumber::GenerEven();
+			Assert::IsTrue(ff % 2 == 0);
+		}
+		TEST_METHOD(Even_Test_Two_numbers)
+		{
+			int ff1 = GenerNumber::GenerEven();
+			int ff2 = GenerNumber::GenerEven();
+			Assert::IsTrue(ff1!=ff2);
+		}
+		TEST_METHOD(Even_Test_vector_numbers)
+		{
+			std::vector<int> result = GenerNumber::GetEvenNumbers(3);
+			std::vector<int> result2 = GenerNumber::GetEvenNumbers(3);
+			//Assert::IsTrue(ff1 != ff2);
+		}
 	};
 }
