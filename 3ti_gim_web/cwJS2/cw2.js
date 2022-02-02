@@ -1,4 +1,4 @@
 $(function(){
-    const lis = $('li').even();
+    const lis = $('li:even');
     console.log(lis);
 });
