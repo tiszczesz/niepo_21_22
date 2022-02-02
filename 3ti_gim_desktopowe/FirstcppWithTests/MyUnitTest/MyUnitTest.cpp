@@ -29,9 +29,18 @@ namespace MyUnitTest
 		}
 		TEST_METHOD(Even_Test_vector_numbers)
 		{
-			std::vector<int> result = GenerNumber::GetEvenNumbers(3);
-			std::vector<int> result2 = GenerNumber::GetEvenNumbers(3);
+			std::vector<int> result = GenerNumber::GetEvenNumbers(8);
+			for(size_t i=0;i<result.size();i++) {
+				Assert::IsTrue(result[i] % 2 == 0);
+			}
 			//Assert::IsTrue(ff1 != ff2);
+		}
+		TEST_METHOD(Divide_Test_number)
+		{
+			int number = 6;
+			int result = GenerNumber::GetDividedBy(number);
+			
+			Assert::IsTrue(result%number ==0);
 		}
 	};
 }

@@ -16,5 +16,8 @@ public:
 		}
 		return result;
 	}
+	static int GetDividedBy(int divisor) {
+		return 5;
+	}
 };
 
