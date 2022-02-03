@@ -131,7 +131,7 @@ namespace WorkWithListVew
             // pbImage
             // 
             this.pbImage.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pbImage.Location = new System.Drawing.Point(506, 49);
+            this.pbImage.Location = new System.Drawing.Point(504, 49);
             this.pbImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(336, 361);
