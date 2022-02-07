@@ -29,7 +29,7 @@ public:
 		return result;
 	}
 	int RandomDividedBy(int divider) {
-		return rand();
+		return rand()*divider;
 	}
 private:
 	bool isPrimal(int number) {

@@ -55,7 +55,7 @@ namespace NativeUTest1
 
 		TEST_METHOD(Test_divide_by_divider) {
 			Numbers numbers;
-			int divider = 3;
+			int divider = 45;//5,8/88,45,1
 			int result = numbers.RandomDividedBy(divider);
 			//result.push_back(4);
 			Assert::IsTrue(result % divider == 0);
