@@ -4,7 +4,7 @@ $(function(){
 
     $("input[type=button]").each(function(){
         $(this).click(function(){
-           $("li a").each(function(){
+           $("li").each(function(){
                 $(this).removeClass();
            });
             //console.log($(this).attr("id"));
