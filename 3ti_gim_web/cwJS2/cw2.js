@@ -9,7 +9,9 @@ $(function(){
            });
             //console.log($(this).attr("id"));
             switch($(this).attr("id")){
-                case "b1": ; break;
+                case "b1": console.log($('li').first());
+                $('li').first().addClass("mark");
+                 break;
                 case "b2": alert("d"); break;
                 case "b3": alert("t"); break;
                 case "b4": alert("c"); break;
