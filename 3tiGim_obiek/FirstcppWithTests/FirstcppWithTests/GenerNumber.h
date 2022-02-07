@@ -16,10 +16,24 @@ public:
 		return result;
 	}
 	static int GetDividedBy(int divisor) {
-		return 5;
+		return rand() * divisor;
 	}
 	static int GetPrimalRandom() {
-		return 3;
+		srand(time(0));
+		int result = 0;
+		do {
+			result = rand();
+		} while (!isPrimal(result));
+		return result;
+	}
+
+private:
+	static bool isPrimal(int number) {
+		if (number <= 1) return false;
+		for (size_t i = 2; i * i <= number; i++) {
+			if (number%i==0) return false;
+		}
+		return true;
 	}
 };
 

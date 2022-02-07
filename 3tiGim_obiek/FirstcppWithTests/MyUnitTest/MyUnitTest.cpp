@@ -37,10 +37,28 @@ namespace MyUnitTest
 		}
 		TEST_METHOD(Divide_Test_number)
 		{
-			int number = 6;
+			int number = 12;
 			int result = GenerNumber::GetDividedBy(number);
 			
 			Assert::IsTrue(result%number ==0);
+		}
+		TEST_METHOD(Primal_Test_number)
+		{
+			int result = GenerNumber::GetPrimalRandom();
+			Assert::IsTrue(isPrimal(result));
+		}
+
+		TEST_METHOD(Primal_Test_number2)
+		{
+			int result = 6;
+			Assert::IsTrue(isPrimal(result));
+		}
+		static bool isPrimal(int number) {
+			if (number <= 1) return false;
+			for (size_t i = 2; i * i <= number; i++) {
+				if (number % i == 0) return false;
+			}
+			return true;
 		}
 	};
 }
