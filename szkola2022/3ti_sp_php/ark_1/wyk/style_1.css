@@ -1,0 +1,40 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#baner {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+#glowny{
+    background-color: lightblue;
+    padding: 100px;
+}
+#dolny{
+    display: flex;
+    flex-direction: row;
+}
+#lewy{
+    background-color: dodgerblue;
+    color: white;
+    width: 20%;
+    height: 220px;
+}
+#srodkowy,#prawy{
+    background-color: dodgerblue;
+    color: white;
+    width: 40%;
+    height: 220px;
+    text-align: center;
+}
+#dolny a{
+    border: dashed 1px dimgrey;
+    background-color: gold;
+    color: darkred;
+    padding: 10px;
+}
+.error{
+    color: red;
+}
