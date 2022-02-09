@@ -26,6 +26,12 @@ public:
 		} while (!isPrimal(result));
 		return result;
 	}
+	static std::vector<int> GetAllPrimalFrom(int low, int up) {
+		std::vector<int> result;
+		if (low >= up) return result;
+		//result.push_back(2);
+		return result;
+	}
 
 private:
 	static bool isPrimal(int number) {
