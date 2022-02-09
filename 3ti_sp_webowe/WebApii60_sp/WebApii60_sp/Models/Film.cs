@@ -9,6 +9,6 @@ namespace WebApii60_sp.Models
 
         public string Title { get; set; }
         public string Director { get; set; }
-        public DateOnly CreateDate { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }
