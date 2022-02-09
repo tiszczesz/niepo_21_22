@@ -26,7 +26,7 @@ public:
 		} while (!isPrimal(result));
 		return result;
 	}
-	static std::vector<int> GetAllPrimalFrom(int low, int up) {
+	static std::vector<int> GetAllPrimalFrom(size_t low, size_t up) {
 		std::vector<int> result;
 		if (low >= up) return result;
 		//result.push_back(2);
