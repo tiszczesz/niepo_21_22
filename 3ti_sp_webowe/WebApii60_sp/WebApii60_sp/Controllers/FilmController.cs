@@ -22,5 +22,15 @@ namespace WebApii60_sp.Controllers
 
             return Ok(films);
         }
+
+        [HttpGet("{id}")]
+        public ActionResult<Film> Get(int id) {
+            Film film = _repo.GetFilmById(id);
+            if (film == null) {
+                return NotFound();
+            }
+
+            return Ok(film);
+        }
     }
 }
