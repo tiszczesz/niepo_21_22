@@ -1,4 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.Write("Podaj liczbe: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Hello, World! a = {a}");
+
+using ConsEF_StartSqlLite1.Models;
+
+ContactRepo repo = new ContactRepo();
+
+List<Contact> contacts = repo.GetAll();
+foreach (Contact c in contacts) {
+    Console.WriteLine($"{c.FirstName} {c.LastName} Adres: {c.Address}");
+}
+
+// CRUD dodawanie nowego kontaktu usuwanie kontaktu o id
+// wyszukiwanie kontaktu po imieniu lub nazwisku
+//zmiana kontaktu po wyszukaniu id
