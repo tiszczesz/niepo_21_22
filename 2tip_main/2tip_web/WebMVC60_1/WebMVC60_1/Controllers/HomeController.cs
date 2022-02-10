@@ -32,6 +32,10 @@ namespace WebMVC60_1.Controllers
         public ViewResult MyViewAction() {
             return View("NewView");
         }
+
+        public IActionResult Redirect() {
+            return RedirectToAction("Privacy");
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
