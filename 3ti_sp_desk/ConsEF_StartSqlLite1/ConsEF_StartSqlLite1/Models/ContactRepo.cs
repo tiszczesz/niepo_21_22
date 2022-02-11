@@ -17,5 +17,10 @@ namespace ConsEF_StartSqlLite1.Models
         public List<Contact> GetAll() {
             return _db.Contacts.ToList();
         }
+
+        public void AddNewContact(Contact contact) {
+            _db.Contacts.Add(contact);
+            _db.SaveChanges();
+        }
     }
 }
