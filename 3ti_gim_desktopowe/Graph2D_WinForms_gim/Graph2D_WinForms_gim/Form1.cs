@@ -28,7 +28,8 @@ namespace Graph2D_WinForms_gim
             if (result == DialogResult.OK) {
                 var color = colorDialog1.Color;
                 Pen p2 = new Pen(color);
-                g.DrawEllipse(p2, 200, 200, 50, 50);
+                int size = Convert.ToInt32(numericUpDown1.Text);
+                g.DrawEllipse(p2, 200, 200, size, size);
             }
         }
     }
