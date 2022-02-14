@@ -42,13 +42,11 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(256, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(257, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 602);
+            this.panel1.Size = new System.Drawing.Size(1086, 689);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -62,7 +60,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 602);
+            this.panel2.Size = new System.Drawing.Size(257, 689);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -78,7 +76,7 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(101, 362);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            300,
+            500,
             0,
             0,
             0});
@@ -104,6 +102,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Narysuj wypełniony kwadrat";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -113,6 +112,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Narysuj prostokąt";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -128,9 +128,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 602);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1343, 689);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

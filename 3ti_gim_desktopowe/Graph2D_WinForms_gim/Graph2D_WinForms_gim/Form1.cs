@@ -32,5 +32,31 @@ namespace Graph2D_WinForms_gim
                 g.DrawEllipse(p2, 200, 200, size, size);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var result = colorDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                var color = colorDialog1.Color;
+                Brush b1 = new SolidBrush(color);
+                int size = Convert.ToInt32(numericUpDown1.Text);
+                g.FillRectangle(b1, 300, 300, size, size);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var result = colorDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                var color = colorDialog1.Color;
+                Pen p2 = new Pen(color);
+                int size = Convert.ToInt32(numericUpDown1.Text);
+                g.DrawRectangle(p2, 400, 400, size, size);
+            }
+
+        }
     }
 }
