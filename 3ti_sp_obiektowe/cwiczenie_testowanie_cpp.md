@@ -12,6 +12,7 @@
 class TextInfo{
     private:
      std::vector<std::string> text;
+     public:
      TextInfo(std::vector<std::string> text){
          this->text = text;
      }
