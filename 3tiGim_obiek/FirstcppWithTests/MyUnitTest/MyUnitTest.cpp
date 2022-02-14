@@ -16,11 +16,13 @@ namespace MyUnitTest
 			int ff = gn.GenerEven();
 			Assert::IsTrue(ff % 2 == 0);
 		}
+
 		TEST_METHOD(Even_Test_Static)
 		{			
 			int ff = GenerNumber::GenerEven();
 			Assert::IsTrue(ff % 2 == 0);
 		}
+
 		TEST_METHOD(Even_Test_Two_numbers)
 		{
 			int ff1 = GenerNumber::GenerEven();
