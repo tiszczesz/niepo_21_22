@@ -45,7 +45,7 @@ document.querySelector("#addContact").onclick = function(){
   let firstname = document.querySelector("#imie").value.trim();
   let lastname = document.querySelector("#nazwisko").value.trim();
   let phone = document.querySelector("#telefon").value.trim();
-  console.log(firstname);
+  //console.log(firstname);
   
   if(firstname.length>0 && lastname.length>0 && phone.length>0){
     
