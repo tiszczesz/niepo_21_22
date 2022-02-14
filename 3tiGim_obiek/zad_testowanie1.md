@@ -7,3 +7,21 @@
    5. Policz słowa od ustalonej długości tzn. GetWords(int 3){....} liczy tylko słowa o długości wiekszej lub równej 3
    6. Policz tagi "&lt;p&gt;  itd"
 2. Testowanie tych funkcjonalności
+3. Przykład klacy
+
+```cpp
+class SearchText{
+    private:
+        string text;
+    public:
+    SearchText(string text){
+        this->text = text;
+    }
+    ...
+    int CountChar(){
+        ....
+    }
+};
+
+
+```
