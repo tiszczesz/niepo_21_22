@@ -53,3 +53,8 @@ document.querySelector("#addContact").onclick = function(){
     document.querySelector("#tabelka").innerHTML = ToHtml.ToTable(contacts);
   }
 };
+
+document.querySelector("#clearContacts").onclick = function(){
+  contacts.length=0;
+  document.querySelector("#tabelka").innerHTML = ToHtml.ToTable(contacts);
+};
