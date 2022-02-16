@@ -1,0 +1,36 @@
+﻿using WebApii60_sp.Data;
+
+namespace WebApii60_sp.Models
+{
+    public class SqLiteFilmRepo :IFilmRepo {
+        private FilmDbContext _db;
+
+        public SqLiteFilmRepo(FilmDbContext db) {
+            _db = db;
+        }
+        public IEnumerable<Film> GetFilms() {
+            return _db.Films.ToList();
+        }
+
+        public Film GetFilmById(int id) {
+            return _db.Films.Find(id);
+        }
+
+        public IEnumerable<Film> DeleteFilm(int id) {
+            var filmToDelete = _db.Films.Find(id);
+            if (filmToDelete != null) {
+                _db.Films.Remove(filmToDelete);
+                _db.SaveChanges();
+            }
+            return _db.Films.ToList();
+        }
+
+        public IEnumerable<Film> UpdateFilm(int id, Film film) {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Film> AddFilm(Film film) {
+            throw new NotImplementedException();
+        }
+    }
+}

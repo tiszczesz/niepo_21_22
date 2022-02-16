@@ -32,5 +32,21 @@ namespace WebApii60_sp.Controllers
 
             return Ok(film);
         }
+
+        [HttpPost]
+        public ActionResult<IEnumerable<Film>> Post(Film film) {
+            
+            return Ok(_repo.AddFilm(film));
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<IEnumerable<Film>> Delete(int id) {
+            return Ok(_repo.DeleteFilm(id));
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult<IEnumerable<Film>> Put(int id, Film film) {
+            return Ok(_repo.UpdateFilm(id, film));
+        }
     }
 }
