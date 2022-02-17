@@ -16,9 +16,9 @@ namespace ConsEF_StartSqlLite1
         }
         public  void ShowAll(List<Contact> contacts) {
             Console.WriteLine(" ------- LISTA KONTAKTÓW ----------");
-            foreach (Contact c in repo.GetAll())
+            foreach (Contact c in contacts)
             {
-                Console.WriteLine($"{c.FirstName} {c.LastName} Adres: {c.Address}");
+                Console.WriteLine($"Id: {c.Id} --> {c.FirstName} {c.LastName} Adres: {c.Address}");
             }
             Console.WriteLine("----------------------------------------------");
         }
@@ -39,6 +39,11 @@ namespace ConsEF_StartSqlLite1
             }
 
             return contact;
+        }
+
+        public string GetQuery() {
+            Console.Write("Podaj fraze do wyszukania: ");
+            return Console.ReadLine();
         }
     }
 }

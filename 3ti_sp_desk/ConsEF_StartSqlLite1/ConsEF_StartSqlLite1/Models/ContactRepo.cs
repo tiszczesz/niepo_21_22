@@ -22,5 +22,21 @@ namespace ConsEF_StartSqlLite1.Models
             _db.Contacts.Add(contact);
             _db.SaveChanges();
         }
+
+        public bool RemoveContact(int id) {
+            Contact toRemove = _db.Contacts.Find(id);
+            if (toRemove != null) {
+                _db.Contacts.Remove(toRemove);
+                _db.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
+        public List<Contact> GetSearch(string query) {
+            return _db.Contacts.Where(
+                c => (c.LastName.Contains(query) || c.FirstName.Contains(query))).ToList();
+        }
     }
 }
