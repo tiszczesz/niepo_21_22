@@ -18,6 +18,12 @@ namespace WebMVC60_1.Controllers
 
         [HttpPost]
         public IActionResult AddFilm(Film film) {
+            if (ModelState.IsValid) {
+                ViewBag.IsValid = true;
+            }
+            else {
+                ViewBag.IsValid = false;
+            }
             ViewBag.IsPost = true;
             return View(film);
         }
