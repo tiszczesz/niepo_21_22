@@ -32,7 +32,7 @@ Console.WriteLine("Czy wyszukac kontakty po nazwisku lub imieniu: (t/n)");
 isOK = Console.ReadLine();
 if (!String.IsNullOrWhiteSpace(isOK) && isOK.StartsWith("t")) {
     string query = contactPresenter.GetQuery();
-    List<Contact> result = repo.GetSearch(query);
+    List<Contact> result = repo.GetSearch(query.ToLower());
     if (result.Count > 0) {
         contactPresenter.ShowAll(result);
     }

@@ -36,7 +36,8 @@ namespace ConsEF_StartSqlLite1.Models
 
         public List<Contact> GetSearch(string query) {
             return _db.Contacts.Where(
-                c => (c.LastName.Contains(query) || c.FirstName.Contains(query))).ToList();
+                c => (c.LastName.ToLower().Contains(query) 
+                      || c.FirstName.ToLower().Contains(query))).ToList();
         }
     }
 }
