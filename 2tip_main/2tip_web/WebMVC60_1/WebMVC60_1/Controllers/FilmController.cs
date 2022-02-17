@@ -12,11 +12,13 @@ namespace WebMVC60_1.Controllers
         }
         [HttpGet]
         public IActionResult AddFilm() {
+            ViewBag.IsPost = false;
             return View();
         }
 
         [HttpPost]
         public IActionResult AddFilm(Film film) {
+            ViewBag.IsPost = true;
             return View(film);
         }
     }
