@@ -10,5 +10,14 @@ namespace WebMVC60_1.Controllers
             //return RedirectToAction("Index", "Home");
             return View(FilmRepo.GeFilms());
         }
+        [HttpGet]
+        public IActionResult AddFilm() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddFilm(Film film) {
+            return View(film);
+        }
     }
 }

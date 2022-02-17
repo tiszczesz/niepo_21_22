@@ -9,7 +9,23 @@
 <body>
 <div class="container">
     <h1 class="text-center bg-light m-3 p-2">Filmy</h1>
-    @RenderBody()
+    <div class="row">
+        <div class="col-2 bg-light">
+            Menu
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a class="btn btn-outline-dark w-100" asp-action="Index" asp-controller="Film">Zbiór filmów</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="btn btn-outline-dark w-100"  asp-action="AddFilm" asp-controller="Film">Dodaj film</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-10">
+            @RenderBody()
+        </div>
+    </div>
+    
 </div>
 </body>
 </html>
