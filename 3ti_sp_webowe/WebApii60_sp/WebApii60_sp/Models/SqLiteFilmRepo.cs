@@ -30,7 +30,12 @@ namespace WebApii60_sp.Models
         }
 
         public IEnumerable<Film> AddFilm(Film film) {
-            throw new NotImplementedException();
+            if (film != null) {
+                _db.Films.Add(film);
+                _db.SaveChanges();
+            }
+
+            return _db.Films.ToList();
         }
     }
 }
