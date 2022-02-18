@@ -26,7 +26,15 @@ namespace WebApii60_sp.Models
         }
 
         public IEnumerable<Film> UpdateFilm(int id, Film film) {
-            throw new NotImplementedException();
+            var filmToUpdate = _db.Films.Find(id);
+            if (filmToUpdate != null) {
+                filmToUpdate.Title= film.Title?? filmToUpdate.Title;
+                filmToUpdate.Director= film.Director?? filmToUpdate.Director;
+                filmToUpdate.CreateDate= film.CreateDate;
+                _db.SaveChanges();
+            }
+
+            return _db.Films.ToList();
         }
 
         public IEnumerable<Film> AddFilm(Film film) {
