@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using WebMVC60_1.Models;
 
 namespace WebMVC60_1.Controllers
@@ -13,8 +14,9 @@ namespace WebMVC60_1.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
+        public IActionResult Index() {
+            ViewBag.controller = ControllerContext.RouteData.Values["controller"]?.ToString();
+            ViewBag.action = ControllerContext.RouteData.Values["action"]?.ToString();
             return View();
         }
 
@@ -23,6 +25,17 @@ namespace WebMVC60_1.Controllers
             return View();
         }
 
+        public string MyStringAction() {
+            return "hello from string action";
+        }
+
+        public ViewResult MyViewAction() {
+            return View("NewView");
+        }
+
+        public IActionResult Redirect() {
+            return RedirectToAction("Privacy");
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

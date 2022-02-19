@@ -1,0 +1,39 @@
+﻿@model Film
+@{
+    Layout = "_LayoutFilm";
+}
+<div class="bg-light text-center">Dodawanie filmu</div>
+<form class="m-2" method="post" asp-action="AddFilm">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Id">Podaj Id</label>
+        <input class="form-control" asp-for="Id"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Title"></label>
+        <input class="form-control" asp-for="Title"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Date"></label>
+        <input class="form-control" asp-for="Date" type="date"/>
+    </div>
+    <input type="submit" class="btn btn-primary btn-lg"/>
+</form>
+
+@if(ViewBag.IsPost!=null && ViewBag.IsPost){
+    <div>To jest post!!!</div>
+    @if (ViewBag.IsValid) {
+        <div>Model poprawny</div>
+        <dl>
+            Dane z formularza:
+            <dt>Id:</dt>
+            <dd>@Model.Id</dd>
+            <dt>Tytuł:</dt>
+            <dd>@Model.Title</dd>
+            <dt>Data wydania:</dt>
+            <dd>@Model.Date.ToShortDateString()</dd>
+        </dl>
+    }
+    else {
+        <div>Model błędny</div>
+    }
+}

@@ -6,3 +6,10 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<div>
+    jesteśmy w kontrolerze: @ViewContext.RouteData.Values["controller"].ToString() <br/>
+    jesteśmy w akcji: @ViewContext.RouteData.Values["action"].ToString() <br/>
+    <p>Inny sposób</p>
+    jesteśmy w kontrolerze: @ViewBag.controller <br/>
+    jesteśmy w akcji: @ViewBag.action <br/>
+</div>
