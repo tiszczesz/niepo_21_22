@@ -9,13 +9,15 @@ $(function(){
     });
     $("#elem2").on("focus",function(){
         console.log("focus");
-        $(this).css({"backgroundColor":"yellow"});
+        $(this).css({"backgroundColor":"red"});
     });
     $("#elem2").on("blur",function(){
-        console.log("blur");
+       // console.log("blur");
         $(this).css({"backgroundColor":"white"});
+        console.log( $(this).next());
+        $(this).next().html($(this).val());
     });
-    $(".line>textarea").on("keyup",(event)=>{console.log("keyup",event.originalEvent);});
+    $(".line textarea").on("keyup",(event)=>{console.log("keyup",event.originalEvent);});
     $(".line>textarea").on("keydown",(event)=>{console.log("keydown",event.originalEvent);});
     $(".line>textarea").on("keypress",(event)=>{console.log("keypress",event.originalEvent);});
 });
