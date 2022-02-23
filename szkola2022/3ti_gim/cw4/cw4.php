@@ -5,38 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw4.css">
     <title>Document</title>
 </head>
 
 <body>
     <?php
-    function GetInfo(): void
-    { //def funkcji
-        echo "<h3>hello from function GetInfo</h3>";
-    }
-    function GetInfo2(string $info = "bla bla bla"): void
-    { //def funkcji
-        echo "<h3>{$info}</h3>";
-    }
-    function GenerListEcho(int $count, bool $isUL = true): void
-    {
-        $listTag = $isUL ? "ul" : "ol";
-        echo "<{$listTag}>";
-        for ($i = 1; $i <= $count; $i++) {
-            echo  "<li>Element listy nr {$i}</li>";
-        }
-        echo "</{$listTag}>";
-    }
-    function GenerList(int $count, bool $isUL = true): string
-    {
-        $listTag = $isUL ? "ul" : "ol";
-        $html =  "<{$listTag}>\n";
-        for ($i = 1; $i <= $count; $i++) {
-            $html .=  "\t<li>Element listy nr {$i}</li>\n";
-        }
-        $html .= "</{$listTag}>\n";
-        return $html;
-    }
+    require_once "functions.php";
     GetInfo();  //wywolanie funkcji
     GetInfo2();
     GetInfo2("Ta funkcja ma własny argument typu string");
@@ -50,6 +25,24 @@
     //var_dump($hhh);
     ?>
     <h1>Ćwiczenie z generowanie elemetu &lt;select&gt; i  &lt;option&gt; argument funkcji to ilość opcji</h1>
+ <?php
+ var_dump(GetColors());
+ echo GenerSelect(GetColors());
+ echo GenerRadio(GetColors());
+ ?>
+ <div class='first'></div>
+ <script>
+     document.querySelector("#colors").onchange = function(e){
+        document.body.style.backgroundColor = e.target.value;
+     }
+     const radios = document.querySelectorAll('input[name="r"]');
+     console.log(radios);
+     for (const r of radios) {
+         r.onclick = function(e){
+             document.querySelector('.first').style.backgroundColor = e.target.value;
+         }
+     }
+ </script>
 </body>
 
 </html>

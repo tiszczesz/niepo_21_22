@@ -8,7 +8,8 @@ document.querySelector('#area').onblur = function () {
   //this.value = this.value.toUpperCase();
   document.querySelector(".result").innerHTML =
        `<p>Ilość znaków: ${this.value.length}</p>`
-       +`<p>Ilość liter: ${CountLetter(this.value)}</p>`;
+       +`<p>Ilość liter: ${CountLetter(this.value)}</p>`
+       +`<p>Ilość cyfr: ${CountDigit(this.value)}</p>`;
 };
 document.querySelector('#area').onkeyup = function (event) {
   console.log('keyup');
@@ -36,5 +37,19 @@ function CountLetter(text){
     if(isAlpha2(text[i])) count++;
   }
   return count;
+}
+function CountDigit(text){
+  let count = 0;
+  for(let i=0;i<text.length;i++){
+    if(text[i]>='0' && text[i]<='9') count++
+  }
+  return count;
+}
+document.querySelector("#liczba").onkeydown = function(e){
+  //e.preventDefault();
+  console.log(e);
+  if(e.key>='0' && e.key<='9' || e.key=='Backspace' 
+        || e.key=='Delete' || e.key=='ArrowRight' || e.key=='ArrowLeft') return true;
+  return false;
 }
 
