@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border:solid 1px brown;margin: 20px;padding:10px;">
+        Kodowanie cezara:
+        <ul>
+            <li>Dane wejsciowe: tekst i klucz jako liczba</li>
+            <li>Dane wyjściowe: zakodowany tekst </li>
+            <li>Sposób kodowania np "a" z kluczem 2 zamienia się na "c"</li>
+            <li>Sposób kodowania np <b>"ala ma kota"</b> z kluczem <b>1</b> zamienia się na <b>"bmb nb lpub"</b></li>
+        </ul>
+    </div>
+    <div class="cw">
+        <label for="key">Klucz:</label>
+        <input type="number" name="key" id="key" min="0" max="26" value="2" step="1"><br>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <div id="result"></div>
+    </div>
+    <script src="cw16.js" defer></script>
+</body>
+</html>
