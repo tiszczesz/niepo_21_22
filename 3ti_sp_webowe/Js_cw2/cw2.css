@@ -1,0 +1,15 @@
+dd {
+    text-align: center;
+    font-weight: bold;
+    background-color: lightblue;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+dt {
+    border: solid 1px blue;
+    padding: 10px;
+    margin-left: 100px;
+    display: none;
+}
