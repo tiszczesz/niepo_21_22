@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cw7.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Formularz zgłoszeniowy</h1>
+      <form action="cw7.php" method="POST">
+        <div class="line">
+          <label for="firstname">Imię: </label>
+          <input type="text" name="firstname" id="firstname" />
+          <span class="error"></span>
+        </div>
+        <div class="line">
+          <label for="lastname">Nazwisko: </label>
+          <input type="text" name="lastname" id="lastname" />
+          <span class="error"></span>
+        </div>
+        <div class="line">
+          <label for="date">Data rejestracji: </label>
+          <input type="date" name="date" id="date" />
+          <span class="error"></span>
+        </div>
+        <div class="line">
+          <label for="division">Klasa: </label>
+          <select name="division" id="division">
+            <option value="1A">1A</option>
+            <option value="1B">1B</option>
+            <option value="1TI">1TI</option>
+            <option value="1THE">1THE</option>
+          </select>
+        </div>
+        <div class="line">
+          <label for="gender">Wybierz płeć: </label> <br />
+          <input type="radio" name="gender" id="k" checked="true" value="kobieta"/> kobieta
+          <br />
+          <input type="radio" name="gender" id="m" value="mężczyzna" /> mężczyzna <br />
+        </div>
+        <div class="line">
+            <label f>Zaznacz zainteresowania: </label> <br />
+            <input type="checkbox" name="zaint[]" value="książki">książki <br>
+            <input type="checkbox" name="zaint[]" value="filmy">filmy<br>
+            <input type="checkbox" name="zaint[]" value="muzyka">muzyka<br>
+            <input type="checkbox" name="zaint[]" value="sport">sport<br>
+            <input type="checkbox" name="zaint[]" value="inne">inne<br>
+          </div>
+          <div class="line">
+              <input type="submit" value="Zatwierdź">
+              <input type="reset" value="Anuluj">
+            </div>
+      </form>
+    </div>
+    <script src="cw7.js" defer></script>
+  </body>
+</html>

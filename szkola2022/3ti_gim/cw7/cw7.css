@@ -1,0 +1,18 @@
+.line{
+    margin: 25px;
+}
+label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+input{
+    width: 200px;
+}
+input[type=radio],input[type=checkbox]{
+    margin-left: 200px;
+    width: auto;
+}
+.container{
+    margin: 30px;
+}
