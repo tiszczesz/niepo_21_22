@@ -17,11 +17,20 @@ namespace ConsoleWithAdoNet1
         public List<Worker> GetWorkers() {
             List<Worker> workers = new List<Worker>();
             using (SqlConnection conn = new SqlConnection(connection)) {
-                string query = "SELECT * FROM Workers order by LastName";
+                string query = "SELECT Id,FirstName,LastName,Position FROM Workers order by LastName";
                 SqlCommand command = new SqlCommand(query, conn);
                 try {
-                    //todo
                     conn.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read()) {
+                        var worker = new Worker {
+                            Id = reader.GetInt32(0),
+                            FirstName = reader.GetString(1),
+                            LastName = reader.GetString(2),
+                            Position = reader.IsDBNull(3) ? "" : reader.GetString(3)
+                        };
+                        workers.Add(worker);
+                    }
                 }
                 catch (Exception ex) {
                     Console.WriteLine(ex.Message);
