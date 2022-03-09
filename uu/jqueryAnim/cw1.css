@@ -1,0 +1,18 @@
+#pierwszy{
+    background-color: blue;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    left: 50px;
+    top: 200px;
+    position: absolute;
+}
+#drugi{
+    background-color: red;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    left: 50px;
+    top: 300px;
+    position: absolute;
+}
