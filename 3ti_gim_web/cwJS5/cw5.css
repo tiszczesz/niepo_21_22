@@ -1,0 +1,33 @@
+.container {
+    margin: auto;
+    width: 1000px;
+}
+
+.info {
+    padding: 20px;
+    margin: 10px;
+    border: solid 1px gray;
+}
+
+#first, #second {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    position: absolute;
+    left: 50px;
+}
+
+#first {
+    background-color: blue;
+    top:200px;
+}
+
+#second {
+    background-color: red;
+    top: 300px;
+}
+button{
+    margin: 20px;
+    padding: 5px;
+    width: 120px;
+}
