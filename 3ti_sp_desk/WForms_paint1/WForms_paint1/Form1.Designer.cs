@@ -51,7 +51,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(112, 450);
+            this.panel1.Size = new System.Drawing.Size(112, 831);
             this.panel1.TabIndex = 0;
             // 
             // pictureBoxBlue
@@ -101,8 +101,9 @@
             this.panelToPaint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelToPaint.Location = new System.Drawing.Point(112, 0);
             this.panelToPaint.Name = "panelToPaint";
-            this.panelToPaint.Size = new System.Drawing.Size(688, 450);
+            this.panelToPaint.Size = new System.Drawing.Size(1703, 831);
             this.panelToPaint.TabIndex = 1;
+            this.panelToPaint.Paint += new System.Windows.Forms.PaintEventHandler(this.panelToPaint_Paint);
             this.panelToPaint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panetToPaint_MouseDown);
             this.panelToPaint.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panetToPaint_MouseMove);
             this.panelToPaint.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panetToPaint_MouseUp);
@@ -111,12 +112,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1815, 831);
             this.Controls.Add(this.panelToPaint);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Rysowanie";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBlue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGreen)).EndInit();

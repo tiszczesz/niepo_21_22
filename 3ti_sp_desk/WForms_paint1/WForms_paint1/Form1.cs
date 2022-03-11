@@ -9,8 +9,8 @@ namespace WForms_paint1
         public Form1()
         {
             InitializeComponent();
-            g = panelToPaint.CreateGraphics();
-            pen = new Pen(Color.Black, 5);
+
+           
 
         }
 
@@ -36,10 +36,26 @@ namespace WForms_paint1
         }
 
         private void panetToPaint_MouseMove(object sender, MouseEventArgs e) {
-            if (moving && x != -1 && y != -1)
-            {
-                //g.DrawLine(); todo
+            if (moving && x != -1 && y != -1) {
+                g.DrawLine(pen, new Point(x, y), e.Location);
+                x = e.X;
+                y= e.Y;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
+            //System.Drawing.Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
+            //panelToPaint.Width = workingArea.Width;
+            //panelToPaint.Height = workingArea.Height;
+        }
+
+        private void panelToPaint_Paint(object sender, PaintEventArgs e)
+        {
+            g = panelToPaint.CreateGraphics();
+           // g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            pen = new Pen(Color.Black, 5);
+            pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
     }
 }
