@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>180</y>
+      <w>640</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>FileOperations
+--
+-FileOperations()
+-filename:string
+...
+
+--
++static GetInstance():FileOperations
++getFromFile():vector&lt;string&gt;
++saveToFile(content:vector&lt;string&gt;):void
+....
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>720</x>
+      <y>20</y>
+      <w>400</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Implementacja Singleton
+Użyć fstream
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
