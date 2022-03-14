@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "niepo_21_22_ae6c96cc"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainCw2",
+            "request": "launch",
+            "mainClass": "MainCw2",
+            "projectName": "niepo_21_22_ae6c96cc"
+        },
+        {
+            "type": "java",
             "name": "Launch Welcome",
             "request": "launch",
             "mainClass": "Welcome",

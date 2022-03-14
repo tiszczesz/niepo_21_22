@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wZmunaWH4wrsydmpUFrcqjv85f+fgShIo3Cx07yMiDSyDzQ8nxaL4L4Ss0XyWw10A3jwkd8bAI7BJSmoH9vT9A==",
+  "dgSpecHash": "+Im/4LImrY3mYMzRkpSiGDFJ/shj1A0sZ+LNies8SAoZuANw30Y5DfCtGuLz9x2xUhZOn0aMEc7+ABRPKn8Lag==",
   "success": true,
-  "projectFilePath": "E:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22.csproj",
+  "projectFilePath": "e:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\prof\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\prof\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

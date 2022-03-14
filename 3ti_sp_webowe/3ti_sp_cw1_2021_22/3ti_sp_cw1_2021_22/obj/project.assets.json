@@ -7249,22 +7249,25 @@
   },
   "packageFolders": {
     "C:\\Users\\prof\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22.csproj",
+      "projectUniqueName": "e:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22.csproj",
       "projectName": "3ti_sp_cw1_2021_22",
-      "projectPath": "E:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22.csproj",
+      "projectPath": "e:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22.csproj",
       "packagesPath": "C:\\Users\\prof\\.nuget\\packages\\",
-      "outputPath": "E:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\obj\\",
+      "outputPath": "e:\\tools\\GitHub\\niepo_21_22\\3ti_sp_webowe\\3ti_sp_cw1_2021_22\\3ti_sp_cw1_2021_22\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\prof\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7327,7 +7330,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
