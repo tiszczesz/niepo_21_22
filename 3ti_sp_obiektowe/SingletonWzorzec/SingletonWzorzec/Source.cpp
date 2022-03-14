@@ -14,7 +14,9 @@ int main() {
 	ps2->HelloFromSingleton();
 	ps->HelloFromSingleton();
 	Singleton* s3 = ps2;
+	Singleton& s4 = Singleton::GetInstance();
 	cout << s3 << endl;
+	cout << &s4 << endl;
 	//Singleton::GetInstance().HelloFromSingleton();
 	//delete ps;
 	return 0;
