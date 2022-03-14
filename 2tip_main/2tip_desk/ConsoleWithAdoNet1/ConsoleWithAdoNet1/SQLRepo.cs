@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,27 @@ namespace ConsoleWithAdoNet1
                 conn.Close();
             }
             return workers;
+        }
+
+        public void AddWorker(Worker worker) {
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                string query = "INSERT INTO Workers(FirstName,LastName,Position) VALUES(@FirstName,@LastName,@Position)";
+
+                SqlCommand command = new SqlCommand(query, conn);
+                try {
+                    command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50).Value = worker.FirstName;
+                    command.Parameters.Add("@LastName", SqlDbType.NVarChar, 50).Value = worker.LastName;
+                    command.Parameters.Add("@Position", SqlDbType.NVarChar, 50).Value = worker.Position;
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                conn.Close();
+            }
         }
     }
 }
