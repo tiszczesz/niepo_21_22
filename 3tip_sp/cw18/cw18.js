@@ -8,6 +8,18 @@ function getTodos(){
         "Odpocząć"
     ];
 }
+
+document.body.onmousedown = function(event){
+    console.log(event);
+}
+const todo = getTodos();
+document.querySelector("#result").innerHTML = generList(todo);
+function generList(list){
+    let html = "<ol>";
+ //petla po wszystkich elementach listy --> tworzenie li
+
+    return html+"</ol>";
+}
 // todo 
 /*
     - wygenerować listę numerowaną z powyższej funkcji
