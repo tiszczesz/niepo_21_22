@@ -1,0 +1,15 @@
+#first, #second{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    position: relative;
+    left: 50px;
+}
+#first{
+    background-color: blue;
+    top: 100px;
+}
+#second{
+    background-color: red;
+    top: 200px;
+}

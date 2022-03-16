@@ -61,5 +61,16 @@ namespace ConsoleWithAdoNet1
                 conn.Close();
             }
         }
+
+        public void DeleteWorker(int id) {
+            string query = $"DELETE FROM Workers WHERE Id={id}";
+            using (SqlConnection conn = new SqlConnection(connection)) {
+                SqlCommand command = conn.CreateCommand();
+                command.CommandText = query;
+                conn.Open();
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace ConsoleWithAdoNet1
         public string LastName { get; set; }
         public string Position { get; set; }
         public override string ToString() {
-            return $"Informacje o pracowniku: {FirstName} {LastName} stanowisko: {Position}";
+            return $"Informacje o pracowniku: Id: {Id} {FirstName} {LastName} stanowisko: {Position}";
         }
     }
 }
