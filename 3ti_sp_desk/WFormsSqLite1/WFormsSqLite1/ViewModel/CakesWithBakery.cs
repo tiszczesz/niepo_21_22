@@ -12,12 +12,16 @@ namespace WFormsSqLite1.ViewModel
 
         public CakesWithBakery(Cake cake) {
             _cake = cake;
+            CakeId = cake.CakeId;
+            BakeryId = cake.BakeryId;
             CakeName = cake.Name;
             CakePrice = cake.Price;
             BakeryName = cake.Bakery.Name;
             BakeryAddress = cake.Bakery.Address;
         }
 
+        public int CakeId { get; set; }
+        public int BakeryId { get; set; }
         public string CakeName { get; set; }
         public decimal CakePrice { get; set; }
         public string BakeryName { get; set; }
