@@ -3,6 +3,8 @@
  */
 package cw3;
 
+import java.util.List;
+
 public class App {
     public static String getGreeting() {
         return "Hello from 3TI_gim";
@@ -13,5 +15,14 @@ public class App {
         FilmRepo repo = new FilmRepo();
         repo.getFilms().stream()
                 .forEach(System.out::println);
+        FilmStatistics fs = new FilmStatistics(repo);
+        System.out.println("Najdluzszy film: "+fs.getMaxLength());
+        System.out.println("Najkrotszy film: "+fs.getMinLength());
+        System.out.println("Posortowane filmy ......");
+        List<Film> ordered = fs.OrderByTitle();
+        ordered.stream().forEach(System.out::println);
+        System.out.println("Sortowanie po dlugosci");
+        List<Film> orderedByLength = fs.OrderByLength();        
+        orderedByLength.stream().forEach(System.out::println);
     }
 }

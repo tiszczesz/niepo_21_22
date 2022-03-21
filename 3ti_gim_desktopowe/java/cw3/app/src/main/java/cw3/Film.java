@@ -52,7 +52,8 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film{" + "Tytul = " + title + ", Rezyser = " + director + ", dlugosc filmu = " + length + '}';
+        return "Film{" + "Tytul = " + title + ", Rezyser = " + director +
+                ", dlugosc filmu = " + length + '}';
     }
     
 }
