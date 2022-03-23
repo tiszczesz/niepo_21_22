@@ -1,0 +1,13 @@
+"use strict";
+let a = 12;
+console.log(typeof a);
+let b;
+//a = "ala ma kota";
+console.log(typeof b);
+let isTrue /*:boolean*/ = true;
+//isTrue =  "true";
+console.log(!!0);
+console.log(!!-1);
+console.log(!!0.00000001);
+console.log(0o11);
+console.log(0x21);
