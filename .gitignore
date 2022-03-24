@@ -391,3 +391,5 @@ MigrationBackup/
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,csharp
 *.jar
+/3ti_gim_desktopowe/java/GUIFormExamples/nbproject/private/
+/3ti_gim_desktopowe/java/GUIFormExamples/build/
