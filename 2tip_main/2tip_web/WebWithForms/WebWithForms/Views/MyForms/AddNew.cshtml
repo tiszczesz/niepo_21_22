@@ -84,7 +84,8 @@
         <div class="card m-3 w-100 p-3">
             <div class="card-header bg-warning">Informacja o zarejestrowanym kandydacie</div>
             <div class="card-body">
-                Zarejestrowano: @Model.Firstname @Model.Lastname do klasy: @Model.Division płeć: @Model.Gender
+                Zarejestrowano: @Model.Firstname @Model.Lastname do klasy: @Model.Division płeć:
+                @Model.Gender
                 Data urodzenia: @Model.BirthDate.Date.ToLongDateString() <br/>
                 @if (Model.Hobbies.Where(item => item.IsChecked).ToList().Count > 0) {
                     <div>Twoje zainteresowania:</div>
