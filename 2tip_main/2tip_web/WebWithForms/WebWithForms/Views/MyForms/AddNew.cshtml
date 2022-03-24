@@ -1,0 +1,102 @@
+﻿@model Candidate;
+@{
+    ViewData["Title"] = "Nowy kandydat";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <form method="post" asp-action="AddNew">
+        <div class="row m-2">
+            <div class="col-2 text-end">
+                <label asp-for="Firstname"></label>
+            </div>
+            <div class="col-10">
+                <input class="form-control" asp-for="Firstname"/>
+                <span asp-validation-for="Firstname" class="error"></span>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-2 text-end">
+                <label asp-for="Lastname"></label>
+            </div>
+            <div class="col-10">
+                <input class="form-control" asp-for="Lastname"/>
+                <span asp-validation-for="Lastname" class="error"></span>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-2 text-end">
+                <label asp-for="BirthDate"></label>
+            </div>
+            <div class="col-10">
+                <input class="form-control" asp-for="BirthDate"/>
+                <span asp-validation-for="BirthDate" class="error"></span>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-2 text-end">
+                <label asp-for="Division"></label>
+            </div>
+            <div class="col-10">
+                <select asp-for="Division" class="form-control">
+                    @foreach (string d in ViewBag.divisions) {
+                        <option value="@d">@d</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-2 text-end">
+                <label asp-for="Gender"></label>
+            </div>
+            <div class="col-10">
+                @foreach (string g in ViewBag.genders) {
+                    <input type="radio" asp-for="Gender" value="@g" id="Gender@(g)"/>
+                    @g
+                    <br/>
+                }
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-2 text-end">
+                <label asp-for="Hobbies"></label>
+            </div>
+            <div class="col-10">
+                 @for (var i = 0; i < Model.Hobbies.Count; i++) {
+                    <input type="checkbox" asp-for="@Model.Hobbies[i].IsChecked"/>
+                    @Model.Hobbies[i].Name
+                    <br/>
+                    <input type="hidden" asp-for="@Model.Hobbies[i].Name"/>
+                }
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col-2 text-end">
+            </div>
+            <div class="col-10">
+                <input type="submit" value="Zapisz" class="btn btn-primary p-2 w-100"/>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    @if (ViewBag.post != null && ViewBag.post) {
+        <div class="card m-3 w-100 p-3">
+            <div class="card-header bg-warning">Informacja o zarejestrowanym kandydacie</div>
+            <div class="card-body">
+                Zarejestrowano: @Model.Firstname @Model.Lastname do klasy: @Model.Division płeć: @Model.Gender
+                Data urodzenia: @Model.BirthDate.Date.ToLongDateString() <br/>
+                @if (Model.Hobbies.Where(item => item.IsChecked).ToList().Count > 0) {
+                    <div>Twoje zainteresowania:</div>
+                    <ul class="list-group">
+                        @foreach (var item in Model.Hobbies.Where(it => it.IsChecked).ToList()) {
+                            <li class="list-group-item">@item.Name</li>
+                        }
+                    </ul>
+                }
+            </div>
+
+        </div>
+    }
+
+</div>

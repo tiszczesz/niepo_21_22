@@ -7,12 +7,12 @@ namespace WebWithForms.Models
         public int Id { get; set; }
         
         [Display(Name = "Imię")]
-        [Required]
+        [Required(ErrorMessage = "Podaj imię")]
         [MinLength(3,ErrorMessage = "Podaj conajmniej 3 litery")]
         public string Firstname { get; set; }
 
         [Display(Name = "Nazwisko")]
-        [Required]
+        [Required(ErrorMessage = "Podaj nazwisko")]
         [MinLength(3, ErrorMessage = "Podaj conajmniej 3 litery")]
         public string Lastname { get; set; }
 
@@ -26,6 +26,7 @@ namespace WebWithForms.Models
         public List<Item> Hobbies { get; set; }
 
         [Display(Name = "Data urodzenia")] 
+        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
     }
 }
