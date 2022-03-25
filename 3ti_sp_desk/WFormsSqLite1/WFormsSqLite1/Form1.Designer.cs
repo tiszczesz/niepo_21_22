@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddCake = new System.Windows.Forms.Button();
             this.comboBoxBsakery = new System.Windows.Forms.ComboBox();
             this.bakeryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxDescription = new System.Windows.Forms.TextBox();
@@ -41,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewCakes = new System.Windows.Forms.DataGridView();
-            this.buttonAddCake = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bakeryBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonAddCake);
             this.panel1.Controls.Add(this.comboBoxBsakery);
             this.panel1.Controls.Add(this.textBoxDescription);
@@ -66,6 +68,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 703);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(100, 369);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Usuń ciastko";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonAddCake
+            // 
+            this.buttonAddCake.Location = new System.Drawing.Point(100, 322);
+            this.buttonAddCake.Name = "buttonAddCake";
+            this.buttonAddCake.Size = new System.Drawing.Size(161, 23);
+            this.buttonAddCake.TabIndex = 8;
+            this.buttonAddCake.Text = "Dodaj ciastko";
+            this.buttonAddCake.UseVisualStyleBackColor = true;
+            this.buttonAddCake.Click += new System.EventHandler(this.buttonAddCake_Click);
             // 
             // comboBoxBsakery
             // 
@@ -165,17 +187,8 @@
             this.dataGridViewCakes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCakes.Size = new System.Drawing.Size(811, 703);
             this.dataGridViewCakes.TabIndex = 0;
+            this.dataGridViewCakes.DoubleClick += new System.EventHandler(this.dataGridViewCakes_DoubleClick);
             this.dataGridViewCakes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCakes_MouseDoubleClick);
-            // 
-            // buttonAddCake
-            // 
-            this.buttonAddCake.Location = new System.Drawing.Point(100, 328);
-            this.buttonAddCake.Name = "buttonAddCake";
-            this.buttonAddCake.Size = new System.Drawing.Size(161, 23);
-            this.buttonAddCake.TabIndex = 8;
-            this.buttonAddCake.Text = "Dodaj ciastko";
-            this.buttonAddCake.UseVisualStyleBackColor = true;
-            this.buttonAddCake.Click += new System.EventHandler(this.buttonAddCake_Click);
             // 
             // Form1
             // 
@@ -211,5 +224,6 @@
         private Label label2;
         private Label label1;
         private Button buttonAddCake;
+        private Button button1;
     }
 }
