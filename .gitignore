@@ -393,3 +393,4 @@ MigrationBackup/
 *.jar
 /3ti_gim_desktopowe/java/GUIFormExamples/nbproject/private/
 /3ti_gim_desktopowe/java/GUIFormExamples/build/
+/3ti_gim_desktopowe/java/firstGUI_1/target/

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *
  * @author prof
- * @literal Generyje statystyki filmów
+ * @literal Generuje statystyki filmów
  */
 public class FilmStatistics {
     private final FilmRepo _repo;
