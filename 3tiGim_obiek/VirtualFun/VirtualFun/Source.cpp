@@ -8,6 +8,10 @@
 using namespace std;
 
 int main() {
-	vector<BaseClass*> repo = Repo::GetAll();
+	Repo repo;
+	vector<BaseClass*> items = repo.GetAll();
+	for (BaseClass* item : items) {
+		item->ToOverride();
+	}
 	return 0;
 }

@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-class BaseClass
+class BaseClass //abstrakcyjna
 {
 protected:
 	int value{ 0 };
@@ -10,8 +10,6 @@ public:
 	BaseClass(int value) {
 		this->value = value;
 	}
-	void ToOverride() {
-		std::cout << "Do nadpisania...." << std::endl;
-	}
+	virtual void ToOverride() = 0; //czysto wirtualna metoda
 };
 
