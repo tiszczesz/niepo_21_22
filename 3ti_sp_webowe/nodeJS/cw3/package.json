@@ -1,15 +1,15 @@
 {
-  "name": "cw1",
+  "name": "cw3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "sdf",
-    "sdfsdfsf"
-  ],
-  "author": "fffff",
-  "license": "ISC"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.3"
+  }
 }

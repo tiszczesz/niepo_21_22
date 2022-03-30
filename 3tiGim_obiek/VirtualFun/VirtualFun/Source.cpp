@@ -4,12 +4,10 @@
 
 #include "DerivedClassOne.h"
 #include "DerivedClassTwo.h"
+#include "Repo.h"
 using namespace std;
 
 int main() {
-	DerivedClassOne d1;
-	DerivedClassTwo d2;
-	d1.ToOverride();
-	d2.ToOverride();
+	vector<BaseClass*> repo = Repo::GetAll();
 	return 0;
 }

@@ -6,12 +6,26 @@
 #include "DerivedClassTwo.h"
 class Repo
 {
+private:
+	std::vector<BaseClass*> data;
 public:
-	static std::vector<BaseClass*> GetAll() {
-		std::vector<BaseClass*> result;
-		result.push_back(new DerivedClassOne());
-		result.push_back(new DerivedClassTwo());
-		return result;
+	Repo() {
+		data.push_back(new BaseClass());
+		data.push_back(new DerivedClassOne());
+		data.push_back(new DerivedClassOne());
+		data.push_back(new DerivedClassTwo());
+		data.push_back(new DerivedClassTwo());
+	}
+	 std::vector<BaseClass*>& GetAll() {		
+		return data;
+	}
+	~Repo() {
+		std::cout << "Czyszczenie data....\n";
+		for (BaseClass* item : data) {
+			delete item;
+			item = nullptr;
+		}
+		data.clear();
 	}
 };
 
