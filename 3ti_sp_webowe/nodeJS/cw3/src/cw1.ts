@@ -1,4 +1,4 @@
-/*const readline = require('readline').createInterface({
+const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
@@ -13,4 +13,4 @@ readline.prompt();
 readline.on('line',(liczba:number)=>{
   console.log(`${liczba}^2 = ${Math.pow(liczba,2)}`);
   readline.close();
-});*/
+});
