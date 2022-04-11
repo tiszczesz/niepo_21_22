@@ -1,4 +1,4 @@
-let date = new Date();
+let date = new Date('2022-04-17');
 function ShowTimer(elem) {
   let time = new Date();
   elem.innerHTML = time.toLocaleTimeString();
@@ -13,23 +13,10 @@ const months = [
   "Marzec",
   "Kwiecień",
   "Maj",
-  "Czerwiec",
-  "Lipiec",
-  "Sierpień",
-  "Wrzesień",
-  "Październik",
-  "Listopad",
-  "Grudzień",
+  "Czerwiec",  "Lipiec",  "Sierpień",  "Wrzesień",  "Październik",  "Listopad",  "Grudzień",
 ];
 const days = [
-  "nonname",
-  "Poniedziałek",
-  "Wtorek",
-  "Środa",
-  "Czwartek",
-  "Piątek",
-  "Sobota",
-  "Niedziela",
+  "Niedziela",  "Poniedziałek",  "Wtorek",  "Środa",  "Czwartek",  "Piątek",  "Sobota",  
 ];
 document.querySelector(".year").innerHTML = date.getFullYear();
 document.querySelector(".month").innerHTML = months[date.getMonth()];
