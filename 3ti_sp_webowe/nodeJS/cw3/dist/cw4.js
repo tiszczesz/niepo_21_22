@@ -1,10 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const readline_1 = __importDefault(require("readline"));
-const r1 = readline_1.default.createInterface({
+import readline from 'readline';
+const r1 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });

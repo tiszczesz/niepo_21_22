@@ -33,6 +33,20 @@ h1{
     font-size: 2em;
     background-color: lightgray;
 }
+.timeToHolidays{
+    position: absolute;
+    right: 20px;
+    top: 200px;
+    border-radius: 6px;
+    border: solid 1px gray;
+    width: 450px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+    font-size: 2em;
+    background-color: lightgray;
+}
 .year{
     margin-top: 40px;
     font-size: 3em;
