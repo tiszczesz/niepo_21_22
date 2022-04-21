@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonAddCake = new System.Windows.Forms.Button();
             this.comboBoxBsakery = new System.Windows.Forms.ComboBox();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewCakes = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bakeryBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,6 +70,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 703);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(99, 421);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 102);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Zarzadzaj piekarniami";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -191,15 +201,6 @@
             this.dataGridViewCakes.TabIndex = 0;
             this.dataGridViewCakes.DoubleClick += new System.EventHandler(this.dataGridViewCakes_DoubleClick);
             this.dataGridViewCakes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCakes_MouseDoubleClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(99, 421);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 102);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Zarzadzaj piekarniami";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
