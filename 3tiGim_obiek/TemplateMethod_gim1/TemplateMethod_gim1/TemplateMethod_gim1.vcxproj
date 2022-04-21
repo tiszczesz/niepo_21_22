@@ -139,11 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FirstClass.cpp" />
     <ClCompile Include="MyAbstractClass.cpp" />
+    <ClCompile Include="SecondClass.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="ThirdClass.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FirstClass.h" />
     <ClInclude Include="MyAbstractClass.h" />
+    <ClInclude Include="SecondClass.h" />
+    <ClInclude Include="ThirdClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -35,7 +35,7 @@ namespace WebWithForms.Controllers
             else {
                 ViewBag.post = false;
             }
-
+            MyLogger.SaveFile(candidate);
             return View(candidate);
         }
 
