@@ -7,17 +7,20 @@ namespace MVCFormEx2.Controllers
     {
         [HttpGet]
         public IActionResult Index() {
-            FacN n = new FacN();
-            return View(n);
+            FacN model = new FacN();
+            model.N = 12;
+            return View(model);
         }
 
         [HttpPost]
-        public IActionResult Index(FacN n) {
+        public IActionResult Index(FacN model) {
+            var formA = Request.Form["N"];
             if (ModelState.IsValid) {
-
+                var result = model;
+                int a = Factorial.FactorialIter(model.N);
             }
 
-            return View();
+            return View(model);
         }
     }
 }

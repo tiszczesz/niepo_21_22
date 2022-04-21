@@ -9,24 +9,30 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/css/site.css"/>
-    <title>Index</title>
+    <title>Imodeldex</title>
 </head>
 <body>
 <div class="container">
-    <h1>Obliczanie silni</h1>
-    <form method="post">
+    <h1>Obliczamodelie silmodeli</h1>
+    <form method="post" asp-action="Index">
         <div class="line">
             <label asp-for="N"></label>
             <input asp-for="N"/>
             <span asp-validation-for="N"></span>
         </div>
+      
         <div class="line">
             <input type="submit" value="Oblicz"/>
         </div>
     </form>
     <div>
-
+        model = @Model.N <br/>
+        result = @Model.Result
     </div>
 </div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
 </body>
 </html>

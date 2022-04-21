@@ -4,10 +4,12 @@ namespace MVCFormEx2.Models
 {
     public class FacN
     {
-        [Display(Name = "n = ")]
+        [Display(Name = " n = ")]
         [Required(ErrorMessage = "Podaj liczbę dodatnią")]
-        [Range(0,20,ErrorMessage = "Liczba (0,20)")]
-        public int? N { get; set; }
+        [Range(minimum:0,maximum:20,ErrorMessage = "Ala ma kota")]
+        public int N { get; set; }
         public int Result { get; set; }
+
+       
     }
 }

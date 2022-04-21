@@ -2,10 +2,10 @@
 {
     public class Factorial
     {
-        public static int FactorialRec(int n) {
+        public static int FactorialRec(int? n) {
             return 0;
         }
-        public static int FactorialIter(int n)
+        public static int FactorialIter(int? n)
         {
             return 0;
         }
