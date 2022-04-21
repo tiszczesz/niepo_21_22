@@ -1,0 +1,32 @@
+﻿@model FacN
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <title>Index</title>
+</head>
+<body>
+<div class="container">
+    <h1>Obliczanie silni</h1>
+    <form method="post">
+        <div class="line">
+            <label asp-for="N"></label>
+            <input asp-for="N"/>
+            <span asp-validation-for="N"></span>
+        </div>
+        <div class="line">
+            <input type="submit" value="Oblicz"/>
+        </div>
+    </form>
+    <div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+form{ border: solid 1px gray; padding: 20px;}
+label{ text-align: right;display: inline-block;width: 200px;margin-right: 10px;}
+.line{ margin: 20px;}
+input[type=submit]{ margin-left: 190px;width: 150px;padding: 8px;}
+h1{ text-align: center; border-bottom: solid 1px lightskyblue;}
+.container{ margin: auto; width: 1000px;}
