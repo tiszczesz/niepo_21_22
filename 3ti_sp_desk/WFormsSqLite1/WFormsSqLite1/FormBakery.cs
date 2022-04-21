@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFormsSqLite1.Data;
 
 namespace WFormsSqLite1
 {
-    public partial class FormBakery : Form
-    {
-        public FormBakery()
+    public partial class FormBakery : Form {
+        
+        public FormBakery(AppDbContext db)
         {
             InitializeComponent();
+
+        }
+
+        private void FormBakery_Load(object sender, EventArgs e)
+        {
+            //var bakaries = d
         }
     }
 }
