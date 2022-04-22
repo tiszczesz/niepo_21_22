@@ -52,7 +52,6 @@ public partial class Form1 : Form {
                     BakeryId = bakaryId,
                     Price = price};
                 if (isEdit == false) {
-                    
                     _dbContext.Cakes.Add(cake);
                     _dbContext.SaveChanges();
                 }
@@ -60,10 +59,7 @@ public partial class Form1 : Form {
                     var row = (CakesWithBakery)dataGridViewCakes.SelectedRows[0].DataBoundItem;
                     Cake cakeToUpdate = _dbContext.Cakes.Find(row.CakeId);
                     if (cakeToUpdate != null) {
-                        cakeToUpdate.Name = textBoxName.Text.Trim();
-                        cakeToUpdate.Price = Convert.ToDecimal(textBoxPrice.Text, CultureInfo.InvariantCulture);
-                        cakeToUpdate.BakeryId = Convert.ToInt32(comboBoxBsakery.SelectedValue);
-                        cakeToUpdate.Description = textBoxDescription.Text.Trim();
+                        UpdateCake(cakeToUpdate);
                         _dbContext.Cakes.Update(cakeToUpdate);
                         _dbContext.SaveChanges();
                         buttonAddCake.Text = "Dodaj ciastko";
@@ -82,6 +78,13 @@ public partial class Form1 : Form {
         }
 
         ;
+    }
+
+    private void UpdateCake(Cake cakeToUpdate) {
+        cakeToUpdate.Name = textBoxName.Text.Trim();
+        cakeToUpdate.Price = Convert.ToDecimal(textBoxPrice.Text, CultureInfo.InvariantCulture);
+        cakeToUpdate.BakeryId = Convert.ToInt32(comboBoxBsakery.SelectedValue);
+        cakeToUpdate.Description = textBoxDescription.Text.Trim();
     }
 
     private void button1_Click(object sender, EventArgs e) {
