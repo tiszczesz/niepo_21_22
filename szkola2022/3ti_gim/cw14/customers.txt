@@ -1,0 +1,5 @@
+Jan;Nowak;Kraków 31-272 ul. Kopalna 12/6;34455666
+Adam;Balon;Tarnów 34-444 ul. Rybna 56/4;3333333
+Jadwiga;Dzwiga;Bochnia 33-009 ul. Długa 12/5;5555555
+Anna;Rydek;Gdów 32-015 ul. Św Mateusza 12/12;7775554
+Roman;Kosecki;Kraków 31-345 ul. Nowotarska 134/8;44566666

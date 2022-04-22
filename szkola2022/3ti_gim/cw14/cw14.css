@@ -1,0 +1,33 @@
+.container{
+    margin: auto;
+    width: 800px;
+}
+h1{text-align: center;}
+table{border-collapse: collapse;margin: auto;text-align: center;}
+th,td{border: solid 1px black;padding: 6px;}
+th{background-color: rgb(161, 124, 124);color: rgb(245, 245, 214);}
+tr:hover{background-color: rgb(206, 204, 204);}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.menuitem{
+    margin-left: 30px;
+    
+    height: 40px;
+    width: 120px;   
+}
+.menuitem a{text-decoration: none; padding: 0;margin: 0;
+    border: solid 1px lightcoral;
+     color: brown;width: 100%;text-align: center;padding-top: 16px;
+     display: inline-block;height: 100%;}
+.menuitem a:hover{background-color: lightsteelblue;}
+
+form{
+    margin: 30px;    
+}
+.line{ margin: 20px 30px;}
+label{display: inline-block; width: 200px; text-align: right;}
+input[type=submit]{margin-left: 200px;width: 160px;padding: 5px;}
