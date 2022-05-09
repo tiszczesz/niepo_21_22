@@ -7,28 +7,42 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="~/css/site.css"/>
     <title>Imodeldex</title>
 </head>
 <body>
 <div class="container">
-    <h1>Obliczamodelie silmodeli</h1>
+    <h1>Obliczanie silni</h1>
     <form method="post" asp-action="Index">
         <div class="line">
             <label asp-for="N"></label>
             <input asp-for="N"/>
-            <span asp-validation-for="N"></span>
+            <span asp-validation-for="N" class="error"></span>
         </div>
-      
+        <div class="line">
+                @foreach (string c in ViewBag.Choice)
+                {
+                   
+
+                    <input type="radio" asp-for="Choice" value="@c" id="Gender@(c)" />
+                    @c
+                    <br/>
+                }
+
+            </div>
+
         <div class="line">
             <input type="submit" value="Oblicz"/>
         </div>
     </form>
-    <div>
-        model = @Model.N <br/>
-        result = @Model.Result
-    </div>
+
+    @if (ViewBag.OK != null && ViewBag.OK) {
+        <div class="result">
+            <span>Wynik obliczenia silni @Model.N! = @Model.Result </span>
+        </div>
+    }
+
 </div>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

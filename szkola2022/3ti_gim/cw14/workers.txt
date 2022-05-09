@@ -1,11 +1,4 @@
-Jan;Nowak;2900;asystent
-Anna;Wanna;3400;sekretarka
-Monika;Kika;3200;asystent
-Adam;Małecki;3500;kierowca
-Roman;Boman;2900;kierowca
-Teresa;Grucka;5600;kierownik
-Jerzy;Broniek;2900;sprzedawca
-Grażyna;Sprężyna;2900;sprzedawca
-Test;Test;3000;Testowe
-Roman;Nowiutki;200;null
-3333;222;23232;wwwww
+Jan;Nowak;3000;kierowca
+Jan;Truk;3000;kierownik
+Jan;Melwin;3000;sprzedawca
+Emil;Bałecki;3400;dd

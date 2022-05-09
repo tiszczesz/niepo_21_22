@@ -22,3 +22,12 @@ label{ text-align: right;display: inline-block;width: 200px;margin-right: 10px;}
 input[type=submit]{ margin-left: 190px;width: 150px;padding: 8px;}
 h1{ text-align: center; border-bottom: solid 1px lightskyblue;}
 .container{ margin: auto; width: 1000px;}
+
+.error{ color: red;}
+.result {
+    padding: 20px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    background-color: bisque;
+    display: inline-block;
+}

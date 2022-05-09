@@ -8,16 +8,16 @@ namespace MVCFormEx2.Controllers
         [HttpGet]
         public IActionResult Index() {
             FacN model = new FacN();
-            model.N = 12;
+            ViewBag.Choice = new String[]{"rekurencyjnie","iteracyjnie"};
             return View(model);
         }
 
         [HttpPost]
         public IActionResult Index(FacN model) {
-            var formA = Request.Form["N"];
+            
             if (ModelState.IsValid) {
-                var result = model;
-                int a = Factorial.FactorialIter(model.N);
+                model.Result = Factorial.FactorialIter(model.N);
+                ViewBag.OK = true;
             }
 
             return View(model);

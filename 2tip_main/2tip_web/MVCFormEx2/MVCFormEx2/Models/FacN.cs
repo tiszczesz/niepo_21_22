@@ -6,9 +6,12 @@ namespace MVCFormEx2.Models
     {
         [Display(Name = " n = ")]
         [Required(ErrorMessage = "Podaj liczbę dodatnią")]
-        [Range(minimum:0,maximum:20,ErrorMessage = "Ala ma kota")]
-        public int N { get; set; }
+        [Range(minimum:0,maximum:20,ErrorMessage = "Przedział (0,20)!")]
+        public int? N { get; set; }
         public int Result { get; set; }
+
+        [Display(Name = "Wybór metody")] 
+        public string Choice { get; set; }
 
        
     }
