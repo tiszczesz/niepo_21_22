@@ -29,7 +29,7 @@
                     @c
                     <br/>
                 }
-
+                <span asp-validation-for="Choice" class="error"></span>
             </div>
 
         <div class="line">
@@ -39,7 +39,7 @@
 
     @if (ViewBag.OK != null && ViewBag.OK) {
         <div class="result">
-            <span>Wynik obliczenia silni @Model.N! = @Model.Result </span>
+            <span>Wynik obliczenia funkcji silnia @Model.N! = @Model.Result metoda: @Model.Choice </span>
         </div>
     }
 

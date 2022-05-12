@@ -11,6 +11,7 @@ namespace MVCFormEx2.Models
         public int Result { get; set; }
 
         [Display(Name = "Wybór metody")] 
+        [Required(ErrorMessage = "Wybierz metodę")]
         public string Choice { get; set; }
 
        

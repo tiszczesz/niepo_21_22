@@ -3,7 +3,9 @@
     public class Factorial
     {
         public static int FactorialRec(int? n) {
-            return 10;
+            if (n == null) return 1;
+            if (n <= 1) return 1;
+            return (int)(FactorialRec(n - 1) * n);
         }
         public static int FactorialIter(int? n) {
             int result = 1;
