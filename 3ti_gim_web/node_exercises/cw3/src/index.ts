@@ -12,9 +12,26 @@ const appendToList = (elemRoot: HTMLDivElement,data:string[]) => {
     });
     elemRoot.appendChild(list);
 }
+function generTab(elem:HTMLDivElement,dane:IWorker[]){
+    const table = document.createElement('table');
+    table.classList.add('table');
+    const trHead = table.insertRow(0);
+    trHead.innerHTML = '<th>Lp</th><th>Imię</th><th>Nazwisko</th><th>Wiek</th>';
+    let lp = 0;
+    dane.forEach((item)=>{
+        const row = table.insertRow(-1);
+        row.innerHTML = `<td>${++lp}</td><td>${item.firstname}</td>
+            <td>${item.lastname}</td><td>${item.age}</td>`;
+    });
+    elem.appendChild(table);
+}
 const root:HTMLDivElement|null = document.querySelector('#root');
 if(root!==null){
     appendToList(root,colors);
+}
+const root2:HTMLDivElement|null = document.querySelector('#root2');
+if(root2!=null){
+    generTab(root2,workers);
 }
 
 

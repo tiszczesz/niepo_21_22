@@ -16,7 +16,6 @@ namespace MVCFormEx2.Controllers
         public IActionResult Index(FacN model) {
             ViewBag.Choice = new String[] { "rekurencyjnie", "iteracyjnie" };
             if (ModelState.IsValid) {
-                
                 model.Result = model.Choice== "rekurencyjnie" ? Factorial.FactorialRec(model.N):
                     Factorial.FactorialIter(model.N);
                 ViewBag.OK = true;

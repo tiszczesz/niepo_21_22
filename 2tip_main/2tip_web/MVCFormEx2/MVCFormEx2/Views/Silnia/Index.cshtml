@@ -23,8 +23,6 @@
         <div class="line">
                 @foreach (string c in ViewBag.Choice)
                 {
-                   
-
                     <input type="radio" asp-for="Choice" value="@c" id="Gender@(c)" />
                     @c
                     <br/>
