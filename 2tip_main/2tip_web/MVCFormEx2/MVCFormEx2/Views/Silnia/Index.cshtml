@@ -16,7 +16,7 @@
     <h1>Obliczanie silni</h1>
     <form method="post" asp-action="Index">
         <div class="line">
-            <label asp-for="N"></label>
+            <label asp-for="N" class="labelMy"></label>
             <input asp-for="N"/>
             <span asp-validation-for="N" class="error"></span>
         </div>
@@ -31,7 +31,7 @@
             </div>
 
         <div class="line">
-            <input type="submit" value="Oblicz"/>
+            <input class="inputMy" type="submit" value="Oblicz"/>
         </div>
     </form>
 

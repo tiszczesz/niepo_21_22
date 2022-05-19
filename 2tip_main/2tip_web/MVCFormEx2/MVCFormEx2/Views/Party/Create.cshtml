@@ -1,0 +1,22 @@
+﻿@model PartyStuff
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>Zapis na imprezę</h3>
+<form asp-action="CreatePost" method="post">
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label"></label>
+        <input class="form-control" asp-for="FirstName"/>
+        <span class="error" asp-validation-for="FirstName"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label"></label>
+        <input class="form-control" asp-for="LastName"/>
+        <span class="error" asp-validation-for="LastName"></span>
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary w-100" value="Zapisz"/>
+    </div>
+</form>

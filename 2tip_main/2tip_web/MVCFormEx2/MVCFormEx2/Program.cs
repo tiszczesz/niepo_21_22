@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Silnia}/{action=Index}/{id?}");
+    pattern: "{controller=Party}/{action=Index}/{id?}");
 
 app.Run();
