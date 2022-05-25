@@ -1,5 +1,5 @@
 <?php
-function &getData():array{
+function getData():array{
     $dane = [
         "white" => "biały",
         "blue" => "niebieski",
