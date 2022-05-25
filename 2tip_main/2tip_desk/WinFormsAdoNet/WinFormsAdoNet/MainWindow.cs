@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using WinFormsAdoNet.Models;
 
 namespace WinFormsAdoNet
@@ -17,6 +18,14 @@ namespace WinFormsAdoNet
             listBox1.DataSource = workers;
             dataGridView1.DataSource = workers;
             dataGridView1.Columns["Id"]!.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            Process.Start("notepad.exe");
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
+            MessageBox.Show(e.ToString());
         }
     }
 }
