@@ -24,6 +24,7 @@ namespace MVCFormEx2.Controllers
         public IActionResult CreatePost(PartyStuff ps)
         {
             if (ModelState.IsValid) {
+
                 ViewBag.Result = "Zapisano do pliku";
             }
             else {
