@@ -11,11 +11,27 @@ namespace MVCFormEx2.Controllers
         }
 
         public IActionResult Create() {
-            return View();
+            PartyStuff ps = new PartyStuff();
+            ps.Items = new List<Item> {
+                new Item { Name = "Żarcie" },
+                new Item { Name = "Picie" },
+                new Item { Name = "Muzyka" },
+                new Item { Name = "Towarzystwo" },
+                new Item { Name = "Inne" }
+            };
+            return View(ps);
         }
         public IActionResult CreatePost(PartyStuff ps)
         {
-            return View();
+            if (ModelState.IsValid) {
+                ViewBag.Result = "Zapisano do pliku";
+            }
+            else {
+                ViewBag.Result = "Popraw dane!!!!";
+            }
+
+            return View(nameof(Create),ps);
+            //return View("Create",ps);
         }
     }
 }

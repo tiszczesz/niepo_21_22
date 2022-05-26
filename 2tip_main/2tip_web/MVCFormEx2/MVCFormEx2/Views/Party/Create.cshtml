@@ -17,9 +17,17 @@
         <span class="error" asp-validation-for="LastName"></span>
     </div>
     <div class="mb-3">
-        
+        @for (var i = 0; i < Model.Items.Count; i++) {
+            <input type="checkbox" class="form-check-input" asp-for="@Model.Items[i].IsChecked"/>
+            <label class="form-check-label">@Model.Items[i].Name</label> <br/>
+            <input type="hidden" asp-for="Items[i].Name"/>
+        }
     </div>
     <div class="mb-3">
         <input type="submit" class="btn btn-primary w-100" value="Zapisz"/>
     </div>
 </form>
+
+@if (ViewBag.Result != null) {
+    <div class="p-3 bg-info m-3">@ViewBag.Result</div>
+}
