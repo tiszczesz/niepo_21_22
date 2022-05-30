@@ -2,6 +2,7 @@ namespace SetMenuWF
 {
     public partial class Form1 : Form
     {
+        private string _fileName = String.Empty;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,33 @@ namespace SetMenuWF
         private void otwórzToolStripMenuItem_Click(object sender, EventArgs e) {
             var result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK) {
-                //todo
+                try
+                {
+                   StreamReader sr = new StreamReader(openFileDialog1.FileName);
+                    rtbDocument.Text = sr.ReadToEnd();
+                    sr.Close();
+                    _fileName = openFileDialog1.FileName;
+                    this.Text += " - " + _fileName;
+                }catch(Exception ex) { 
+                    MessageBox.Show(ex.Message);
+                }
+            }else
+            {
+                this.Text = "Nie wybrano pliku";
+            }
+        }
+
+        private void zapiszToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = _fileName;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (String.IsNullOrEmpty(saveFileDialog1.FileName)) {
+                    MessageBox.Show("Brak nazwy pliku do zapisu");
+                    return;
+                }
+                var fileToSave = saveFileDialog1.FileName;
+                File.WriteAllText(fileToSave,rtbDocument.Text);
             }
         }
     }

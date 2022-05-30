@@ -42,7 +42,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbCurrentTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbDocument = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
@@ -91,6 +91,7 @@
             this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
             this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zapiszToolStripMenuItem.Text = "&Zapisz";
+            this.zapiszToolStripMenuItem.Click += new System.EventHandler(this.zapiszToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -157,25 +158,26 @@
             this.panel1.Size = new System.Drawing.Size(179, 404);
             this.panel1.TabIndex = 2;
             // 
-            // richTextBox1
+            // rtbDocument
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(179, 24);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(621, 404);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.rtbDocument.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbDocument.Location = new System.Drawing.Point(179, 24);
+            this.rtbDocument.Name = "rtbDocument";
+            this.rtbDocument.Size = new System.Drawing.Size(621, 404);
+            this.rtbDocument.TabIndex = 3;
+            this.rtbDocument.Text = "";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "tekstowe|*.txt|wszystkie|*.*";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbDocument);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -209,7 +211,7 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lbCurrentTime;
         private Panel panel1;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbDocument;
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
     }

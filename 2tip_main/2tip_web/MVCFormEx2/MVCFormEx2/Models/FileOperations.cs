@@ -6,17 +6,20 @@ namespace MVCFormEx2.Models
     {
         public static void SaveToFile(PartyStuff ps) {
             StringBuilder sb = new StringBuilder();
-            if (ps.Items.Count > 0) {
-                foreach (var item in ps.Items) {
-                    sb.Append(item.Name).Append("| ");
+            var items = ps.Items.Where(i => i.IsChecked).ToList();
+            if (items.Count > 0) {
+                foreach (var item in items) {
+                    if(item.IsChecked) sb.Append(item.Name).Append("| ");
                 }
             }else {
                 sb.Append("brak towaru..");
             }
 
-            string line = $"{ps.FirstName} {ps.LastName} {sb.ToString()} {DateTime.Now.ToLongTimeString()}";
+            string line = $"{ps.FirstName} {ps.LastName} " +
+                          $"{sb.ToString()} {DateTime.Now.ToLongDateString()}: " +
+                          $"{DateTime.Now.ToLongTimeString()}";
             using (StreamWriter sw = new StreamWriter("dane.txt",append:true)) {
-                //todo
+                sw.WriteLine(line);
             }
         }
     }

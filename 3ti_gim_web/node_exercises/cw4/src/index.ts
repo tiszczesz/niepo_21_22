@@ -18,13 +18,16 @@ fetch("https://jsonplaceholder.typicode.com/comments")
    
   })
 function generList(elem:HTMLDivElement,data:IComment[]):void{
+  const h2 = document.createElement('h2');
+  h2.innerHTML = `Pobrano listę komentarzy ilość: ${data.length}`;
+  elem.appendChild(h2);
   const list = document.createElement('ul');
   data.forEach( (e) => {
     const li = document.createElement('li');
     li.innerHTML = `<b>${e.name}</b> zawartość: <u>${e.body}</u>`;
-    list.appendChild(li);
-    elem.appendChild(list);
-  });
+    list.appendChild(li);   
+  }); 
+  elem.appendChild(list);
 }
 console.log("Hello from Typescript");
 
