@@ -51,7 +51,22 @@ namespace SetMenuWF
                 }
                 var fileToSave = saveFileDialog1.FileName;
                 File.WriteAllText(fileToSave,rtbDocument.Text);
+                lbFileStatus.Text = "brak zmian";
+                lbFileStatus.ForeColor = Color.Black;
             }
+        }
+
+        private void rtbDocument_TextChanged(object sender, EventArgs e)
+        {
+            lbFileStatus.Text = "zmiany w tekœcie!!!";
+            lbFileStatus.ForeColor = Color.Red;
+            nowyToolStripMenuItem.Enabled = true;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var okienko = new Confirm();
+            var result = okienko.ShowDialog();
         }
     }
 }

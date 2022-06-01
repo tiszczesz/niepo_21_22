@@ -41,12 +41,15 @@
             this.oProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbCurrentTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbFileStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rtbDocument = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,6 +78,7 @@
             // 
             // nowyToolStripMenuItem
             // 
+            this.nowyToolStripMenuItem.Enabled = false;
             this.nowyToolStripMenuItem.Name = "nowyToolStripMenuItem";
             this.nowyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nowyToolStripMenuItem.Text = "&Nowy";
@@ -136,7 +140,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbCurrentTime});
+            this.lbCurrentTime,
+            this.lbFileStatus});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -149,9 +154,17 @@
             this.lbCurrentTime.Size = new System.Drawing.Size(118, 17);
             this.lbCurrentTime.Text = "toolStripStatusLabel1";
             // 
+            // lbFileStatus
+            // 
+            this.lbFileStatus.ForeColor = System.Drawing.Color.Black;
+            this.lbFileStatus.Name = "lbFileStatus";
+            this.lbFileStatus.Size = new System.Drawing.Size(65, 17);
+            this.lbFileStatus.Text = "brak zmian";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -166,11 +179,25 @@
             this.rtbDocument.Size = new System.Drawing.Size(621, 404);
             this.rtbDocument.TabIndex = 3;
             this.rtbDocument.Text = "";
+            this.rtbDocument.TextChanged += new System.EventHandler(this.rtbDocument_TextChanged);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "tekstowe|*.txt|wszystkie|*.*";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "txt";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 274);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tutaj będą statystyki pliku Ilość lini Ilość znaków Ilość literIlość samogłosek a" +
+    "ktualizowane przy każdej zmianie tekstu";
             // 
             // Form1
             // 
@@ -185,11 +212,13 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +243,7 @@
         private RichTextBox rtbDocument;
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
+        private ToolStripStatusLabel lbFileStatus;
+        private Label label1;
     }
 }
