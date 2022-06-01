@@ -21,4 +21,6 @@ npx tsc -init
 npm i --save-dev webpack
 npm i --save-dev webpack-cli
 npm i --save-dev ts-loader
+
+npm install --save-dev webpack-dev-server
 ```
