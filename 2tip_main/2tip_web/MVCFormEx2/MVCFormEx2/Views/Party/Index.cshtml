@@ -1,10 +1,26 @@
-﻿@*
+﻿@model List<string>
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+<div>
+
+</div>
 <h1>Impreza na całego</h1>
 <h3>Lista dotychczasowych uczestników</h3>
 <div>
+        <ol>
+                @foreach(var item in @Model)
+                {
+                    <li>@item</li>
+                }
+        </ol>
+    </div>
+
+<div>
     <a asp-action="Create" class="btn btn-primary p-1">Dodaj uczestnika</a>
+</div>
+<div>
+    <a asp-action="Print" class="btn btn-primary p-1">Daj pdf</a>
 </div>

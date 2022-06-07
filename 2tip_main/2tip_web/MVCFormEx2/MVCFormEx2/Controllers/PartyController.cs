@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVCFormEx2.Models;
+using PuppeteerSharp;
+using PuppeteerSharp.Media;
+using System.Text;
 
 namespace MVCFormEx2.Controllers
 {
@@ -7,7 +10,13 @@ namespace MVCFormEx2.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            List<string> items = new List<string>();
+            if (System.IO.File.Exists("dane.txt"))
+            {
+                items = FileOperations.LoadFromFile();
+            }           
+            return View(items);
+            
         }
 
         public IActionResult Create() {
@@ -26,7 +35,7 @@ namespace MVCFormEx2.Controllers
             if (ModelState.IsValid) {
                 FileOperations.SaveToFile(ps);
                 ViewBag.Result = "Zapisano do pliku";
-                return RedirectToAction("ShowAll");
+                return RedirectToAction("Index");
             }
             
             ViewBag.Result = "Popraw dane!!!!";
@@ -37,7 +46,32 @@ namespace MVCFormEx2.Controllers
         public IActionResult ShowAll() {
             //pobierz z pliku do listy
             //wyslij do widoku liste aby byla numerowana
-            return View(list);
+            List<string> items = FileOperations.LoadFromFile();
+            return View(items);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Print()
+        {
+            await new BrowserFetcher().DownloadAsync(BrowserFetcher.DefaultRevision);
+            await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
+            {
+                Headless = true
+            });
+            await using var page = await browser.NewPageAsync();
+            await page.EmulateMediaTypeAsync(MediaType.Screen);
+            var items = FileOperations.LoadFromFile();
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in items) {
+                sb.Append(item).Append("<br>");
+            }
+            
+            await page.SetContentAsync(sb.ToString());
+            var pdfContent = await page.PdfStreamAsync(new PdfOptions
+            {
+                Format = PaperFormat.A4,
+                PrintBackground = true
+            });
+            return File(pdfContent, "application/pdf", "converted.pdf");
         }
     }
 }

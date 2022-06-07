@@ -26,8 +26,7 @@
             for($i = 0; $i < mb_strlen($napis); $i++){
                 $znak = $i<(mb_strlen($napis)-1)?'<br>':'';
                 var_dump($znak);
-                $result .= mb_substr($napis,$i,1).$znak;
-               
+                $result .= mb_substr($napis,$i,1).$znak;               
             }
             return $result;
         }
@@ -40,16 +39,27 @@
             }
             return $result;
         }
+        function is_Upper(string $znak):bool {
+            return preg_match('/^[A-ZĄĘŚĆŻŚŁÓ]$/u',$znak);
+        }
         echo wstawZnak("Łódka jest żółta",'.').'<br>';
         echo stringWords("Łódka jest żółta",'.').'<br>';
-        echo wstawBR("Łódka jest żółta");
+        echo wstawBR("Łódka jest żółta").'<br>';
         function ChangeUpper(string $napis,string $znak):string {
             $result = '';
-            if( mb_strtoupper(mb_substr($napis,0,1)) === mb_substr($napis,0,1)){
-                //....
+            for($i=0; $i < mb_strlen($napis); $i++){
+                if(is_Upper(mb_substr($napis,$i,1))){
+                     echo  mb_substr($napis,$i,1).' jest duza <br>';
+                    $result .= $znak;
+                }else{
+                    $result .= mb_substr($napis,$i,1);
+                }
             }
+            
             return $result;
         }
+        echo ChangeUpper('Ala Ma koTaXXŁaaaęÓ','_').'<br>';
+        echo ChangeUpper('MAŁpaĘ','_').'<br>';
     ?>
 </body>
 </html>

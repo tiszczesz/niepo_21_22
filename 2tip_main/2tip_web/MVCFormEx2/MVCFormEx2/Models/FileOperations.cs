@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.IO;
 
 namespace MVCFormEx2.Models
 {
@@ -21,6 +22,24 @@ namespace MVCFormEx2.Models
             using (StreamWriter sw = new StreamWriter("dane.txt",append:true)) {
                 sw.WriteLine(line);
             }
+        }
+        public static List<string> LoadFromFile()
+        {
+            var items = new List<string>();
+            try
+            {
+                using(StreamReader  sr = new StreamReader("dane.txt"))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null) { 
+                        items.Add(line);
+                    } 
+                }
+            }
+            catch (Exception ex) { 
+
+            }
+            return items;
         }
     }
 }
