@@ -39,3 +39,7 @@ document.querySelectorAll('[name="rr"]').forEach((e) => {
             fontSize = event.target.value + 'px';
     });
 });
+document.querySelector("#gener")?.addEventListener("click", (event) => {
+    alert("kliknięto: " + event.target);
+    ``;
+});

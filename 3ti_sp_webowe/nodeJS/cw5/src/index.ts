@@ -1,4 +1,4 @@
-import { Colors, Sizes } from './data.js';
+import { Colors, Sizes, FirstNames } from './data.js';
 console.log(Colors);
 
 function GenerColors(htmlElem:HTMLDivElement,  data:string[]):void{
@@ -44,3 +44,9 @@ document.querySelectorAll('[name="rr"]').forEach((e) => {
          fontSize = (event.target as HTMLInputElement).value+'px';
     });
 });
+
+document.querySelector("#gener")?.addEventListener("click", (event) => {
+    alert("kliknięto: "+event.target);
+})
+
+
