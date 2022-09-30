@@ -23,6 +23,7 @@ form{ border: solid 1px gray; padding: 20px;}
 h1{ text-align: center; border-bottom: solid 1px lightskyblue;}
 .container{ margin: auto; width: 1000px;}
 
+
 .error{ color: red;}
 .result {
     padding: 20px;
@@ -30,4 +31,9 @@ h1{ text-align: center; border-bottom: solid 1px lightskyblue;}
     border-radius: 10px;
     background-color: bisque;
     display: inline-block;
+}
+.my-list{
+    background: url("../media/ob1.jpeg") no-repeat;
+    background-size: cover;
+
 }

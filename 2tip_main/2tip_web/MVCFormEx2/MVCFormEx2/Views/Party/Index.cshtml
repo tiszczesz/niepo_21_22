@@ -9,7 +9,7 @@
 </div>
 <h1>Impreza na całego</h1>
 <h3>Lista dotychczasowych uczestników</h3>
-<div>
+<div class="my-list">
         <ol>
                 @foreach(var item in @Model)
                 {
@@ -23,4 +23,7 @@
 </div>
 <div>
     <a asp-action="Print" class="btn btn-primary p-1">Daj pdf</a>
+</div>
+<div>
+    <img src="~/media/ob1.jpeg" alt="ciastka" />
 </div>
